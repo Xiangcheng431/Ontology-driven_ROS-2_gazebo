@@ -1,0 +1,8 @@
+string execution_id
+string task_id
+string required_capability_id
+string provided_capability_id
+string skill_id
+string resource_id
+float32 progress
+string status

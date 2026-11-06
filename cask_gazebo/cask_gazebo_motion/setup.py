@@ -1,0 +1,3 @@
+from setuptools import find_packages, setup
+package_name = 'cask_gazebo_motion'
+setup(name=package_name, version='0.0.0', packages=find_packages(exclude=['test']), data_files=[('share/ament_index/resource_index/packages', ['resource/' + package_name]), ('share/' + package_name, ['package.xml'])], install_requires=['setuptools'], zip_safe=True, maintainer='xiangcheng', maintainer_email='xiangcheng@todo.todo', description='Additional Gazebo motion and physical scene helpers', license='TODO: License declaration', entry_points={'console_scripts': ['obstacle_manager_node = cask_gazebo_motion.obstacle_manager_node:main', 'gazebo_feedback_relay = cask_gazebo_motion.gazebo_feedback_relay:main']}, package_data={'cask_gazebo_motion': []})

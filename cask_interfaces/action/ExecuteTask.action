@@ -1,0 +1,13 @@
+# Goal
+string task_id
+
+---
+# Result
+bool success
+string message
+
+---
+# Feedback
+float32 progress
+string current_skill
+string status
