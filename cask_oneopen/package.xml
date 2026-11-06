@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>cask_oneopen</name>
+  <version>0.0.0</version>
+  <description>TODO: Package description</description>
+  <maintainer email="xiangcheng@todo.todo">xiangcheng</maintainer>
+  <license>Apache-2.0</license>
+
+  <depend>launch</depend>
+  <depend>launch_ros</depend>
+  <depend>cask_robot_description</depend>
+  <depend>cask_robot_skill_servers</depend>
+  <depend>cask_world_model</depend>
+  <depend>cask_skill_manager</depend>
+  <depend>cask_task_manager</depend>
+  <depend>cask_component_manager</depend>
+  <exec_depend>ament_index_python</exec_depend>
+  <exec_depend>xacro</exec_depend>
+  <exec_depend>ros_gz_bridge</exec_depend>
+  <exec_depend>ros_gz_sim</exec_depend>
+  <exec_depend>robot_state_publisher</exec_depend>
+  <exec_depend>tf2_ros</exec_depend>
+
+  <test_depend>ament_copyright</test_depend>
+  <test_depend>ament_flake8</test_depend>
+  <test_depend>ament_pep257</test_depend>
+  <test_depend>python3-pytest</test_depend>
+
+  <exec_depend>cask_handoff</exec_depend>
+  <exec_depend>cask_gazebo_motion</exec_depend>
+  <export>
+    <build_type>ament_python</build_type>
+  </export>
+</package>

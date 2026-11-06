@@ -1,0 +1,1299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<robot name="jekko_01">
+  <material name="black">
+    <color rgba="0.055 0.06 0.065 1" />
+  </material>
+  <material name="rubber">
+    <color rgba="0.025 0.028 0.032 1" />
+  </material>
+  <material name="grey">
+    <color rgba="0.23 0.25 0.27 1" />
+  </material>
+  <material name="silver">
+    <color rgba="0.64 0.67 0.69 1" />
+  </material>
+  <material name="white">
+    <color rgba="0.86 0.88 0.89 1" />
+  </material>
+  <material name="orange">
+    <color rgba="0.98 0.27 0.045 1" />
+  </material>
+  <material name="yellow">
+    <color rgba="0.98 0.7 0.03 1" />
+  </material>
+  <material name="red">
+    <color rgba="0.76 0.08 0.08 1" />
+  </material>
+  <material name="glass">
+    <color rgba="0.04 0.11 0.15 1" />
+  </material>
+  <link name="jekko_base_link">
+    <inertial>
+      <origin xyz="0 0 0.42" rpy="0 0 0" />
+      <mass value="1600" />
+      <inertia ixx="64.45333333333333" iyy="483.3333333333334" izz="493.7866666666667" ixy="0" ixz="0" iyz="0" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0.42" rpy="0 0 0" />
+      <geometry>
+        <box size="1.85 0.53 0.45" />
+      </geometry>
+      <material name="black" />
+    </visual>
+    <collision>
+      <origin xyz="0 0 0.42" rpy="0 0 0" />
+      <geometry>
+        <box size="1.85 0.53 0.45" />
+      </geometry>
+    </collision>
+    <visual>
+      <origin xyz="-0.47 0 0.72" rpy="0 0 0" />
+      <geometry>
+        <box size="0.68 0.5 0.26" />
+      </geometry>
+      <material name="orange" />
+    </visual>
+    <visual>
+      <origin xyz="0.775 0 0.63" rpy="0 0 0" />
+      <geometry>
+        <box size="0.3 0.53 0.12" />
+      </geometry>
+      <material name="grey" />
+    </visual>
+    <visual>
+      <origin xyz="0 0.29 0.16" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://cask_robot_description/urdf/jekko_01_track.obj" scale="1 1 1" />
+      </geometry>
+      <material name="rubber" />
+    </visual>
+    <visual>
+      <origin xyz="0 -0.29 0.16" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://cask_robot_description/urdf/jekko_01_track.obj" scale="1 1 1" />
+      </geometry>
+      <material name="rubber" />
+    </visual>
+    <visual>
+      <origin xyz="0.85 0 0.79" rpy="0 0 0" />
+      <geometry>
+        <box size="0.17 0.035 0.03" />
+      </geometry>
+      <material name="black" />
+    </visual>
+    <visual>
+      <origin xyz="0.872 -0.06 0.79" rpy="0 1.570796 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.008" />
+      </geometry>
+      <material name="glass" />
+    </visual>
+    <visual>
+      <origin xyz="0.872 0.06 0.79" rpy="0 1.570796 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.008" />
+      </geometry>
+      <material name="glass" />
+    </visual>
+  </link>
+  <link name="jekko_left_roller_0_wheel_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="4" />
+      <inertia ixx="0.037885440000000006" iyy="0.059043840000000014" izz="0.037885440000000006" ixy="0" ixz="0" iyz="0" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="1.570796 0 0" />
+      <geometry>
+        <cylinder radius="0.14880000000000002" length="0.15839999999999999" />
+      </geometry>
+      <material name="rubber" />
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.14880000000000002" />
+      </geometry>
+    </collision>
+    <visual>
+      <origin xyz="0 0 0" rpy="1.570796 0 0" />
+      <geometry>
+        <cylinder radius="0.08035200000000002" length="0.1624" />
+      </geometry>
+      <material name="silver" />
+    </visual>
+    <visual name="task005_merged_wheel_treads"><origin xyz="0 0 0" rpy="0 0 0" /><geometry><mesh filename="package://cask_robot_description/urdf/jekko_task005_wheel_treads_28ebab203028.obj" scale="1 1 1" /></geometry><material name="black" />
+    </visual>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  </link>
+  <joint name="jekko_left_roller_0_wheel_joint" type="continuous">
+  <parent link="jekko_base_link" />
+  <child link="jekko_left_roller_0_wheel_link" />
+  <origin xyz="-0.415 0.29 0.16" rpy="0 0 0" />
+  <axis xyz="0 1 0" />
+  <limit effort="1800" velocity="28.0" />
+  <dynamics damping="0.5" friction="0.02" />
+</joint>
+  <gazebo reference="jekko_left_roller_0_wheel_link">
+  <mu1>0.05</mu1>
+  <mu2>0.9</mu2>
+  <fdir1>0 1 0</fdir1>
+</gazebo>
+  <link name="jekko_left_roller_2_wheel_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="4" />
+      <inertia ixx="0.037885440000000006" iyy="0.059043840000000014" izz="0.037885440000000006" ixy="0" ixz="0" iyz="0" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="1.570796 0 0" />
+      <geometry>
+        <cylinder radius="0.14880000000000002" length="0.15839999999999999" />
+      </geometry>
+      <material name="rubber" />
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.14880000000000002" />
+      </geometry>
+    </collision>
+    <visual>
+      <origin xyz="0 0 0" rpy="1.570796 0 0" />
+      <geometry>
+        <cylinder radius="0.08035200000000002" length="0.1624" />
+      </geometry>
+      <material name="silver" />
+    </visual>
+    <visual name="task005_merged_wheel_treads"><origin xyz="0 0 0" rpy="0 0 0" /><geometry><mesh filename="package://cask_robot_description/urdf/jekko_task005_wheel_treads_28ebab203028.obj" scale="1 1 1" /></geometry><material name="black" />
+    </visual>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  </link>
+  <joint name="jekko_left_roller_2_wheel_joint" type="continuous">
+  <parent link="jekko_base_link" />
+  <child link="jekko_left_roller_2_wheel_link" />
+  <origin xyz="0 0.29 0.16" rpy="0 0 0" />
+  <axis xyz="0 1 0" />
+  <limit effort="1800" velocity="28.0" />
+  <dynamics damping="0.5" friction="0.02" />
+</joint>
+  <gazebo reference="jekko_left_roller_2_wheel_link">
+  <mu1>0.05</mu1>
+  <mu2>0.9</mu2>
+  <fdir1>0 1 0</fdir1>
+</gazebo>
+  <link name="jekko_left_roller_4_wheel_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="4" />
+      <inertia ixx="0.037885440000000006" iyy="0.059043840000000014" izz="0.037885440000000006" ixy="0" ixz="0" iyz="0" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="1.570796 0 0" />
+      <geometry>
+        <cylinder radius="0.14880000000000002" length="0.15839999999999999" />
+      </geometry>
+      <material name="rubber" />
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.14880000000000002" />
+      </geometry>
+    </collision>
+    <visual>
+      <origin xyz="0 0 0" rpy="1.570796 0 0" />
+      <geometry>
+        <cylinder radius="0.08035200000000002" length="0.1624" />
+      </geometry>
+      <material name="silver" />
+    </visual>
+    <visual name="task005_merged_wheel_treads"><origin xyz="0 0 0" rpy="0 0 0" /><geometry><mesh filename="package://cask_robot_description/urdf/jekko_task005_wheel_treads_28ebab203028.obj" scale="1 1 1" /></geometry><material name="black" />
+    </visual>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  </link>
+  <joint name="jekko_left_roller_4_wheel_joint" type="continuous">
+  <parent link="jekko_base_link" />
+  <child link="jekko_left_roller_4_wheel_link" />
+  <origin xyz="0.415 0.29 0.16" rpy="0 0 0" />
+  <axis xyz="0 1 0" />
+  <limit effort="1800" velocity="28.0" />
+  <dynamics damping="0.5" friction="0.02" />
+</joint>
+  <gazebo reference="jekko_left_roller_4_wheel_link">
+  <mu1>0.05</mu1>
+  <mu2>0.9</mu2>
+  <fdir1>0 1 0</fdir1>
+</gazebo>
+  <link name="jekko_right_roller_0_wheel_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="4" />
+      <inertia ixx="0.037885440000000006" iyy="0.059043840000000014" izz="0.037885440000000006" ixy="0" ixz="0" iyz="0" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="1.570796 0 0" />
+      <geometry>
+        <cylinder radius="0.14880000000000002" length="0.15839999999999999" />
+      </geometry>
+      <material name="rubber" />
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.14880000000000002" />
+      </geometry>
+    </collision>
+    <visual>
+      <origin xyz="0 0 0" rpy="1.570796 0 0" />
+      <geometry>
+        <cylinder radius="0.08035200000000002" length="0.1624" />
+      </geometry>
+      <material name="silver" />
+    </visual>
+    <visual name="task005_merged_wheel_treads"><origin xyz="0 0 0" rpy="0 0 0" /><geometry><mesh filename="package://cask_robot_description/urdf/jekko_task005_wheel_treads_28ebab203028.obj" scale="1 1 1" /></geometry><material name="black" />
+    </visual>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  </link>
+  <joint name="jekko_right_roller_0_wheel_joint" type="continuous">
+  <parent link="jekko_base_link" />
+  <child link="jekko_right_roller_0_wheel_link" />
+  <origin xyz="-0.415 -0.29 0.16" rpy="0 0 0" />
+  <axis xyz="0 1 0" />
+  <limit effort="1800" velocity="28.0" />
+  <dynamics damping="0.5" friction="0.02" />
+</joint>
+  <gazebo reference="jekko_right_roller_0_wheel_link">
+  <mu1>0.05</mu1>
+  <mu2>0.9</mu2>
+  <fdir1>0 1 0</fdir1>
+</gazebo>
+  <link name="jekko_right_roller_2_wheel_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="4" />
+      <inertia ixx="0.037885440000000006" iyy="0.059043840000000014" izz="0.037885440000000006" ixy="0" ixz="0" iyz="0" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="1.570796 0 0" />
+      <geometry>
+        <cylinder radius="0.14880000000000002" length="0.15839999999999999" />
+      </geometry>
+      <material name="rubber" />
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.14880000000000002" />
+      </geometry>
+    </collision>
+    <visual>
+      <origin xyz="0 0 0" rpy="1.570796 0 0" />
+      <geometry>
+        <cylinder radius="0.08035200000000002" length="0.1624" />
+      </geometry>
+      <material name="silver" />
+    </visual>
+    <visual name="task005_merged_wheel_treads"><origin xyz="0 0 0" rpy="0 0 0" /><geometry><mesh filename="package://cask_robot_description/urdf/jekko_task005_wheel_treads_28ebab203028.obj" scale="1 1 1" /></geometry><material name="black" />
+    </visual>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  </link>
+  <joint name="jekko_right_roller_2_wheel_joint" type="continuous">
+  <parent link="jekko_base_link" />
+  <child link="jekko_right_roller_2_wheel_link" />
+  <origin xyz="0 -0.29 0.16" rpy="0 0 0" />
+  <axis xyz="0 1 0" />
+  <limit effort="1800" velocity="28.0" />
+  <dynamics damping="0.5" friction="0.02" />
+</joint>
+  <gazebo reference="jekko_right_roller_2_wheel_link">
+  <mu1>0.05</mu1>
+  <mu2>0.9</mu2>
+  <fdir1>0 1 0</fdir1>
+</gazebo>
+  <link name="jekko_right_roller_4_wheel_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="4" />
+      <inertia ixx="0.037885440000000006" iyy="0.059043840000000014" izz="0.037885440000000006" ixy="0" ixz="0" iyz="0" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="1.570796 0 0" />
+      <geometry>
+        <cylinder radius="0.14880000000000002" length="0.15839999999999999" />
+      </geometry>
+      <material name="rubber" />
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.14880000000000002" />
+      </geometry>
+    </collision>
+    <visual>
+      <origin xyz="0 0 0" rpy="1.570796 0 0" />
+      <geometry>
+        <cylinder radius="0.08035200000000002" length="0.1624" />
+      </geometry>
+      <material name="silver" />
+    </visual>
+    <visual name="task005_merged_wheel_treads"><origin xyz="0 0 0" rpy="0 0 0" /><geometry><mesh filename="package://cask_robot_description/urdf/jekko_task005_wheel_treads_28ebab203028.obj" scale="1 1 1" /></geometry><material name="black" />
+    </visual>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  </link>
+  <joint name="jekko_right_roller_4_wheel_joint" type="continuous">
+  <parent link="jekko_base_link" />
+  <child link="jekko_right_roller_4_wheel_link" />
+  <origin xyz="0.415 -0.29 0.16" rpy="0 0 0" />
+  <axis xyz="0 1 0" />
+  <limit effort="1800" velocity="28.0" />
+  <dynamics damping="0.5" friction="0.02" />
+</joint>
+  <gazebo reference="jekko_right_roller_4_wheel_link">
+  <mu1>0.05</mu1>
+  <mu2>0.9</mu2>
+  <fdir1>0 1 0</fdir1>
+</gazebo>
+  <gazebo>
+    <plugin filename="ignition-gazebo-diff-drive-system" name="ignition::gazebo::systems::DiffDrive">
+  <left_joint>jekko_left_roller_0_wheel_joint</left_joint>
+  <left_joint>jekko_left_roller_2_wheel_joint</left_joint>
+  <left_joint>jekko_left_roller_4_wheel_joint</left_joint>
+  <right_joint>jekko_right_roller_0_wheel_joint</right_joint>
+  <right_joint>jekko_right_roller_2_wheel_joint</right_joint>
+  <right_joint>jekko_right_roller_4_wheel_joint</right_joint>
+  <wheel_separation>0.58</wheel_separation>
+  <wheel_radius>0.14880000000000002</wheel_radius>
+  <topic>/jekko/cmd_vel</topic>
+  <odom_topic>/jekko/odom</odom_topic>
+  <tf_topic>/jekko/odom_tf</tf_topic>
+  <frame_id>jekko_odom</frame_id>
+  <child_frame_id>jekko_base_link</child_frame_id>
+  <min_linear_velocity>-0.7</min_linear_velocity>
+  <max_linear_velocity>0.7</max_linear_velocity>
+  <min_angular_velocity>-1.1</min_angular_velocity>
+  <max_angular_velocity>1.1</max_angular_velocity>
+  <min_linear_acceleration>-1.6</min_linear_acceleration>
+  <max_linear_acceleration>1.6</max_linear_acceleration>
+  <odom_publish_frequency>30</odom_publish_frequency>
+</plugin>
+  </gazebo>
+  <link name="jekko_front_left_support">
+    <inertial>
+      <origin xyz="0.215 0 0" rpy="0 0 0" />
+      <mass value="20" />
+      <inertia ixx="0.04066666666666667" iyy="0.33216666666666667" izz="0.3248333333333333" ixy="0" ixz="0" iyz="0" />
+    </inertial>
+    <visual>
+      <origin xyz="0.215 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.43 0.1 0.12" />
+      </geometry>
+      <material name="grey" />
+    </visual>
+    <collision>
+      <origin xyz="0.215 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.43 0.1 0.12" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="jekko_front_left_support_fixed" type="fixed">
+    <parent link="jekko_base_link" />
+    <child link="jekko_front_left_support" />
+    <origin xyz="0.64 0.19 0.4" rpy="0 0 0.72" />
+  </joint>
+  <link name="jekko_front_left_extension">
+    <inertial>
+      <origin xyz="0.225 0 0" rpy="0 0 0" />
+      <mass value="12" />
+      <inertia ixx="0.011250000000000001" iyy="0.208125" izz="0.208125" ixy="0" ixz="0" iyz="0" />
+    </inertial>
+    <visual>
+      <origin xyz="0.225 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.45 0.075 0.075" />
+      </geometry>
+      <material name="silver" />
+    </visual>
+    <collision>
+      <origin xyz="0.225 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.45 0.075 0.075" />
+      </geometry>
+    </collision>
+  <visual name="overlapping_inner_beam">
+      <origin xyz="-0.45 0 0" rpy="0 0 0" />
+      <geometry><box size="0.9 0.065 0.065" /></geometry><material name="silver" />
+    </visual><visual name="vertical_leg_housing">
+      <origin xyz="0.4 0 0.12" rpy="0 0 0" />
+      <geometry><cylinder radius="0.05" length="0.30" /></geometry><material name="grey" />
+    </visual></link>
+  <joint name="jekko_front_left_extension_joint" type="prismatic">
+  <parent link="jekko_front_left_support" />
+  <child link="jekko_front_left_extension" />
+  <origin xyz="0.31 0 0" rpy="0 0 0" />
+  <axis xyz="1 0 0" />
+  <limit effort="10000" velocity="0.21" lower="-0.005" upper="0.855" />
+  <dynamics damping="0.5" friction="0.02" />
+</joint>
+  <gazebo>
+    <plugin filename="ignition-gazebo-joint-position-controller-system" name="ignition::gazebo::systems::JointPositionController">
+  <joint_name>jekko_front_left_extension_joint</joint_name>
+  <topic>/jekko/front_left_extension_cmd</topic>
+  <use_velocity_commands>true</use_velocity_commands>
+  <p_gain>4</p_gain>
+  <cmd_max>0.2</cmd_max>
+  <cmd_min>-0.2</cmd_min>
+  <initial_position>0</initial_position>
+</plugin>
+  </gazebo>
+  <link name="jekko_front_left_foot">
+    <inertial>
+      <origin xyz="0 0 -0.11" rpy="0 0 0" />
+      <mass value="8" />
+      <inertia ixx="0.05686666666666667" iyy="0.05686666666666667" izz="0.043199999999999995" ixy="0" ixz="0" iyz="0" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0.025" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.032" length="0.45" />
+      </geometry>
+      <material name="silver" />
+    </visual>
+    <collision>
+      <origin xyz="0 0 -0.1" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.032" length="0.2" />
+      </geometry>
+    </collision>
+    <visual>
+      <origin xyz="0 0 -0.215" rpy="0 0 0" />
+      <geometry>
+        <box size="0.18 0.18 0.03" />
+      </geometry>
+      <material name="black" />
+    </visual>
+    <collision>
+      <origin xyz="0 0 -0.215" rpy="0 0 0" />
+      <geometry>
+        <box size="0.18 0.18 0.03" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="jekko_front_left_foot_joint" type="prismatic">
+  <parent link="jekko_front_left_extension" />
+  <child link="jekko_front_left_foot" />
+  <origin xyz="0.4 0 0" rpy="0 0 0" />
+  <axis xyz="0 0 -1" />
+  <limit effort="15000" velocity="0.105" lower="-0.005" upper="0.225" />
+  <dynamics damping="0.5" friction="0.02" />
+</joint>
+  <gazebo>
+    <plugin filename="ignition-gazebo-joint-position-controller-system" name="ignition::gazebo::systems::JointPositionController">
+  <joint_name>jekko_front_left_foot_joint</joint_name>
+  <topic>/jekko/front_left_foot_cmd</topic>
+  <use_velocity_commands>true</use_velocity_commands>
+  <p_gain>4</p_gain>
+  <cmd_max>0.1</cmd_max>
+  <cmd_min>-0.1</cmd_min>
+  <initial_position>0</initial_position>
+</plugin>
+  </gazebo>
+  <link name="jekko_front_right_support">
+    <inertial>
+      <origin xyz="0.215 0 0" rpy="0 0 0" />
+      <mass value="20" />
+      <inertia ixx="0.04066666666666667" iyy="0.33216666666666667" izz="0.3248333333333333" ixy="0" ixz="0" iyz="0" />
+    </inertial>
+    <visual>
+      <origin xyz="0.215 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.43 0.1 0.12" />
+      </geometry>
+      <material name="grey" />
+    </visual>
+    <collision>
+      <origin xyz="0.215 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.43 0.1 0.12" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="jekko_front_right_support_fixed" type="fixed">
+    <parent link="jekko_base_link" />
+    <child link="jekko_front_right_support" />
+    <origin xyz="0.64 -0.19 0.4" rpy="0 0 -0.72" />
+  </joint>
+  <link name="jekko_front_right_extension">
+    <inertial>
+      <origin xyz="0.225 0 0" rpy="0 0 0" />
+      <mass value="12" />
+      <inertia ixx="0.011250000000000001" iyy="0.208125" izz="0.208125" ixy="0" ixz="0" iyz="0" />
+    </inertial>
+    <visual>
+      <origin xyz="0.225 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.45 0.075 0.075" />
+      </geometry>
+      <material name="silver" />
+    </visual>
+    <collision>
+      <origin xyz="0.225 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.45 0.075 0.075" />
+      </geometry>
+    </collision>
+  <visual name="overlapping_inner_beam">
+      <origin xyz="-0.45 0 0" rpy="0 0 0" />
+      <geometry><box size="0.9 0.065 0.065" /></geometry><material name="silver" />
+    </visual><visual name="vertical_leg_housing">
+      <origin xyz="0.4 0 0.12" rpy="0 0 0" />
+      <geometry><cylinder radius="0.05" length="0.30" /></geometry><material name="grey" />
+    </visual></link>
+  <joint name="jekko_front_right_extension_joint" type="prismatic">
+  <parent link="jekko_front_right_support" />
+  <child link="jekko_front_right_extension" />
+  <origin xyz="0.31 0 0" rpy="0 0 0" />
+  <axis xyz="1 0 0" />
+  <limit effort="10000" velocity="0.21" lower="-0.005" upper="0.855" />
+  <dynamics damping="0.5" friction="0.02" />
+</joint>
+  <gazebo>
+    <plugin filename="ignition-gazebo-joint-position-controller-system" name="ignition::gazebo::systems::JointPositionController">
+  <joint_name>jekko_front_right_extension_joint</joint_name>
+  <topic>/jekko/front_right_extension_cmd</topic>
+  <use_velocity_commands>true</use_velocity_commands>
+  <p_gain>4</p_gain>
+  <cmd_max>0.2</cmd_max>
+  <cmd_min>-0.2</cmd_min>
+  <initial_position>0</initial_position>
+</plugin>
+  </gazebo>
+  <link name="jekko_front_right_foot">
+    <inertial>
+      <origin xyz="0 0 -0.11" rpy="0 0 0" />
+      <mass value="8" />
+      <inertia ixx="0.05686666666666667" iyy="0.05686666666666667" izz="0.043199999999999995" ixy="0" ixz="0" iyz="0" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0.025" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.032" length="0.45" />
+      </geometry>
+      <material name="silver" />
+    </visual>
+    <collision>
+      <origin xyz="0 0 -0.1" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.032" length="0.2" />
+      </geometry>
+    </collision>
+    <visual>
+      <origin xyz="0 0 -0.215" rpy="0 0 0" />
+      <geometry>
+        <box size="0.18 0.18 0.03" />
+      </geometry>
+      <material name="black" />
+    </visual>
+    <collision>
+      <origin xyz="0 0 -0.215" rpy="0 0 0" />
+      <geometry>
+        <box size="0.18 0.18 0.03" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="jekko_front_right_foot_joint" type="prismatic">
+  <parent link="jekko_front_right_extension" />
+  <child link="jekko_front_right_foot" />
+  <origin xyz="0.4 0 0" rpy="0 0 0" />
+  <axis xyz="0 0 -1" />
+  <limit effort="15000" velocity="0.105" lower="-0.005" upper="0.225" />
+  <dynamics damping="0.5" friction="0.02" />
+</joint>
+  <gazebo>
+    <plugin filename="ignition-gazebo-joint-position-controller-system" name="ignition::gazebo::systems::JointPositionController">
+  <joint_name>jekko_front_right_foot_joint</joint_name>
+  <topic>/jekko/front_right_foot_cmd</topic>
+  <use_velocity_commands>true</use_velocity_commands>
+  <p_gain>4</p_gain>
+  <cmd_max>0.1</cmd_max>
+  <cmd_min>-0.1</cmd_min>
+  <initial_position>0</initial_position>
+</plugin>
+  </gazebo>
+  <link name="jekko_rear_left_support">
+    <inertial>
+      <origin xyz="0.215 0 0" rpy="0 0 0" />
+      <mass value="20" />
+      <inertia ixx="0.04066666666666667" iyy="0.33216666666666667" izz="0.3248333333333333" ixy="0" ixz="0" iyz="0" />
+    </inertial>
+    <visual>
+      <origin xyz="0.215 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.43 0.1 0.12" />
+      </geometry>
+      <material name="grey" />
+    </visual>
+    <collision>
+      <origin xyz="0.215 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.43 0.1 0.12" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="jekko_rear_left_support_fixed" type="fixed">
+    <parent link="jekko_base_link" />
+    <child link="jekko_rear_left_support" />
+    <origin xyz="-0.65 0.19 0.4" rpy="0 0 2.42" />
+  </joint>
+  <link name="jekko_rear_left_extension">
+    <inertial>
+      <origin xyz="0.225 0 0" rpy="0 0 0" />
+      <mass value="12" />
+      <inertia ixx="0.011250000000000001" iyy="0.208125" izz="0.208125" ixy="0" ixz="0" iyz="0" />
+    </inertial>
+    <visual>
+      <origin xyz="0.225 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.45 0.075 0.075" />
+      </geometry>
+      <material name="silver" />
+    </visual>
+    <collision>
+      <origin xyz="0.225 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.45 0.075 0.075" />
+      </geometry>
+    </collision>
+  <visual name="overlapping_inner_beam">
+      <origin xyz="-0.45 0 0" rpy="0 0 0" />
+      <geometry><box size="0.9 0.065 0.065" /></geometry><material name="silver" />
+    </visual><visual name="vertical_leg_housing">
+      <origin xyz="0.4 0 0.12" rpy="0 0 0" />
+      <geometry><cylinder radius="0.05" length="0.30" /></geometry><material name="grey" />
+    </visual></link>
+  <joint name="jekko_rear_left_extension_joint" type="prismatic">
+  <parent link="jekko_rear_left_support" />
+  <child link="jekko_rear_left_extension" />
+  <origin xyz="0.31 0 0" rpy="0 0 0" />
+  <axis xyz="1 0 0" />
+  <limit effort="10000" velocity="0.21" lower="-0.005" upper="0.855" />
+  <dynamics damping="0.5" friction="0.02" />
+</joint>
+  <gazebo>
+    <plugin filename="ignition-gazebo-joint-position-controller-system" name="ignition::gazebo::systems::JointPositionController">
+  <joint_name>jekko_rear_left_extension_joint</joint_name>
+  <topic>/jekko/rear_left_extension_cmd</topic>
+  <use_velocity_commands>true</use_velocity_commands>
+  <p_gain>4</p_gain>
+  <cmd_max>0.2</cmd_max>
+  <cmd_min>-0.2</cmd_min>
+  <initial_position>0</initial_position>
+</plugin>
+  </gazebo>
+  <link name="jekko_rear_left_foot">
+    <inertial>
+      <origin xyz="0 0 -0.11" rpy="0 0 0" />
+      <mass value="8" />
+      <inertia ixx="0.05686666666666667" iyy="0.05686666666666667" izz="0.043199999999999995" ixy="0" ixz="0" iyz="0" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0.025" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.032" length="0.45" />
+      </geometry>
+      <material name="silver" />
+    </visual>
+    <collision>
+      <origin xyz="0 0 -0.1" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.032" length="0.2" />
+      </geometry>
+    </collision>
+    <visual>
+      <origin xyz="0 0 -0.215" rpy="0 0 0" />
+      <geometry>
+        <box size="0.18 0.18 0.03" />
+      </geometry>
+      <material name="black" />
+    </visual>
+    <collision>
+      <origin xyz="0 0 -0.215" rpy="0 0 0" />
+      <geometry>
+        <box size="0.18 0.18 0.03" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="jekko_rear_left_foot_joint" type="prismatic">
+  <parent link="jekko_rear_left_extension" />
+  <child link="jekko_rear_left_foot" />
+  <origin xyz="0.4 0 0" rpy="0 0 0" />
+  <axis xyz="0 0 -1" />
+  <limit effort="15000" velocity="0.105" lower="-0.005" upper="0.225" />
+  <dynamics damping="0.5" friction="0.02" />
+</joint>
+  <gazebo>
+    <plugin filename="ignition-gazebo-joint-position-controller-system" name="ignition::gazebo::systems::JointPositionController">
+  <joint_name>jekko_rear_left_foot_joint</joint_name>
+  <topic>/jekko/rear_left_foot_cmd</topic>
+  <use_velocity_commands>true</use_velocity_commands>
+  <p_gain>4</p_gain>
+  <cmd_max>0.1</cmd_max>
+  <cmd_min>-0.1</cmd_min>
+  <initial_position>0</initial_position>
+</plugin>
+  </gazebo>
+  <link name="jekko_rear_right_support">
+    <inertial>
+      <origin xyz="0.215 0 0" rpy="0 0 0" />
+      <mass value="20" />
+      <inertia ixx="0.04066666666666667" iyy="0.33216666666666667" izz="0.3248333333333333" ixy="0" ixz="0" iyz="0" />
+    </inertial>
+    <visual>
+      <origin xyz="0.215 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.43 0.1 0.12" />
+      </geometry>
+      <material name="grey" />
+    </visual>
+    <collision>
+      <origin xyz="0.215 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.43 0.1 0.12" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="jekko_rear_right_support_fixed" type="fixed">
+    <parent link="jekko_base_link" />
+    <child link="jekko_rear_right_support" />
+    <origin xyz="-0.65 -0.19 0.4" rpy="0 0 -2.42" />
+  </joint>
+  <link name="jekko_rear_right_extension">
+    <inertial>
+      <origin xyz="0.225 0 0" rpy="0 0 0" />
+      <mass value="12" />
+      <inertia ixx="0.011250000000000001" iyy="0.208125" izz="0.208125" ixy="0" ixz="0" iyz="0" />
+    </inertial>
+    <visual>
+      <origin xyz="0.225 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.45 0.075 0.075" />
+      </geometry>
+      <material name="silver" />
+    </visual>
+    <collision>
+      <origin xyz="0.225 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.45 0.075 0.075" />
+      </geometry>
+    </collision>
+  <visual name="overlapping_inner_beam">
+      <origin xyz="-0.45 0 0" rpy="0 0 0" />
+      <geometry><box size="0.9 0.065 0.065" /></geometry><material name="silver" />
+    </visual><visual name="vertical_leg_housing">
+      <origin xyz="0.4 0 0.12" rpy="0 0 0" />
+      <geometry><cylinder radius="0.05" length="0.30" /></geometry><material name="grey" />
+    </visual></link>
+  <joint name="jekko_rear_right_extension_joint" type="prismatic">
+  <parent link="jekko_rear_right_support" />
+  <child link="jekko_rear_right_extension" />
+  <origin xyz="0.31 0 0" rpy="0 0 0" />
+  <axis xyz="1 0 0" />
+  <limit effort="10000" velocity="0.21" lower="-0.005" upper="0.855" />
+  <dynamics damping="0.5" friction="0.02" />
+</joint>
+  <gazebo>
+    <plugin filename="ignition-gazebo-joint-position-controller-system" name="ignition::gazebo::systems::JointPositionController">
+  <joint_name>jekko_rear_right_extension_joint</joint_name>
+  <topic>/jekko/rear_right_extension_cmd</topic>
+  <use_velocity_commands>true</use_velocity_commands>
+  <p_gain>4</p_gain>
+  <cmd_max>0.2</cmd_max>
+  <cmd_min>-0.2</cmd_min>
+  <initial_position>0</initial_position>
+</plugin>
+  </gazebo>
+  <link name="jekko_rear_right_foot">
+    <inertial>
+      <origin xyz="0 0 -0.11" rpy="0 0 0" />
+      <mass value="8" />
+      <inertia ixx="0.05686666666666667" iyy="0.05686666666666667" izz="0.043199999999999995" ixy="0" ixz="0" iyz="0" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0.025" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.032" length="0.45" />
+      </geometry>
+      <material name="silver" />
+    </visual>
+    <collision>
+      <origin xyz="0 0 -0.1" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.032" length="0.2" />
+      </geometry>
+    </collision>
+    <visual>
+      <origin xyz="0 0 -0.215" rpy="0 0 0" />
+      <geometry>
+        <box size="0.18 0.18 0.03" />
+      </geometry>
+      <material name="black" />
+    </visual>
+    <collision>
+      <origin xyz="0 0 -0.215" rpy="0 0 0" />
+      <geometry>
+        <box size="0.18 0.18 0.03" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="jekko_rear_right_foot_joint" type="prismatic">
+  <parent link="jekko_rear_right_extension" />
+  <child link="jekko_rear_right_foot" />
+  <origin xyz="0.4 0 0" rpy="0 0 0" />
+  <axis xyz="0 0 -1" />
+  <limit effort="15000" velocity="0.105" lower="-0.005" upper="0.225" />
+  <dynamics damping="0.5" friction="0.02" />
+</joint>
+  <gazebo>
+    <plugin filename="ignition-gazebo-joint-position-controller-system" name="ignition::gazebo::systems::JointPositionController">
+  <joint_name>jekko_rear_right_foot_joint</joint_name>
+  <topic>/jekko/rear_right_foot_cmd</topic>
+  <use_velocity_commands>true</use_velocity_commands>
+  <p_gain>4</p_gain>
+  <cmd_max>0.1</cmd_max>
+  <cmd_min>-0.1</cmd_min>
+  <initial_position>0</initial_position>
+</plugin>
+  </gazebo>
+  <link name="jekko_slew_link">
+    <inertial>
+      <origin xyz="0 0 0.15" rpy="0 0 0" />
+      <mass value="230" />
+      <inertia ixx="8.281916666666667" iyy="9.851666666666667" izz="13.165583333333336" ixy="0" ixz="0" iyz="0" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0.02" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.3" length="0.12" />
+      </geometry>
+      <material name="silver" />
+    </visual>
+    <collision>
+      <origin xyz="0 0 0.02" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.3" length="0.12" />
+      </geometry>
+    </collision>
+    <visual>
+      <origin xyz="0 0 0.23" rpy="0 0 0" />
+      <geometry>
+        <box size="0.65 0.49 0.3" />
+      </geometry>
+      <material name="orange" />
+    </visual>
+    <collision>
+      <origin xyz="0 0 0.23" rpy="0 0 0" />
+      <geometry>
+        <box size="0.65 0.49 0.3" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="jekko_slew_joint" type="continuous">
+  <parent link="jekko_base_link" />
+  <child link="jekko_slew_link" />
+  <origin xyz="-0.08 0 0.69" rpy="0 0 0" />
+  <axis xyz="0 0 1" />
+  <limit effort="20000" velocity="0.5" />
+  <dynamics damping="0.5" friction="0.02" />
+</joint>
+  <gazebo>
+    <plugin filename="ignition-gazebo-joint-position-controller-system" name="ignition::gazebo::systems::JointPositionController">
+  <joint_name>jekko_slew_joint</joint_name>
+  <topic>/jekko/slew_cmd</topic>
+  <use_velocity_commands>true</use_velocity_commands>
+  <p_gain>4</p_gain>
+  <cmd_max>0.5</cmd_max>
+  <cmd_min>-0.5</cmd_min>
+  <initial_position>0</initial_position>
+</plugin>
+  </gazebo>
+  <link name="jekko_boom_link">
+    <inertial>
+      <origin xyz="0.925 0 0" rpy="0 0 0" />
+      <mass value="180" />
+      <inertia ixx="1.6935000000000002" iyy="52.43100000000001" izz="51.93750000000001" ixy="0" ixz="0" iyz="0" />
+    </inertial>
+    <visual>
+      <origin xyz="0.925 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="1.85 0.2 0.27" />
+      </geometry>
+      <material name="orange" />
+    </visual>
+    <collision>
+      <origin xyz="0.925 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="1.85 0.2 0.27" />
+      </geometry>
+    </collision>
+    <visual>
+      <origin xyz="0 0 0" rpy="1.570796 0 0" />
+      <geometry>
+        <cylinder radius="0.13" length="0.3" />
+      </geometry>
+      <material name="black" />
+    </visual>
+    <visual>
+      <origin xyz="0.57 0 -0.19" rpy="0 1.570796 0" />
+      <geometry>
+        <cylinder radius="0.045" length="0.95" />
+      </geometry>
+      <material name="silver" />
+    </visual>
+  </link>
+  <joint name="jekko_boom_pitch_joint" type="revolute">
+  <parent link="jekko_slew_link" />
+  <child link="jekko_boom_link" />
+  <origin xyz="0 0 0.42" rpy="0 -0.2 0" />
+  <axis xyz="0 -1 0" />
+  <limit effort="30000" velocity="0.36" lower="0" upper="1.19" />
+  <dynamics damping="0.5" friction="0.02" />
+</joint>
+  <gazebo>
+    <plugin filename="ignition-gazebo-joint-position-controller-system" name="ignition::gazebo::systems::JointPositionController">
+  <joint_name>jekko_boom_pitch_joint</joint_name>
+  <topic>/jekko/boom_pitch_cmd</topic>
+  <use_velocity_commands>false</use_velocity_commands>
+  <p_gain>160000</p_gain>
+  <cmd_max>30000</cmd_max>
+  <cmd_min>-30000</cmd_min>
+  <initial_position>0</initial_position>
+  <i_gain>80000</i_gain>
+  <d_gain>20000</d_gain>
+  <i_max>10000</i_max>
+  <i_min>-10000</i_min>
+  <cmd_offset>3500</cmd_offset>
+</plugin>
+  </gazebo>
+  <link name="jekko_telescope_1_link">
+    <inertial>
+      <origin xyz="0.75 0 0" rpy="0 0 0" />
+      <mass value="65" />
+      <inertia ixx="0.37754166666666666" iyy="12.426374999999998" izz="12.326166666666666" ixy="0" ixz="0" iyz="0" />
+    </inertial>
+    <visual>
+      <origin xyz="0.75 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="1.5 0.135 0.195" />
+      </geometry>
+      <material name="orange" />
+    </visual>
+    <collision>
+      <origin xyz="0.75 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="1.5 0.135 0.195" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="jekko_telescope_1_joint" type="prismatic">
+  <parent link="jekko_boom_link" />
+  <child link="jekko_telescope_1_link" />
+  <origin xyz="0.42 0 0" rpy="0 0 0" />
+  <axis xyz="1 0 0" />
+  <limit effort="15000" velocity="0.42" lower="-0.005" upper="1.155" />
+  <dynamics damping="0.5" friction="0.02" />
+</joint>
+  <gazebo>
+    <plugin filename="ignition-gazebo-joint-position-controller-system" name="ignition::gazebo::systems::JointPositionController">
+  <joint_name>jekko_telescope_1_joint</joint_name>
+  <topic>/jekko/telescope_1_cmd</topic>
+  <use_velocity_commands>true</use_velocity_commands>
+  <p_gain>4</p_gain>
+  <cmd_max>0.4</cmd_max>
+  <cmd_min>-0.4</cmd_min>
+  <initial_position>0</initial_position>
+</plugin>
+  </gazebo>
+  <link name="jekko_telescope_2_link">
+    <inertial>
+      <origin xyz="0.75 0 0" rpy="0 0 0" />
+      <mass value="65" />
+      <inertia ixx="0.09438541666666667" iyy="12.24721875" izz="12.222166666666668" ixy="0" ixz="0" iyz="0" />
+    </inertial>
+    <visual>
+      <origin xyz="0.75 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="1.5 0.1 0.16" />
+      </geometry>
+      <material name="black" />
+    </visual>
+    <collision>
+      <origin xyz="0.75 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="1.5 0.1 0.16" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="jekko_telescope_2_joint" type="prismatic">
+  <parent link="jekko_telescope_1_link" />
+  <child link="jekko_telescope_2_link" />
+  <origin xyz="0.2 0 0" rpy="0 0 0" />
+  <axis xyz="1 0 0" />
+  <limit effort="15000" velocity="0.42" lower="-0.005" upper="1.155" />
+  <dynamics damping="0.5" friction="0.02" />
+</joint>
+  <gazebo>
+    <plugin filename="ignition-gazebo-joint-position-controller-system" name="ignition::gazebo::systems::JointPositionController">
+  <joint_name>jekko_telescope_2_joint</joint_name>
+  <topic>/jekko/telescope_2_cmd</topic>
+  <use_velocity_commands>true</use_velocity_commands>
+  <p_gain>4</p_gain>
+  <cmd_max>0.4</cmd_max>
+  <cmd_min>-0.4</cmd_min>
+  <initial_position>0</initial_position>
+</plugin>
+  </gazebo>
+  <link name="jekko_cable_head_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="8" />
+      <inertia ixx="0.0192" iyy="0.0192" izz="0.0192" ixy="0" ixz="0" iyz="0" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="1.570796 0 0" />
+      <geometry>
+        <cylinder radius="0.075" length="0.09" />
+      </geometry>
+      <material name="grey" />
+    </visual>
+  </link>
+  <joint name="jekko_hook_level_joint" type="revolute">
+  <parent link="jekko_telescope_2_link" />
+  <child link="jekko_cable_head_link" />
+  <origin xyz="1.5 0 0" rpy="0 0.2 0" />
+  <axis xyz="0 1 0" />
+  <limit effort="200" velocity="0.6" lower="-1.4" upper="1.4" />
+  <dynamics damping="2.0" friction="0.02" />
+</joint>
+  <gazebo>
+    <plugin filename="ignition-gazebo-joint-position-controller-system" name="ignition::gazebo::systems::JointPositionController">
+  <joint_name>jekko_hook_level_joint</joint_name>
+  <topic>/jekko/hook_level_cmd</topic>
+  <use_velocity_commands>true</use_velocity_commands>
+  <p_gain>8</p_gain>
+  <cmd_max>0.6</cmd_max>
+  <cmd_min>-0.6</cmd_min>
+  <initial_position>0</initial_position>
+</plugin>
+  </gazebo>
+  <link name="jekko_hook_link">
+    <inertial>
+      <origin xyz="0 0 -0.27" rpy="0 0 0" />
+      <mass value="7" />
+      <inertia ixx="0.21373333333333333" iyy="0.21985833333333335" izz="0.013591666666666669" ixy="0" ixz="0" iyz="0" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 -0.5" rpy="0 0 0" />
+      <geometry>
+        <box size="0.11 0.065 0.1" />
+      </geometry>
+      <material name="orange" />
+    </visual>
+    <collision>
+      <origin xyz="0 0 -0.5" rpy="0 0 0" />
+      <geometry>
+        <box size="0.11 0.065 0.1" />
+      </geometry>
+    </collision>
+    <visual>
+      <origin xyz="0.01588967 0 -0.5388148" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.012" />
+      </geometry>
+      <material name="silver" />
+    </visual>
+    <visual>
+      <origin xyz="-0.009940537 0 -0.5364413" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.012" />
+      </geometry>
+      <material name="silver" />
+    </visual>
+    <visual>
+      <origin xyz="-0.03031089 0 -0.5525" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.012" />
+      </geometry>
+      <material name="silver" />
+    </visual>
+    <visual>
+      <origin xyz="-0.03403295 0 -0.5781706" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.012" />
+      </geometry>
+      <material name="silver" />
+    </visual>
+    <visual>
+      <origin xyz="-0.01906237 0 -0.5993535" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.012" />
+      </geometry>
+      <material name="silver" />
+    </visual>
+    <visual>
+      <origin xyz="0.006378243 0 -0.6044139" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.012" />
+      </geometry>
+      <material name="silver" />
+    </visual>
+    <visual>
+      <origin xyz="0.02831559 0 -0.5905725" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.012" />
+      </geometry>
+      <material name="silver" />
+    </visual>
+  </link>
+  <joint name="jekko_hoist_joint" type="prismatic">
+  <parent link="jekko_cable_head_link" />
+  <child link="jekko_hook_link" />
+  <origin xyz="0 0 0" rpy="0 0 0" />
+  <axis xyz="0 0 -1" />
+  <limit effort="10000" velocity="0.42" lower="-0.005" upper="3.005" />
+  <dynamics damping="0.5" friction="0.02" />
+</joint>
+  <gazebo>
+    <plugin filename="ignition-gazebo-joint-position-controller-system" name="ignition::gazebo::systems::JointPositionController">
+  <joint_name>jekko_hoist_joint</joint_name>
+  <topic>/jekko/hoist_cmd</topic>
+  <use_velocity_commands>true</use_velocity_commands>
+  <p_gain>4</p_gain>
+  <cmd_max>0.4</cmd_max>
+  <cmd_min>-0.4</cmd_min>
+  <initial_position>0</initial_position>
+</plugin>
+  </gazebo>
+  <link name="jekko_cargo_attachment_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="0.02" />
+      <inertia ixx="3.333333333333334e-07" iyy="3.333333333333334e-07" izz="3.333333333333334e-07" ixy="0" ixz="0" iyz="0" />
+    </inertial>
+  </link>
+  <joint name="jekko_hook_yaw_joint" type="continuous">
+  <parent link="jekko_hook_link" />
+  <child link="jekko_cargo_attachment_link" />
+  <origin xyz="0 0 -0.58" rpy="0 0 0" />
+  <axis xyz="0 0 1" />
+  <limit effort="500" velocity="0.5" />
+  <dynamics damping=".5" friction=".02" />
+</joint>
+  <gazebo>
+    <plugin filename="ignition-gazebo-joint-state-publisher-system" name="ignition::gazebo::systems::JointStatePublisher">
+  <topic>/jekko/joint_states</topic>
+  <update_rate>50</update_rate>
+</plugin>
+  </gazebo>
+  <gazebo>
+    <plugin filename="ignition-gazebo-pose-publisher-system" name="ignition::gazebo::systems::PosePublisher">
+      <publish_link_pose>false</publish_link_pose>
+      <publish_sensor_pose>false</publish_sensor_pose>
+      <publish_collision_pose>false</publish_collision_pose>
+      <publish_visual_pose>false</publish_visual_pose>
+      <publish_nested_model_pose>true</publish_nested_model_pose>
+      <use_pose_vector_msg>true</use_pose_vector_msg>
+      <update_frequency>30</update_frequency>
+      <publish_model_pose>true</publish_model_pose>
+    </plugin>
+  </gazebo>
+  <gazebo>
+    <plugin filename="ignition-gazebo-joint-position-controller-system" name="ignition::gazebo::systems::JointPositionController">
+  <joint_name>jekko_hook_yaw_joint</joint_name>
+  <topic>/jekko/hook_yaw_cmd</topic>
+  <use_velocity_commands>true</use_velocity_commands>
+  <p_gain>4</p_gain>
+  <cmd_max>0.5</cmd_max>
+  <cmd_min>-0.5</cmd_min>
+  <initial_position>0</initial_position>
+</plugin>
+  </gazebo>
+  <!-- CASK_TASK005_SOUTH_SPEED_V1 -->
+</robot>
+
+<!-- CASK_JEKKO_PRISMATIC_LIMIT_BUFFER_V1: nominal commanded ranges unchanged. -->
+
+<!-- CASK_JEKKO_CONNECTED_VISUALS_V1: moving rods overlap housings; wire follows measurements. -->

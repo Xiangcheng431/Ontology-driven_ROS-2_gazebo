@@ -1,0 +1,444 @@
+<?xml version="1.0"?>
+
+<robot
+  xmlns:xacro="http://www.ros.org/wiki/xacro"
+  name="crane">
+
+  <xacro:arg name="prefix" default="crane_"/>
+  <xacro:property name="prefix" value="$(arg prefix)"/>
+  <xacro:arg name="boom_length" default="10.0"/>
+  <xacro:property name="boom_length" value="$(arg boom_length)"/>
+  <xacro:property name="boom_scale" value="${boom_length / 6.0}"/>
+
+
+  <!-- ==================== Materials ==================== -->
+
+  <material name="crane_yellow">
+    <color rgba="0.95 0.65 0.05 1.0"/>
+  </material>
+
+  <material name="crane_dark">
+    <color rgba="0.10 0.10 0.12 1.0"/>
+  </material>
+
+  <material name="crane_gray">
+    <color rgba="0.38 0.39 0.42 1.0"/>
+  </material>
+
+
+  <!-- ==================== Base ==================== -->
+
+  <link name="${prefix}base_link">
+
+    <visual>
+      <origin xyz="0 0 0.30" rpy="0 0 0"/>
+      <geometry>
+        <box size="2.60 2.20 0.60"/>
+      </geometry>
+      <material name="crane_dark"/>
+    </visual>
+
+    <visual>
+      <origin xyz="0 0 0.68" rpy="0 0 0"/>
+      <geometry>
+        <cylinder radius="0.72" length="0.20"/>
+      </geometry>
+      <material name="crane_gray"/>
+    </visual>
+
+    <collision>
+      <origin xyz="0 0 0.30" rpy="0 0 0"/>
+      <geometry>
+        <box size="2.60 2.20 0.60"/>
+      </geometry>
+    </collision>
+
+    <inertial>
+      <origin xyz="0 0 0.30" rpy="0 0 0"/>
+      <mass value="3500.0"/>
+      <inertia
+        ixx="1600.0"
+        ixy="0.0"
+        ixz="0.0"
+        iyy="2100.0"
+        iyz="0.0"
+        izz="2800.0"/>
+    </inertial>
+
+  </link>
+
+
+  <!-- ==================== Tower ==================== -->
+
+  <link name="${prefix}tower_link">
+
+    <visual>
+      <origin xyz="0 0 5.00" rpy="0 0 0"/>
+      <geometry>
+        <cylinder radius="0.35" length="10.00"/>
+      </geometry>
+      <material name="crane_yellow"/>
+    </visual>
+
+    <!-- Lower reinforcement -->
+
+    <visual>
+      <origin xyz="0 0 0.50" rpy="0 0 0"/>
+      <geometry>
+        <cylinder radius="0.50" length="1.00"/>
+      </geometry>
+      <material name="crane_yellow"/>
+    </visual>
+
+    <collision>
+      <origin xyz="0 0 5.00" rpy="0 0 0"/>
+      <geometry>
+        <cylinder radius="0.35" length="10.00"/>
+      </geometry>
+    </collision>
+
+    <inertial>
+      <origin xyz="0 0 5.00" rpy="0 0 0"/>
+      <mass value="1800.0"/>
+      <inertia
+        ixx="15000.0"
+        ixy="0.0"
+        ixz="0.0"
+        iyy="15000.0"
+        iyz="0.0"
+        izz="220.0"/>
+    </inertial>
+
+  </link>
+
+  <joint name="${prefix}tower_joint" type="continuous">
+    <parent link="${prefix}base_link"/>
+    <child link="${prefix}tower_link"/>
+    <origin xyz="0 0 0.60" rpy="0 0 0"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="20000.0" velocity="0.75"/>
+    <dynamics damping="2.0" friction="1.0"/>
+  </joint>
+
+
+  <!-- ==================== Boom ==================== -->
+
+  <link name="${prefix}boom_link">
+
+    <!-- Main forward boom -->
+
+    <visual>
+      <origin xyz="${boom_length / 2.0} 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="${boom_length} 0.32 0.32"/>
+      </geometry>
+      <material name="crane_yellow"/>
+    </visual>
+
+    <!-- Rear counter-boom -->
+
+    <visual>
+      <origin xyz="-0.85 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="1.70 0.38 0.38"/>
+      </geometry>
+      <material name="crane_yellow"/>
+    </visual>
+
+    <!-- Counterweight -->
+
+    <visual>
+      <origin xyz="-1.55 0 -0.40" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.70 1.10 0.90"/>
+      </geometry>
+      <material name="crane_dark"/>
+    </visual>
+
+    <collision>
+      <origin xyz="${boom_length / 2.0} 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="${boom_length} 0.32 0.32"/>
+      </geometry>
+    </collision>
+
+    <inertial>
+      <!-- Approximate inertia scaled with span; nominal simulation mass retained. -->
+      <origin xyz="${1.80 * boom_scale} 0 -0.05" rpy="0 0 0"/>
+      <mass value="1100.0"/>
+      <inertia
+        ixx="160.0"
+        ixy="0.0"
+        ixz="0.0"
+        iyy="${4300.0 * boom_scale * boom_scale}"
+        iyz="0.0"
+        izz="${4300.0 * boom_scale * boom_scale}"/>
+    </inertial>
+
+  </link>
+
+  <joint name="${prefix}boom_joint" type="fixed">
+    <parent link="${prefix}tower_link"/>
+    <child link="${prefix}boom_link"/>
+    <origin xyz="0 0 10.00" rpy="0 0 0"/>
+  </joint>
+
+
+  <!-- ==================== Trolley ==================== -->
+
+  <link name="${prefix}trolley_link">
+
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.42 0.52 0.28"/>
+      </geometry>
+      <material name="crane_dark"/>
+    </visual>
+
+    <visual>
+      <origin xyz="-0.12 0.22 0.17" rpy="1.5708 0 0"/>
+      <geometry>
+        <cylinder radius="0.10" length="0.08"/>
+      </geometry>
+      <material name="crane_gray"/>
+    </visual>
+
+    <visual>
+      <origin xyz="0.12 0.22 0.17" rpy="1.5708 0 0"/>
+      <geometry>
+        <cylinder radius="0.10" length="0.08"/>
+      </geometry>
+      <material name="crane_gray"/>
+    </visual>
+
+    <visual>
+      <origin xyz="-0.12 -0.22 0.17" rpy="1.5708 0 0"/>
+      <geometry>
+        <cylinder radius="0.10" length="0.08"/>
+      </geometry>
+      <material name="crane_gray"/>
+    </visual>
+
+    <visual>
+      <origin xyz="0.12 -0.22 0.17" rpy="1.5708 0 0"/>
+      <geometry>
+        <cylinder radius="0.10" length="0.08"/>
+      </geometry>
+      <material name="crane_gray"/>
+    </visual>
+
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.42 0.52 0.28"/>
+      </geometry>
+    </collision>
+
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="120.0"/>
+      <inertia
+        ixx="4.0"
+        ixy="0.0"
+        ixz="0.0"
+        iyy="3.0"
+        iyz="0.0"
+        izz="5.0"/>
+    </inertial>
+
+  </link>
+
+  <joint name="${prefix}trolley_joint" type="prismatic">
+    <parent link="${prefix}boom_link"/>
+    <child link="${prefix}trolley_link"/>
+    <origin xyz="0.40 0 -0.20" rpy="0 0 0"/>
+    <axis xyz="1 0 0"/>
+
+    <limit
+      lower="0.0"
+      upper="${boom_length - 0.80}"
+      effort="5000.0"
+      velocity="1.20"/>
+
+    <dynamics damping="2.0" friction="0.5"/>
+  </joint>
+
+
+  <!-- ==================== Cable guide ==================== -->
+
+  <!--
+    RViz cannot dynamically change the length of a cable cylinder.
+    This fixed thin guide represents the complete possible cable path.
+    The hook moves vertically along this guide.
+  -->
+
+  <link name="${prefix}cable_guide_link">
+
+    <visual>
+      <origin xyz="0 0 -4.65" rpy="0 0 0"/>
+      <geometry>
+        <cylinder radius="0.025" length="9.30"/>
+      </geometry>
+      <material name="crane_gray"/>
+    </visual>
+
+  
+    <!-- Estimated simulation mass; requires calibration for load tests. -->
+    <inertial><origin xyz="0 0 0" rpy="0 0 0"/><mass value="5.0"/><inertia ixx="36.038281250000004" ixy="0" ixz="0" iyy="36.038281250000004" iyz="0" izz="0.0015625"/></inertial>
+  </link>
+
+  <joint name="${prefix}cable_guide_joint" type="fixed">
+    <parent link="${prefix}trolley_link"/>
+    <child link="${prefix}cable_guide_link"/>
+    <origin xyz="0 0 -0.10" rpy="0 0 0"/>
+  </joint>
+
+
+  <!-- ==================== Hook ==================== -->
+
+  <link name="${prefix}hook_link">
+    <!-- Visible rigid sling; native fixed joint carries the payload. -->
+    <visual><origin xyz="0 0 -0.55"/><geometry><cylinder radius="0.018" length="0.50"/></geometry><material name="crane_gray"/></visual>
+
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <cylinder radius="0.16" length="0.22"/>
+      </geometry>
+      <material name="crane_dark"/>
+    </visual>
+
+    <visual>
+      <origin xyz="0 0 -0.18" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.08 0.08 0.28"/>
+      </geometry>
+      <material name="crane_dark"/>
+    </visual>
+
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <cylinder radius="0.16" length="0.22"/>
+      </geometry>
+    </collision>
+
+    <inertial>
+      <origin xyz="0 0 -0.10" rpy="0 0 0"/>
+      <mass value="80.0"/>
+      <inertia
+        ixx="1.2"
+        ixy="0.0"
+        ixz="0.0"
+        iyy="1.2"
+        iyz="0.0"
+        izz="0.8"/>
+    </inertial>
+
+  </link>
+
+  <!--
+    Height calculation:
+
+      tower joint world height  = 0.60 m
+      tower height              = 10.00 m
+      trolley offset            = -0.20 m
+      hook joint offset         = -0.10 m
+      hook tip offset           = -0.30 m
+
+      hook_tip_world_z = 10.00 - hook_joint
+
+      hook_joint = 0.00 m -> hook height = 10.00 m
+      hook_joint = 9.40 m -> hook height = 0.60 m
+  -->
+
+  <joint name="${prefix}hook_joint" type="prismatic">
+    <parent link="${prefix}trolley_link"/>
+    <child link="${prefix}hook_carrier_link"/>
+    <origin xyz="0 0 -0.10" rpy="0 0 0"/>
+    <axis xyz="0 0 -1"/>
+
+    <limit
+      lower="0.0"
+      upper="9.40"
+      effort="80000.0"
+      velocity="1.80"/>
+
+    <dynamics damping="3.0" friction="1.0"/>
+  </joint>
+
+
+  <!-- Swivel keeps the load's world orientation during tower rotation. -->
+  <link name="${prefix}hook_carrier_link">
+    <inertial><mass value="10"/><inertia ixx="0.05" iyy="0.05" izz="0.05" ixy="0" ixz="0" iyz="0"/></inertial>
+  </link>
+  <joint name="${prefix}hook_yaw_joint" type="revolute">
+    <parent link="${prefix}hook_carrier_link"/><child link="${prefix}hook_link"/>
+    <origin xyz="0 0 0"/><axis xyz="0 0 1"/>
+    <limit lower="-6.2831853" upper="6.2831853" effort="30000" velocity="0.45"/>
+    <dynamics damping="2"/>
+  </joint>
+  <gazebo><plugin filename="ignition-gazebo-joint-controller-system" name="ignition::gazebo::systems::JointController">
+    <joint_name>${prefix}hook_yaw_joint</joint_name>
+    <topic>/crane/hook_yaw_velocity_cmd</topic><use_force_commands>false</use_force_commands>
+    <initial_velocity>0</initial_velocity>
+  </plugin></gazebo>
+  <!-- Physical hook point used by TF and postconditions -->
+
+  <link name="${prefix}hook_tip_link">
+
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <sphere radius="0.13"/>
+      </geometry>
+      <material name="crane_dark"/>
+    </visual>
+
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <sphere radius="0.13"/>
+      </geometry>
+    </collision>
+
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="40.0"/>
+      <inertia
+        ixx="0.28"
+        ixy="0.0"
+        ixz="0.0"
+        iyy="0.28"
+        iyz="0.0"
+        izz="0.28"/>
+    </inertial>
+
+  </link>
+
+  <joint name="${prefix}hook_tip_joint" type="fixed">
+    <parent link="${prefix}hook_link"/>
+    <child link="${prefix}hook_tip_link"/>
+    <origin xyz="0 0 -0.30" rpy="0 0 0"/>
+  </joint>
+
+
+  <!-- Gazebo Fortress simulation extensions. -->
+<link name="world"/><joint name="${prefix}world_fixed_joint" type="fixed"><parent link="world"/><child link="${prefix}base_link"/><origin xyz="0 0 0" rpy="0 0 0"/></joint><gazebo><plugin filename="ignition-gazebo-joint-controller-system" name="ignition::gazebo::systems::JointController">
+    <joint_name>${prefix}tower_joint</joint_name>
+    <topic>/crane/tower_velocity_cmd</topic><use_force_commands>false</use_force_commands>
+    <initial_velocity>0</initial_velocity>
+  </plugin></gazebo><gazebo><!-- Trolley position goals are closed-loop controlled by the skill server.
+       One velocity controller only; no simultaneous perfect-position driver. -->
+  <plugin filename="ignition-gazebo-joint-controller-system" name="ignition::gazebo::systems::JointController">
+    <joint_name>${prefix}trolley_joint</joint_name>
+    <topic>/crane/trolley_velocity_cmd</topic>
+    <!-- Close velocity feedback with bounded motor force. A zero velocity
+         target actively damps trolley/load momentum instead of resetting it. -->
+    <use_force_commands>true</use_force_commands><initial_velocity>0</initial_velocity>
+    <p_gain>20000</p_gain><i_gain>0</i_gain><d_gain>0</d_gain>
+    <i_max>0</i_max><i_min>0</i_min>
+    <cmd_max>5000</cmd_max><cmd_min>-5000</cmd_min>
+  </plugin></gazebo><gazebo><plugin filename="ignition-gazebo-joint-position-controller-system" name="ignition::gazebo::systems::JointPositionController"><joint_name>${prefix}hook_joint</joint_name><topic>/crane/hook_cmd</topic><use_velocity_commands>true</use_velocity_commands><p_gain>1.5</p_gain><cmd_max>0.495</cmd_max><cmd_min>-0.495</cmd_min><initial_position>0.0</initial_position></plugin></gazebo><gazebo><plugin filename="ignition-gazebo-joint-state-publisher-system" name="ignition::gazebo::systems::JointStatePublisher"><topic>/crane/joint_states</topic></plugin></gazebo>
+</robot>
