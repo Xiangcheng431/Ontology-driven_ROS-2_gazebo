@@ -16,14 +16,42 @@ Task order is derived from product input/output dependencies. Robot motion is im
 
 ~~~mermaid
 flowchart TD
-    Client["Task ID"] --> Task["Task Manager"]
-    Task <--> World["Semantic World Model"]
-    Task --> Skill["Skill Manager"]
-    Skill <--> World
-    Skill --> Robot["Robot skill servers"]
-    Robot <--> Sim["Gazebo simulation"]
-    Sim --> Component["Component Manager"]
-    Component --> World
+    Launch["cask_oneopen"] --> Publish["Publish task ID and ExecuteTask action"]
+    Publish --> Task["cask_task_manager
+Query task requirements, robot capabilities and runtime state
+Order required capability sequence by input-output data flow
+Query, rank and match provided capability skill server candidates"]
+    Task --> Skill["cask_skill_manager
+Confirm semantic agreement and generate parameters
+Publish the ROS 2 action / send execute skill goal"]
+    Skill --> Robot["robot_skill_server + Gazebo motion control
+Path planning / avoidance / physical motion"]
+    Robot --> Safe{"Safe executable
+candidate available?"}
+    Safe -->|No| Stop["Task failed / safe stop"]
+    Safe -->|Yes| Result{"Skill results?"}
+    Result --> Update["Update world_model
+Record execution results
+Update component_manager"]
+    Update -->|Failure: re-query skill| Task
+    Update -->|Success| Remaining{"Remaining
+task steps?"}
+    Remaining -->|Yes: next step| Task
+    Remaining -->|No| Done["Task completed"]
+
+    World["world_model
+Ontology ABox
+Task requirements
+Robot capabilities
+Skills and interfaces
+Runtime state"]
+    Task <-.-> World
+    Skill <-.-> World
+
+    classDef module fill:#ffffff,stroke:#1565c0,stroke-width:1.5px,color:#111111;
+    classDef decision fill:#ffffff,stroke:#1565c0,stroke-width:1.5px,color:#111111;
+    class Launch,Publish,Task,Skill,Robot,Stop,Update,Done,World module;
+    class Safe,Result,Remaining decision;
 ~~~
 
 The World Model describes the task and available resources. The Task Manager selects and orders suitable skills. The Skill Manager resolves interfaces and execution parameters. Robot servers implement lifting and navigation, while the Component Manager reports the measured payload and scene state.
