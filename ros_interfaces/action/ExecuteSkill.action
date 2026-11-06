@@ -1,0 +1,14 @@
+string execution_id
+string task_id
+string required_capability_id
+string provided_capability_id
+string skill_id
+string[] parameter_names
+float64[] parameter_values
+string[] parameter_units
+---
+bool success
+string message
+---
+float32 progress
+string status
