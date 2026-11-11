@@ -1,4 +1,4 @@
-# Ontology-Driven ROS 2 capability matching Multi-Robot Framework for construction task
+# Ontology-Driven ROS 2 capability matching Multi-Robot framework for construction task
 
 **Master's thesis — Xiangcheng Li, M.Sc. Construction Robotics, RWTH Aachen University**
 
