@@ -1,0 +1,2140 @@
+@prefix abox: <http://www.semanticweb.org/lixiangcheng/CASK+CRO-abox#> .
+@prefix din: <http://www.w3id.org/hsu-aut/DINEN61360#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix scene: <urn:cask:scene:> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+abox:Bobcat_01 a scene:RobotEntity ;
+    scene:gazeboModelName "bobcat" ;
+    scene:hasInitialPose scene:initial_bobcat .
+
+abox:Crane_01 a scene:RobotEntity ;
+    scene:gazeboModelName "crane" ;
+    scene:hasInitialPose scene:initial_crane .
+
+abox:Forklift_01 a scene:RobotEntity ;
+    scene:gazeboModelName "forklift" ;
+    scene:hasInitialPose scene:initial_forklift .
+
+abox:Innok224_01 a scene:RobotEntity ;
+    scene:gazeboModelName "innok224" ;
+    scene:hasInitialPose scene:initial_innok224 .
+
+abox:Jekko_01 a scene:RobotEntity ;
+    scene:gazeboModelName "jekko" ;
+    scene:hasInitialPose scene:initial_jekko .
+
+abox:Kali_01 a scene:RobotEntity ;
+    scene:gazeboModelName "kali" ;
+    scene:hasInitialPose scene:initial_kali .
+
+abox:ScrewPosition_005 a owl:NamedIndividual,
+        <http://www.w3id.org/hsu-aut/VDI3682#Product> ;
+    abox:hasOrientationYaw 0.0 ;
+    abox:hasPositionX -1.1 ;
+    abox:hasPositionY -1.32 ;
+    abox:hasPositionZ 1.158 ;
+    abox:hasReferenceFrame "world" ;
+    scene:sceneRole "task_state_or_work_point" ;
+    scene:sourcePath "src/ontology/CASK+CRO-abox.ttl" .
+
+abox:Task002ExcavatingBefore a owl:NamedIndividual,
+        <http://www.w3id.org/hsu-aut/VDI3682#Product> ;
+    abox:hasOrientationYaw 0.0 ;
+    abox:hasPositionX 5.0 ;
+    abox:hasPositionY -3.0 ;
+    abox:hasPositionZ -1.0 ;
+    abox:hasReferenceFrame "world" ;
+    din:has_Data_Element abox:Soil_Requirement_Property,
+        abox:Task002Payload_Property ;
+    scene:sceneRole "task_state_or_work_point" ;
+    scene:sourcePath "src/ontology/CASK+CRO-abox.ttl" .
+
+abox:Task002LiftingAfter a owl:NamedIndividual,
+        <http://www.w3id.org/hsu-aut/VDI3682#Product> ;
+    abox:hasOrientationYaw -1.5707963267948966 ;
+    abox:hasPositionX 7.5 ;
+    abox:hasPositionY 0.0 ;
+    abox:hasPositionZ 0.7 ;
+    abox:hasReferenceFrame "world" ;
+    din:has_Data_Element abox:Soil_Requirement_Property,
+        abox:SuspendedHandoffRequirement_Property,
+        abox:Task002HandoffMiddle_Property,
+        abox:Task002LiftingHeight_Property,
+        abox:Task002Payload_Property ;
+    scene:sceneRole "task_state_or_work_point" ;
+    scene:sourcePath "src/ontology/CASK+CRO-abox.ttl" .
+
+abox:Task002LiftingBefore a owl:NamedIndividual,
+        <http://www.w3id.org/hsu-aut/VDI3682#Product> ;
+    abox:hasOrientationYaw 0.0 ;
+    abox:hasPositionX 5.0 ;
+    abox:hasPositionY -3.0 ;
+    abox:hasPositionZ 0.4 ;
+    abox:hasReferenceFrame "world" ;
+    din:has_Data_Element abox:Soil_Requirement_Property,
+        abox:Task002Payload_Property ;
+    scene:sceneRole "task_state_or_work_point" ;
+    scene:sourcePath "src/ontology/CASK+CRO-abox.ttl" .
+
+abox:Task002LiftingMiddle a owl:NamedIndividual,
+        <http://www.w3id.org/hsu-aut/VDI2206#Product> ;
+    abox:hasOrientationYaw -1.5707963267948966 ;
+    abox:hasPositionX 7.5 ;
+    abox:hasPositionY 0.0 ;
+    abox:hasPositionZ 2.30 ;
+    abox:hasReferenceFrame "world" ;
+    din:has_Data_Element abox:Soil_Requirement_Property,
+        abox:Task002Payload_Property ;
+    scene:sceneRole "task_state_or_work_point" ;
+    scene:sourcePath "src/ontology/CASK+CRO-abox.ttl" .
+
+abox:Task002TransportingAfter a owl:NamedIndividual,
+        <http://www.w3id.org/hsu-aut/VDI3682#Product> ;
+    abox:hasOrientationYaw 0.0 ;
+    abox:hasPositionX 14 ;
+    abox:hasPositionY 4.0 ;
+    abox:hasPositionZ 0.4 ;
+    abox:hasReferenceFrame "world" ;
+    din:has_Data_Element abox:Soil_Requirement_Property,
+        abox:Task002TransportDistance_Property ;
+    scene:sceneRole "task_state_or_work_point" ;
+    scene:sourcePath "src/ontology/CASK+CRO-abox.ttl" .
+
+abox:Task002TransportingBefore a owl:NamedIndividual,
+        <http://www.w3id.org/hsu-aut/VDI3682#Product> ;
+    abox:hasOrientationYaw -1.5707963267948966 ;
+    abox:hasPositionX 7.5 ;
+    abox:hasPositionY 0.0 ;
+    abox:hasPositionZ 0.7 ;
+    abox:hasReferenceFrame "world" ;
+    din:has_Data_Element abox:Soil_Requirement_Property,
+        abox:Task002Payload_Property ;
+    scene:sceneRole "task_state_or_work_point" ;
+    scene:sourcePath "src/ontology/CASK+CRO-abox.ttl" .
+
+abox:Task003InitialRoofComponent a owl:NamedIndividual,
+        <http://www.w3id.org/hsu-aut/VDI3682#Product> ;
+    abox:hasPositionX 0.0 ;
+    abox:hasPositionY 1.8 ;
+    abox:hasReferenceFrame "crane_base_link" ;
+    din:has_Data_Element abox:RoofComponent_Requirement_Property,
+        abox:Task003Payload_Property ;
+    scene:sceneRole "task_state_or_work_point" ;
+    scene:sourcePath "src/ontology/CASK+CRO-abox.ttl" .
+
+abox:Task003LiftedRoofComponent a owl:NamedIndividual,
+        <http://www.w3id.org/hsu-aut/VDI3682#Product> ;
+    abox:hasPositionX -1.8 ;
+    abox:hasPositionY 0.0 ;
+    abox:hasReferenceFrame "crane_base_link" ;
+    din:has_Data_Element abox:RoofComponent_Requirement_Property,
+        abox:Task003LiftingHeight_Property,
+        abox:Task003RoofPosition_Property ;
+    scene:sceneRole "task_state_or_work_point" ;
+    scene:sourcePath "src/ontology/CASK+CRO-abox.ttl" .
+
+abox:Task003ScrewedRoofComponent a owl:NamedIndividual,
+        <http://www.w3id.org/hsu-aut/VDI3682#Product> ;
+    din:has_Data_Element abox:RoofComponent_Requirement_Property,
+        abox:Task003ScrewingRotation_Property,
+        abox:Task003ScrewingTorque_Property .
+
+abox:Task003ToolPositionedRoofComponent a owl:NamedIndividual,
+        <http://www.w3id.org/hsu-aut/VDI3682#Product> ;
+    abox:hasOrientationYaw 0.0 ;
+    abox:hasPositionX 1.0 ;
+    abox:hasPositionY 0.0 ;
+    abox:hasPositionZ 1.8 ;
+    abox:hasReferenceFrame "world" ;
+    din:has_Data_Element abox:RoofComponent_Requirement_Property,
+        abox:Task003LiftingHeight_Property,
+        abox:Task003RoofPosition_Property,
+        abox:Task003ToolPosition_Property,
+        abox:Task003ToolPositioningError_Property ;
+    scene:sceneRole "task_state_or_work_point" ;
+    scene:sourcePath "src/ontology/CASK+CRO-abox.ttl" .
+
+abox:Task004LiftingAfter a owl:NamedIndividual,
+        <http://www.w3id.org/hsu-aut/VDI3682#Product> ;
+    abox:hasOrientationYaw 0.0 ;
+    abox:hasPositionX 5.0 ;
+    abox:hasPositionY 4.5 ;
+    abox:hasPositionZ 0.4 ;
+    abox:hasReferenceFrame "world" ;
+    din:has_Data_Element abox:Rebar_Requirement_Property,
+        abox:Task001HoldDuration_Property,
+        abox:TaskHeight_Property ;
+    scene:sceneRole "task_state_or_work_point" ;
+    scene:sourcePath "src/ontology/CASK+CRO-abox.ttl" .
+
+abox:Task004LiftingBefore a owl:NamedIndividual,
+        <http://www.w3id.org/hsu-aut/VDI3682#Product> ;
+    abox:hasOrientationYaw 0.0 ;
+    abox:hasPositionX 0.0 ;
+    abox:hasPositionY 3.0 ;
+    abox:hasPositionZ 0.4 ;
+    abox:hasReferenceFrame "world" ;
+    din:has_Data_Element abox:Rebar_Requirement_Property,
+        abox:TaskPayload_Property ;
+    scene:sceneRole "task_state_or_work_point" ;
+    scene:sourcePath "src/ontology/CASK+CRO-abox.ttl" .
+
+abox:Task004ScanningAfter a owl:NamedIndividual,
+        <http://www.w3id.org/hsu-aut/VDI3682#Product> ;
+    abox:hasOrientationYaw 0.0 ;
+    abox:hasPositionX 5.0 ;
+    abox:hasPositionY 4.5 ;
+    abox:hasPositionZ 0.4 ;
+    abox:hasReferenceFrame "world" ;
+    din:has_Data_Element abox:Rebar_Requirement_Property,
+        abox:Scanned_Requirement_Property ;
+    scene:sceneRole "task_state_or_work_point" ;
+    scene:sourcePath "src/ontology/CASK+CRO-abox.ttl" .
+
+abox:Task005EnteringAfter a owl:NamedIndividual,
+        <http://www.w3id.org/hsu-aut/VDI3682#Product> ;
+    abox:hasOrientationYaw 0.0 ;
+    abox:hasPositionX -1.1 ;
+    abox:hasPositionY -1.6 ;
+    abox:hasPositionZ 1.0 ;
+    abox:hasReferenceFrame "world" ;
+    din:has_Data_Element abox:SteelComponent_Requirement_Property ;
+    scene:sceneRole "task_state_or_work_point" ;
+    scene:sourcePath "src/ontology/CASK+CRO-abox.ttl" .
+
+abox:Task005Innok224ScanningPose a owl:NamedIndividual,
+        <http://www.w3id.org/hsu-aut/VDI3682#Product> ;
+    abox:hasOrientationYaw -1.7359450042095235 ;
+    abox:hasPositionX -0.85 ;
+    abox:hasPositionY -0.1 ;
+    abox:hasPositionZ 0.0 ;
+    abox:hasReferenceFrame "world" ;
+    scene:sceneRole "task_state_or_work_point" ;
+    scene:sourcePath "src/ontology/CASK+CRO-abox.ttl" .
+
+abox:Task005JekkoWorkPose a owl:NamedIndividual ;
+    abox:hasOrientationYaw 1.5707963267948966 ;
+    abox:hasPositionX -2.6 ;
+    abox:hasPositionY -5.0 ;
+    abox:hasPositionZ 0.0 ;
+    abox:hasReferenceFrame "world" ;
+    scene:sceneRole "task_state_or_work_point" ;
+    scene:sourcePath "src/ontology/CASK+CRO-abox.ttl" .
+
+abox:Task005KaliRetreatPose a owl:NamedIndividual,
+        <http://www.w3id.org/hsu-aut/VDI3682#Product> ;
+    abox:hasOrientationYaw 0.0 ;
+    abox:hasPositionX -4.9 ;
+    abox:hasPositionY 0.25 ;
+    abox:hasPositionZ 0.0 ;
+    abox:hasReferenceFrame "world" ;
+    scene:sceneRole "task_state_or_work_point" ;
+    scene:sourcePath "src/ontology/CASK+CRO-abox.ttl" .
+
+abox:Task005KaliworkingPose a owl:NamedIndividual,
+        <http://www.w3id.org/hsu-aut/VDI3682#Product> ;
+    abox:hasOrientationYaw 0.0 ;
+    abox:hasPositionX -1.6 ;
+    abox:hasPositionY 0.25 ;
+    abox:hasPositionZ 0.0 ;
+    abox:hasReferenceFrame "world" ;
+    scene:sceneRole "task_state_or_work_point" ;
+    scene:sourcePath "src/ontology/CASK+CRO-abox.ttl" .
+
+abox:Task005RetreatingAfter a owl:NamedIndividual,
+        <http://www.w3id.org/hsu-aut/VDI3682#Product> ;
+    abox:hasOrientationYaw 0.0 ;
+    abox:hasPositionX -1.1 ;
+    abox:hasPositionY -1.6 ;
+    abox:hasPositionZ 1.0 ;
+    abox:hasReferenceFrame "world" ;
+    din:has_Data_Element abox:SteelComponent_Requirement_Property ;
+    scene:sceneRole "task_state_or_work_point" ;
+    scene:sourcePath "src/ontology/CASK+CRO-abox.ttl" .
+
+abox:Task005ScanningAfter a owl:NamedIndividual,
+        <http://www.w3id.org/hsu-aut/VDI3682#Product> ;
+    abox:hasOrientationYaw 0.0 ;
+    abox:hasPositionX -1.1 ;
+    abox:hasPositionY -1.6 ;
+    abox:hasPositionZ 1.0 ;
+    abox:hasReferenceFrame "world" ;
+    din:has_Data_Element abox:Scanned_Requirement_Property,
+        abox:SteelComponent_Requirement_Property ;
+    scene:sceneRole "task_state_or_work_point" ;
+    scene:sourcePath "src/ontology/CASK+CRO-abox.ttl" .
+
+abox:Task005ScrewingAfter a owl:NamedIndividual,
+        <http://www.w3id.org/hsu-aut/VDI3682#Product> ;
+    abox:hasOrientationYaw 0.0 ;
+    abox:hasPositionX -1.1 ;
+    abox:hasPositionY -1.6 ;
+    abox:hasPositionZ 1.0 ;
+    abox:hasReferenceFrame "world" ;
+    din:has_Data_Element abox:SteelComponent_Requirement_Property,
+        abox:Task005ScrewingRotation_Property,
+        abox:Task005ScrewingTorque_Property ;
+    scene:sceneRole "task_state_or_work_point" ;
+    scene:sourcePath "src/ontology/CASK+CRO-abox.ttl" .
+
+abox:Task005ToolChangingAfter a owl:NamedIndividual,
+        <http://www.w3id.org/hsu-aut/VDI3682#Product> ;
+    abox:hasOrientationYaw 0.0 ;
+    abox:hasPositionX -1.1 ;
+    abox:hasPositionY -1.6 ;
+    abox:hasPositionZ 1.0 ;
+    abox:hasReferenceFrame "world" ;
+    din:has_Data_Element abox:SteelComponent_Requirement_Property ;
+    scene:sceneRole "task_state_or_work_point" ;
+    scene:sourcePath "src/ontology/CASK+CRO-abox.ttl" .
+
+abox:Task005ToolPositioningAfter a owl:NamedIndividual,
+        <http://www.w3id.org/hsu-aut/VDI3682#Product> ;
+    abox:hasOrientationYaw 0.0 ;
+    abox:hasPositionX -1.1 ;
+    abox:hasPositionY -1.6 ;
+    abox:hasPositionZ 1.0 ;
+    abox:hasReferenceFrame "world" ;
+    din:has_Data_Element abox:SteelComponent_Requirement_Property,
+        abox:Task005ToolPosition_Property,
+        abox:Task005ToolPositioningError_Property ;
+    scene:sceneRole "task_state_or_work_point" ;
+    scene:sourcePath "src/ontology/CASK+CRO-abox.ttl" .
+
+abox:Task005WeldingAfter a owl:NamedIndividual,
+        <http://www.w3id.org/hsu-aut/VDI3682#Product> ;
+    abox:hasOrientationYaw 0.0 ;
+    abox:hasPositionX -1.1 ;
+    abox:hasPositionY -1.6 ;
+    abox:hasPositionZ 1.0 ;
+    abox:hasReferenceFrame "world" ;
+    din:has_Data_Element abox:SteelComponent_Requirement_Property ;
+    scene:sceneRole "task_state_or_work_point" ;
+    scene:sourcePath "src/ontology/CASK+CRO-abox.ttl" .
+
+abox:Task005WeldingEnd a owl:NamedIndividual,
+        <http://www.w3id.org/hsu-aut/VDI3682#Product> ;
+    abox:hasOrientationYaw 0.0 ;
+    abox:hasPositionX -1.2 ;
+    abox:hasPositionY -1.4 ;
+    abox:hasPositionZ 1.17 ;
+    abox:hasReferenceFrame "world" ;
+    scene:sceneRole "task_state_or_work_point" ;
+    scene:sourcePath "src/ontology/CASK+CRO-abox.ttl" .
+
+abox:Task005WeldingStart a owl:NamedIndividual,
+        <http://www.w3id.org/hsu-aut/VDI3682#Product> ;
+    abox:hasOrientationYaw 0.0 ;
+    abox:hasPositionX -1.0 ;
+    abox:hasPositionY -1.4 ;
+    abox:hasPositionZ 1.17 ;
+    abox:hasReferenceFrame "world" ;
+    scene:sceneRole "task_state_or_work_point" ;
+    scene:sourcePath "src/ontology/CASK+CRO-abox.ttl" .
+
+abox:TaskElementAfter_001 a owl:NamedIndividual,
+        <http://www.w3id.org/hsu-aut/VDI3682#Product> ;
+    abox:hasOrientationYaw 0.0 ;
+    abox:hasPositionX 5.0 ;
+    abox:hasPositionY 4.5 ;
+    abox:hasPositionZ 0.4 ;
+    abox:hasReferenceFrame "world" ;
+    din:has_Data_Element abox:Rebar_Requirement_Property,
+        abox:Task001HoldDuration_Property,
+        abox:TaskHeight_Property ;
+    scene:sceneRole "task_state_or_work_point" ;
+    scene:sourcePath "src/ontology/CASK+CRO-abox.ttl" .
+
+abox:TruckAcceptedElement a owl:NamedIndividual,
+        <http://www.w3id.org/hsu-aut/VDI3682#Product> ;
+    abox:hasPositionZ 1.38 ;
+    abox:hasReferenceFrame "world" ;
+    din:has_Data_Element abox:Soil_Assurance_Property,
+        abox:SuspendedHandoffAssurance_Property,
+        abox:TruckPayload_Property ;
+    scene:sceneRole "task_state_or_work_point" ;
+    scene:sourcePath "src/ontology/CASK+CRO-abox.ttl" .
+
+abox:Truck_01 a scene:RobotEntity ;
+    scene:gazeboModelName "truck" ;
+    scene:hasInitialPose scene:initial_truck .
+
+scene:SceneSupplement a owl:Ontology ;
+    rdfs:comment "IOC conversion supplement only. Existing launch, motion, ABox and runtime World Model are unchanged. Initial poses, task states, declared defaults and launch overrides have distinct records. Do not interpret this snapshot as live state." .
+
+scene:TimberTransfer a scene:MaterialTransferScenario ;
+    rdfs:comment "Simulation defaults: 100 kg palletized timber. Pickup behind Kali; storage to the right. Coordinates are scene facts, not control code. Adjust here for a different scene." ;
+    scene:carryHeight 0.75 ;
+    scene:delivery scene:TimberIntermediateStorage ;
+    scene:gazeboModelName "timber_01" ;
+    scene:massKg 100.0 ;
+    scene:material "Timber" ;
+    scene:mobileCraneWorkPose scene:TimberMobileCraneWork ;
+    scene:pickup scene:TimberPickup ;
+    scene:pickupApproachDistance 2.5e0 .
+
+scene:component_task001_rebar a scene:ComponentEntity ;
+    scene:gazeboModelName "task001_rebar" ;
+    scene:hasInitialPose scene:initial_task001_rebar ;
+    scene:massKg 2e+03 .
+
+scene:component_task002_soil a scene:ComponentEntity ;
+    scene:gazeboModelName "task002_soil" ;
+    scene:hasInitialPose scene:initial_task002_soil ;
+    scene:massKg 3e+03 .
+
+scene:component_task005_steel a scene:ComponentEntity ;
+    scene:gazeboModelName "task005_steel" ;
+    scene:hasInitialPose scene:initial_task005_steel ;
+    scene:massKg 2e+01 ;
+    scene:sizeX 8e-01 ;
+    scene:sizeY 5e-01 ;
+    scene:sizeZ 3e-01 .
+
+scene:component_task005_work_support a scene:ComponentEntity ;
+    scene:gazeboModelName "task005_work_support" ;
+    scene:hasInitialPose scene:initial_task005_work_support ;
+    scene:sizeX 8e-01 ;
+    scene:sizeY 5e-01 ;
+    scene:sizeZ 8.5e-01 .
+
+scene:launch_bobcat_excavating_server_57 a scene:LaunchParameterOverride ;
+    scene:sourceLine 57 ;
+    scene:sourcePath "src/cask_oneopen/launch/cask_gazebo_oneopen.launch.py" ;
+    scene:valueJSON "{\"motion_timeout\": 600.0, \"planning_timeout\": 12.0, \"rear_steering\": true, \"robot\": \"bobcat\"}" .
+
+scene:launch_bobcat_rear_steering_57 a scene:LaunchParameterOverride ;
+    scene:sourceLine 57 ;
+    scene:sourcePath "src/cask_oneopen/launch/cask_gazebo_oneopen.launch.py" ;
+    scene:valueJSON "{\"robot\": \"bobcat\"}" .
+
+scene:launch_cask_component_manager_57 a scene:LaunchParameterOverride ;
+    scene:sourceLine 57 ;
+    scene:sourcePath "src/cask_oneopen/launch/cask_gazebo_oneopen.launch.py" ;
+    scene:valueJSON "{\"gazebo_physics\": true}" .
+
+scene:launch_cask_obstacle_manager_57 a scene:LaunchParameterOverride ;
+    scene:sourceLine 57 ;
+    scene:sourcePath "src/cask_oneopen/launch/cask_gazebo_oneopen.launch.py" ;
+    scene:valueJSON "{\"gazebo_physics\": true, \"obstacle_radius\": 0.45}" .
+
+scene:launch_cask_skill_manager_57 a scene:LaunchParameterOverride ;
+    scene:sourceLine 57 ;
+    scene:sourcePath "src/cask_oneopen/launch/cask_gazebo_oneopen.launch.py" ;
+    scene:valueJSON "{\"crane_world_x\": 2.8, \"crane_world_y\": 0.0, \"crane_world_yaw\": 0.0, \"forklift_cargo_offset_x\": 1.99, \"physical_cargo_mode\": true}" .
+
+scene:launch_cask_task_manager_57 a scene:LaunchParameterOverride ;
+    scene:sourceLine 57 ;
+    scene:sourcePath "src/cask_oneopen/launch/cask_gazebo_oneopen.launch.py" ;
+    scene:valueJSON "{}" .
+
+scene:launch_crane_lifting_server_57 a scene:LaunchParameterOverride ;
+    scene:sourceLine 57 ;
+    scene:sourcePath "src/cask_oneopen/launch/cask_gazebo_oneopen.launch.py" ;
+    scene:valueJSON "{\"angular_velocity_control\": true, \"physical_cargo_mode\": true, \"trolley_velocity_control\": true}" .
+
+scene:launch_crane_world_transform_57 a scene:LaunchParameterOverride ;
+    scene:sourceLine 57 ;
+    scene:sourcePath "src/cask_oneopen/launch/cask_gazebo_oneopen.launch.py" ;
+    scene:valueJSON "[{\"use_sim_time\": true}]" .
+
+scene:launch_forklift_lifting_server_57 a scene:LaunchParameterOverride ;
+    scene:sourceLine 57 ;
+    scene:sourcePath "src/cask_oneopen/launch/cask_gazebo_oneopen.launch.py" ;
+    scene:valueJSON "{\"drive_speed\": 0.7, \"initial_x\": -16.0, \"initial_y\": 4.0, \"initial_yaw\": 0.0, \"lift_joint_upper\": 2.7, \"motion_timeout\": 600.0, \"navigation_bounds\": [-20.0, 20.0, -10.0, 12.0], \"odom_is_world\": false, \"physical_cargo_mode\": true}" .
+
+scene:launch_forklift_rear_steering_57 a scene:LaunchParameterOverride ;
+    scene:sourceLine 57 ;
+    scene:sourcePath "src/cask_oneopen/launch/cask_gazebo_oneopen.launch.py" ;
+    scene:valueJSON "{\"robot\": \"forklift\"}" .
+
+scene:launch_gazebo_feedback_relay_61 a scene:LaunchParameterOverride ;
+    scene:sourceLine 61 ;
+    scene:sourcePath "src/cask_oneopen/launch/cask_gazebo_oneopen.launch.py" ;
+    scene:valueJSON "[{\"use_sim_time\": false}]" .
+
+scene:launch_innok224_front_steering_driver_58 a scene:LaunchParameterOverride ;
+    scene:sourceLine 58 ;
+    scene:sourcePath "src/cask_oneopen/launch/cask_gazebo_oneopen.launch.py" ;
+    scene:valueJSON "[{\"use_sim_time\": true}]" .
+
+scene:launch_innok224_scanning_server_58 a scene:LaunchParameterOverride ;
+    scene:sourceLine 58 ;
+    scene:sourcePath "src/cask_oneopen/launch/cask_gazebo_oneopen.launch.py" ;
+    scene:valueJSON "{}" .
+
+scene:launch_jekko_lifting_server_58 a scene:LaunchParameterOverride ;
+    scene:sourceLine 58 ;
+    scene:sourcePath "src/cask_oneopen/launch/cask_gazebo_oneopen.launch.py" ;
+    scene:valueJSON "{}" .
+
+scene:launch_kali_skill_server_58 a scene:LaunchParameterOverride ;
+    scene:sourceLine 58 ;
+    scene:sourcePath "src/cask_oneopen/launch/cask_gazebo_oneopen.launch.py" ;
+    scene:valueJSON "{}" .
+
+scene:launch_task002_scene_node_57 a scene:LaunchParameterOverride ;
+    scene:sourceLine 57 ;
+    scene:sourcePath "src/cask_oneopen/launch/cask_gazebo_oneopen.launch.py" ;
+    scene:valueJSON "{}" .
+
+scene:launch_truck_transporting_server_57 a scene:LaunchParameterOverride ;
+    scene:sourceLine 57 ;
+    scene:sourcePath "src/cask_oneopen/launch/cask_gazebo_oneopen.launch.py" ;
+    scene:valueJSON "{\"angular_speed\": 0.24, \"drive_speed\": 0.6, \"motion_timeout\": 600.0, \"planning_timeout\": 12.0, \"robot\": \"truck\"}" .
+
+scene:model_bobcat_01.urdf.xacro a scene:ModelResource ;
+    scene:sourcePath "src/cask_robot_description/urdf/bobcat_01.urdf.xacro" ;
+    scene:valueJSON "{\"path\": \"src/cask_robot_description/urdf/bobcat_01.urdf.xacro\"}" .
+
+scene:model_crane_01.urdf.xacro a scene:ModelResource ;
+    scene:sourcePath "src/cask_robot_description/urdf/crane_01.urdf.xacro" ;
+    scene:valueJSON "{\"path\": \"src/cask_robot_description/urdf/crane_01.urdf.xacro\"}" .
+
+scene:model_forklift_01.urdf.xacro a scene:ModelResource ;
+    scene:sourcePath "src/cask_robot_description/urdf/forklift_01.urdf.xacro" ;
+    scene:valueJSON "{\"path\": \"src/cask_robot_description/urdf/forklift_01.urdf.xacro\"}" .
+
+scene:model_innok224_01.urdf.xacro a scene:ModelResource ;
+    scene:sourcePath "src/cask_robot_description/urdf/innok224_01.urdf.xacro" ;
+    scene:valueJSON "{\"path\": \"src/cask_robot_description/urdf/innok224_01.urdf.xacro\"}" .
+
+scene:model_jekko_01.urdf.xacro a scene:ModelResource ;
+    scene:sourcePath "src/cask_robot_description/urdf/jekko_01.urdf.xacro" ;
+    scene:valueJSON "{\"path\": \"src/cask_robot_description/urdf/jekko_01.urdf.xacro\"}" .
+
+scene:model_kali_01.urdf.xacro a scene:ModelResource ;
+    scene:sourcePath "src/cask_robot_description/urdf/kali_01.urdf.xacro" ;
+    scene:valueJSON "{\"path\": \"src/cask_robot_description/urdf/kali_01.urdf.xacro\"}" .
+
+scene:model_kmr.urdf.xacro a scene:ModelResource ;
+    scene:sourcePath "src/cask_robot_description/urdf/kmr.urdf.xacro" ;
+    scene:valueJSON "{\"path\": \"src/cask_robot_description/urdf/kmr.urdf.xacro\"}" .
+
+scene:model_roof_component_03.urdf.xacro a scene:ModelResource ;
+    scene:sourcePath "src/cask_robot_description/urdf/roof_component_03.urdf.xacro" ;
+    scene:valueJSON "{\"path\": \"src/cask_robot_description/urdf/roof_component_03.urdf.xacro\"}" .
+
+scene:model_truck_01.urdf.xacro a scene:ModelResource ;
+    scene:sourcePath "src/cask_robot_description/urdf/truck_01.urdf.xacro" ;
+    scene:valueJSON "{\"path\": \"src/cask_robot_description/urdf/truck_01.urdf.xacro\"}" .
+
+scene:rebar_collision_parts a scene:ComponentLocalGeometry ;
+    scene:sourcePath "src/cask_component_manager/cask_component_manager/component_manager_node.py" ;
+    scene:valueJSON "[[\"deck\", [0, 0, 0.125], [1.2, 1.0, 0.05], \"0.45 0.30 0.16 1\"], [\"left_runner\", [0, 0.48, -0.15], [1.2, 0.1, 0.5], \"0.4 0.26 0.13 1\"], [\"right_runner\", [0, -0.48, -0.15], [1.2, 0.1, 0.5], \"0.4 0.26 0.13 1\"], [\"steel_bundle\", [0, 0, 0.26], [0.22, 1.6, 0.22], \"0.5 0.27 0.12 1\"]]" .
+
+scene:soil_SOIL_BOXES a scene:ComponentLocalGeometry ;
+    scene:sourcePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/task002_scene.py" ;
+    scene:valueJSON "[[\"deck\", [0, 0, 0.125], [1.2, 1.0, 0.05]], [\"left_runner\", [0, 0.48, -0.15], [1.2, 0.1, 0.5]], [\"right_runner\", [0, -0.48, -0.15], [1.2, 0.1, 0.5]], [\"soil_volume\", [0, 0, 0.36], [0.9, 0.8, 0.4]]]" .
+
+scene:soil_SOIL_SIZE a scene:ComponentLocalGeometry ;
+    scene:sourcePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/task002_scene.py" ;
+    scene:valueJSON "[1.2, 1.0, 0.45]" .
+
+scene:source_04449e5a35ab a scene:SourceFile ;
+    scene:relativePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/task005_geometry.py" ;
+    scene:sha256 "8917b6cb0248a3d7cc9c7b14ddc9a5ead6fdcc8b705c6ab7df70435f3b9e276c" .
+
+scene:source_05c5bfb39209 a scene:SourceFile ;
+    scene:relativePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/jekko_motion.py" ;
+    scene:sha256 "e1b2feae371e5fc51e2afbe54c4d17031d6a443ed9c6297d1af79b4bb05a2872" .
+
+scene:source_122cb6962b53 a scene:SourceFile ;
+    scene:relativePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/crane_servo.py" ;
+    scene:sha256 "8914f8ff0f5e9c312771872786dd544655d10cf5608f6e788b5c84345d9dc285" .
+
+scene:source_1719fbf16a08 a scene:SourceFile ;
+    scene:relativePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/task002_scene_node.py" ;
+    scene:sha256 "29ef6d3179357bdd28f5e6d63d88f7b369fd20926c8eab492aa73eb9352cadde" .
+
+scene:source_17edfca5af25 a scene:SourceFile ;
+    scene:relativePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/jekko_geometry.py" ;
+    scene:sha256 "fa24246c1c24055bfda42769d2c1ec494bbacd338ce57a7fe1bae12a6ecaf73f" .
+
+scene:source_218b1e268dd9 a scene:SourceFile ;
+    scene:relativePath "src/cask_robot_skill_servers/cask_robot_skill_servers/truck_transporting_server.py" ;
+    scene:sha256 "20d7d3b60b29aac8091020aead2cca2315d15e08095a907798492c58cf52dd34" .
+
+scene:source_23d614971125 a scene:SourceFile ;
+    scene:relativePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/kali_motion.py" ;
+    scene:sha256 "7bda61dfe23b9c2edd1fcd9755ce7324ca9dc33efaf502f4917031947ce7f1ab" .
+
+scene:source_24802368d582 a scene:SourceFile ;
+    scene:relativePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/truck_handoff.py" ;
+    scene:sha256 "53843d2e82cb46ed601bebff08ea5d15d2ec603eb6d742eb6bcad1facf7361d6" .
+
+scene:source_265f45fb453c a scene:SourceFile ;
+    scene:relativePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/kmr_motion.py" ;
+    scene:sha256 "acd6b8adf8d1327d006b16b3c69d9e7b8c4e90db95c3cf8bc886a83fbec467ab" .
+
+scene:source_266902ae96d5 a scene:SourceFile ;
+    scene:relativePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/truck_reeds_shepp.py" ;
+    scene:sha256 "3bdf043cbbfa5ff67925599603c8aea92fd913591df41483eae83cbee51c2c81" .
+
+scene:source_289b7cc40956 a scene:SourceFile ;
+    scene:relativePath "src/cask_robot_skill_servers/cask_robot_skill_servers/crane_lifting_server.py" ;
+    scene:sha256 "4875bb240c5275f17d3da5a5234385a88e34e294a9a40cc1217a0236b55c7b3d" .
+
+scene:source_2b56745b2a35 a scene:SourceFile ;
+    scene:relativePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/truck_kinematics.py" ;
+    scene:sha256 "0d36ee130f2e0727a92ead7363aebf92e5b5f86c3e22dd76cc224b6ff2c87f5b" .
+
+scene:source_2f33a1c897ba a scene:SourceFile ;
+    scene:relativePath "src/cask_robot_skill_servers/cask_robot_skill_servers/bobcat_excavating_server.py" ;
+    scene:sha256 "f58cd9a84449ba128c9628a73408120175f0edd5a3fde0446ecc1fc4622cd03a" .
+
+scene:source_35bc28daf7c8 a scene:SourceFile ;
+    scene:relativePath "src/cask_robot_description/urdf/innok224_01.urdf.xacro" ;
+    scene:sha256 "d085e00cd1bcdc0506674969d13288649eb1d3159c63e3586a3b32a399dfcbc3" .
+
+scene:source_3a25b3cea71f a scene:SourceFile ;
+    scene:relativePath "src/cask_robot_skill_servers/cask_robot_skill_servers/bobcat_physical_excavating_server.py" ;
+    scene:sha256 "da74be11dfd2740aaf8966a900e84f1a94140f6750070ddfae3751afc271e98e" .
+
+scene:source_3c5069c40a08 a scene:SourceFile ;
+    scene:relativePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/innok224_geometry.py" ;
+    scene:sha256 "5fda808643610185ec9025b84bb6f66fd4d98b9366e7ece210783b8b2cb6fcc7" .
+
+scene:source_3df27c3fd3e8 a scene:SourceFile ;
+    scene:relativePath "src/cask_robot_skill_servers/cask_robot_skill_servers/jekko_skill_server.py" ;
+    scene:sha256 "476ac93b127e105fe928dfcc1aad0f809df96188993a0fdacff0e34e1e993f50" .
+
+scene:source_3e43ad2ae753 a scene:SourceFile ;
+    scene:relativePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/innok224_front_steering_driver.py" ;
+    scene:sha256 "2c4340bd4c0b74e2575aefa4088dfa39699fdaff7a9bdd4e6be7f9ecbd3c3c74" .
+
+scene:source_3f9e0f0d2d05 a scene:SourceFile ;
+    scene:relativePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/local_path_planner.py" ;
+    scene:sha256 "6ea182ff8d87a23f4bb6b7ac4b57660e1fa6e2ad025cf5e9b3639e7e486ceab1" .
+
+scene:source_41fd8dc4e299 a scene:SourceFile ;
+    scene:relativePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/crane_motion.py" ;
+    scene:sha256 "b102eeeb37a95875136ae733bbb9e50ea4d5057d00e97cb6e2e80d295389ddbe" .
+
+scene:source_43b2ec27e348 a scene:SourceFile ;
+    scene:relativePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/truck_motion.py" ;
+    scene:sha256 "ba59e9a4052e6f51b67d63696f8e05233be0761cc18a4bb0da636059cabb14b6" .
+
+scene:source_4490c5ffcd98 a scene:SourceFile ;
+    scene:relativePath "src/cask_robot_description/urdf/forklift_01.urdf.xacro" ;
+    scene:sha256 "2c0e69950ad642441b283456798b2dd3a52e77373c2157d586845b066852a961" .
+
+scene:source_4aa4748bc52f a scene:SourceFile ;
+    scene:relativePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/task001_route_planner.py" ;
+    scene:sha256 "3645404b78eda125c042439f405339572413158257d085fcb0e14e672f5aa9b8" .
+
+scene:source_4c0fc2a640d5 a scene:SourceFile ;
+    scene:relativePath "src/cask_robot_description/urdf/crane_01.urdf.xacro" ;
+    scene:sha256 "48188f99e82cc451edcc777318e772d4c514f10e4849b73bb0d38611c74c1036" .
+
+scene:source_4d6a82312834 a scene:SourceFile ;
+    scene:relativePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/task002_obstacles.py" ;
+    scene:sha256 "e878b531618d62120cdeb9efdcc5d827378ca33aa0d74648516723f2e05ce713" .
+
+scene:source_51bd12df9878 a scene:SourceFile ;
+    scene:relativePath "src/cask_robot_skill_servers/cask_robot_skill_servers/forklift_lifting_server.py" ;
+    scene:sha256 "6f8a95db1b365f4d9c25c3d9ea47e3ddc05708176c121141920e16d0d8553949" .
+
+scene:source_5232dd8a0601 a scene:SourceFile ;
+    scene:relativePath "src/ontology/CASK+CRO-abox.ttl" ;
+    scene:sha256 "af100a9ca888881e3957d3fa48043272e14c029cbc8a94af3f9e3e9221bf6ac7" .
+
+scene:source_59725ead76de a scene:SourceFile ;
+    scene:relativePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/truck_path_planner.py" ;
+    scene:sha256 "b3d17ac210c1a3d050f191a03e7782859448d2b5e63ac88327e5c6204e891640" .
+
+scene:source_5abe1876cb91 a scene:SourceFile ;
+    scene:relativePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/truck_navigation.py" ;
+    scene:sha256 "6e6332502b57dc2efb444af9be536120f6f9a5bf41abf9d7ef18d7000eb53023" .
+
+scene:source_5ee6d63c6cf2 a scene:SourceFile ;
+    scene:relativePath "src/cask_robot_description/urdf/bobcat_01.urdf.xacro" ;
+    scene:sha256 "563686b77438b4f0582807af2008da7c901b5b4f399406cd12b4a44bc35507e1" .
+
+scene:source_61f18ce5bce2 a scene:SourceFile ;
+    scene:relativePath "src/cask_robot_description/urdf/roof_component_03.urdf.xacro" ;
+    scene:sha256 "930ce4b71697c2c9bf33706ef2eb31361e16f07e1eb195a6ad2a05c8f143b3ab" .
+
+scene:source_62700e758d1b a scene:SourceFile ;
+    scene:relativePath "src/cask_robot_description/urdf/kali_01.urdf.xacro" ;
+    scene:sha256 "431abf48984bb54a9cd406c588d44358cd1f8ad7aaa3fcf991e95c1089e46ec3" .
+
+scene:source_668ce11167e3 a scene:SourceFile ;
+    scene:relativePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/handoff_height_hold.py" ;
+    scene:sha256 "9476d74d8350ed3f506a8479b20b9e79357b357a963259953ec2cd9316923810" .
+
+scene:source_67537a69a213 a scene:SourceFile ;
+    scene:relativePath "src/cask_robot_skill_servers/cask_robot_skill_servers/kmr_skill_server.py" ;
+    scene:sha256 "3160baf53f6195d039c4bd340f165633515e066a1407a84f9b9b4e7ca8e8d310" .
+
+scene:source_679898660a73 a scene:SourceFile ;
+    scene:relativePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/obstacle_manager_node.py" ;
+    scene:sha256 "b00aaf73f17a9f3b81ce325e8178e4c4a58041f134835b4d65f9a83adce91a1a" .
+
+scene:source_69ade6fa84c3 a scene:SourceFile ;
+    scene:relativePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/forklift_hook_clearance.py" ;
+    scene:sha256 "33cb99db4c4cd4bef827c2097818d411496157ecc98c11b78d3d195fe6cb3235" .
+
+scene:source_6c4a0a5df4c6 a scene:SourceFile ;
+    scene:relativePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/forklift_handoff.py" ;
+    scene:sha256 "6c2fbd10e27f06d824a5560e128b5e928d880f97c78ab7a848858f12e0f74e11" .
+
+scene:source_6cac88500e60 a scene:SourceFile ;
+    scene:relativePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/ground_navigation_motion.py" ;
+    scene:sha256 "971941c1d37f7aee5100188a940889879d8386829165637265dda66d30996a0d" .
+
+scene:source_6e0ac3abcaaa a scene:SourceFile ;
+    scene:relativePath "src/cask_robot_skill_servers/cask_robot_skill_servers/kali_skill_server.py" ;
+    scene:sha256 "12609d39d74f780d295d1626fcb82012aa645fc689fb45dc51840496adfb7242" .
+
+scene:source_6e96cfa31505 a scene:SourceFile ;
+    scene:relativePath "src/cask_robot_description/urdf/jekko_01.urdf.xacro" ;
+    scene:sha256 "736be6ec72dcbe4f231460ee9ff71bbe56907d304e50140eb0adb2432826fd2a" .
+
+scene:source_728224aed8d7 a scene:SourceFile ;
+    scene:relativePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/bobcat_motion.py" ;
+    scene:sha256 "efc14881e406ca1f6ffb3e5f422c54f6c5f5f096a73325b1cead4d410f2ffefa" .
+
+scene:source_757d76b38061 a scene:SourceFile ;
+    scene:relativePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/gazebo_attachment.py" ;
+    scene:sha256 "3be13b7d334cdcf7cb95eb1880f1a86a6423cd6c193df4c9aecd761e8ce717e6" .
+
+scene:source_7d672c105aed a scene:SourceFile ;
+    scene:relativePath "src/cask_robot_skill_servers/cask_robot_skill_servers/__init__.py" ;
+    scene:sha256 "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855" .
+
+scene:source_8299bfb1206f a scene:SourceFile ;
+    scene:relativePath "src/cask_oneopen/launch/cask_gazebo_oneopen.launch.py" ;
+    scene:sha256 "d67aa9fb2d90149706b8e2111a80d8f844bd196b9d2b1390df08b14f82c74f7c" .
+
+scene:source_875f3079b0b3 a scene:SourceFile ;
+    scene:relativePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/__init__.py" ;
+    scene:sha256 "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855" .
+
+scene:source_87d2a9904068 a scene:SourceFile ;
+    scene:relativePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/task005_simulation.py" ;
+    scene:sha256 "33c7e5db4d6ce9aa23e7759fea7ff07b193c80873c911a9d37b9c41e2d3b8b9d" .
+
+scene:source_8a0766c243e6 a scene:SourceFile ;
+    scene:relativePath "src/cask_gazebo/cask_gazebo_motion/setup.py" ;
+    scene:sha256 "0d93a3342021068da01f5cf09c39f893a13a0308ac06936cce05700ee34ef002" .
+
+scene:source_941643073999 a scene:SourceFile ;
+    scene:relativePath "src/cask_robot_description/urdf/kmr.urdf.xacro" ;
+    scene:sha256 "4257ba1796ab3aeb57b85ee9d422bb172613fdd380f1f8eca759858987f00adc" .
+
+scene:source_9a92fafb1848 a scene:SourceFile ;
+    scene:relativePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/crane_handoff.py" ;
+    scene:sha256 "29340326ebcfbeb9b97506f92047ebca0c82221c2bcabc11f88517548da7dcc8" .
+
+scene:source_9ce5036ae8df a scene:SourceFile ;
+    scene:relativePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/jekko_navigation.py" ;
+    scene:sha256 "affc27391d54c908dcb50b139eb04dfab267926fa73dd80ea3bd7f421ca9fe06" .
+
+scene:source_a2b8a1a97fdd a scene:SourceFile ;
+    scene:relativePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/gazebo_feedback_relay.py" ;
+    scene:sha256 "9961a9a76b798939d421269e8c402f63ed177a17351e153b6ff526d1717db6b7" .
+
+scene:source_a3e147148f01 a scene:SourceFile ;
+    scene:relativePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/task005_route_planner.py" ;
+    scene:sha256 "dd9007f89b64a39d7fbc2cb2dba6d70424f1877661c3b0bee17b263f3d6d4611" .
+
+scene:source_a51e53ca6960 a scene:SourceFile ;
+    scene:relativePath "src/cask_robot_skill_servers/cask_robot_skill_servers/truck_physical_transporting_server.py" ;
+    scene:sha256 "a13a9d0be3450425aa9a69ede96519ba1ce930a5b0b08c1e4ad417cb8345dc0c" .
+
+scene:source_a77a35bf8e78 a scene:SourceFile ;
+    scene:relativePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/innok224_navigation.py" ;
+    scene:sha256 "8ccf1aa5de3a54bd4508183fd5a3a372da3883a058e65baead08c536145da396" .
+
+scene:source_a8173ead1cf8 a scene:SourceFile ;
+    scene:relativePath "src/cask_robot_skill_servers/cask_robot_skill_servers/ground_navigation_server.py" ;
+    scene:sha256 "d00d623a272eb264c54c1de707d7f94b2d362ba05cd20657007fa4dc89496fb3" .
+
+scene:source_a94282a33ed2 a scene:SourceFile ;
+    scene:relativePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/task002_scene.py" ;
+    scene:sha256 "69e68791bbe3349bae57e3a11430c3cd31c941018311128526a85e3e674aee58" .
+
+scene:source_a96ab6e21866 a scene:SourceFile ;
+    scene:relativePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/forklift_motion.py" ;
+    scene:sha256 "6bad57d006d09bf7b8c42efbf8d45c1d31630a4346c275797a0c944d63e1eddd" .
+
+scene:source_b0b645571679 a scene:SourceFile ;
+    scene:relativePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/physical_path_planner.py" ;
+    scene:sha256 "c21c0053d27a6a67a16a612f8e32ab3270a769379bf0b3f34b3115cb28a641a7" .
+
+scene:source_b2b740481ccb a scene:SourceFile ;
+    scene:relativePath "src/cask_robot_description/urdf/truck_01.urdf.xacro" ;
+    scene:sha256 "0057591d6979626648908f73d4024432d3ac3cf1473cd37084e9500b1e071edd" .
+
+scene:source_b4020e8433fd a scene:SourceFile ;
+    scene:relativePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/ground_navigation.py" ;
+    scene:sha256 "02375888cd0953e513fa7b32f1c99dd57992e6ee73fc38efa0478a0adfaeb443" .
+
+scene:source_b5fe39501b76 a scene:SourceFile ;
+    scene:relativePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/rear_steering_driver.py" ;
+    scene:sha256 "73f3ba34454f31f8e16197da617ae5b6123ee952e1e40d6d4f76ea92cd84afbe" .
+
+scene:source_b895cdcec536 a scene:SourceFile ;
+    scene:relativePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/bobcat_visual_motion.py" ;
+    scene:sha256 "8abfc94159a2281fa44673c7b50dd65d742554eb00005f78466a64b25e98a667" .
+
+scene:source_bc92546184a3 a scene:SourceFile ;
+    scene:relativePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/kali_geometry.py" ;
+    scene:sha256 "b2194c228dd17ec5f845aabd71154965994b63267170ba095037d2cc58d9cf6a" .
+
+scene:source_c171da0dc861 a scene:SourceFile ;
+    scene:relativePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/truck_geometry.py" ;
+    scene:sha256 "406d8911ee13795d13413268cb24617ab371b850a95226bbbad3f0dd768112b5" .
+
+scene:source_c6a8ca22148a a scene:SourceFile ;
+    scene:relativePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/delivery_hold.py" ;
+    scene:sha256 "3cf4e6127c10bf9fd996422ad45fd7c69169c523e30a2fa482eac3d5ec9539a5" .
+
+scene:source_c7c7f0420bcc a scene:SourceFile ;
+    scene:relativePath "src/cask_component_manager/cask_component_manager/component_manager_node.py" ;
+    scene:sha256 "01e460b42129067140a8ab09486a5d80cb1721daf3be3014450a8f604c698f4d" .
+
+scene:source_cc272a752c05 a scene:SourceFile ;
+    scene:relativePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/rear_steering_geometry.py" ;
+    scene:sha256 "57c69d5cbad9c15c57f6d198a0d9379df82cfea07e68a144b38f34b7cb8cdb92" .
+
+scene:source_d43c13322d72 a scene:SourceFile ;
+    scene:relativePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/jekko_visuals.py" ;
+    scene:sha256 "69b83125b1fb9896afea71120bdb1974d14cc00f415141d965b66f5789d31696" .
+
+scene:source_d625b863e5bd a scene:SourceFile ;
+    scene:relativePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/innok224_motion.py" ;
+    scene:sha256 "40c9cf26298d14194d79a8691dfc5bf4acbaaffe62d58642736031394fa4eae9" .
+
+scene:source_d85ff9121d48 a scene:SourceFile ;
+    scene:relativePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/gazebo_joint_commands.py" ;
+    scene:sha256 "32c1812d7605624e6fd5cc4f2a10dcb5215bcb0ebdaa2ce50919316bb7797114" .
+
+scene:source_dad1397deb7f a scene:SourceFile ;
+    scene:relativePath "src/cask_robot_skill_servers/cask_robot_skill_servers/innok224_scanning_server.py" ;
+    scene:sha256 "0e9089ba27185427d3799f57035f6a875d010b8f5496b4df97dc0cf6c62c180d" .
+
+scene:source_e51261ab94c4 a scene:SourceFile ;
+    scene:relativePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/motion_speed.py" ;
+    scene:sha256 "dbcd37591ebc51a502cfbf1c32c8f8e7d8ae14e53097a3e1c3a26a285a8fec5d" .
+
+scene:source_e7288de240d5 a scene:SourceFile ;
+    scene:relativePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/truck_visual_motion.py" ;
+    scene:sha256 "5be724393c1db5413bd18c68c0a8bc30683628e345e8c9b1403afc9025024e2f" .
+
+scene:source_e971d504c749 a scene:SourceFile ;
+    scene:relativePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/task005_feedback_relay.py" ;
+    scene:sha256 "01cb44712c642c0075f8ca044dc7059a0ef1352108fb2db7bd0c0934140130c0" .
+
+scene:source_f02c0f35a31e a scene:SourceFile ;
+    scene:relativePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/gazebo_motion.py" ;
+    scene:sha256 "25b4b27a7095c11f1946c3bcff9b9ca4f1487a43f8f4519b3b51abaaeca8a150" .
+
+scene:source_f7ae7b705388 a scene:SourceFile ;
+    scene:relativePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/rear_vehicle_navigation.py" ;
+    scene:sha256 "19ab17b72b074de032dad6464b23b051713aefe171ee029b52df7f4bccacd99f" .
+
+scene:source_fae97f6233af a scene:SourceFile ;
+    scene:relativePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/forklift_terminal_control.py" ;
+    scene:sha256 "12d4993f062ef0a43cd534def245a9cf03cb260cbe6847323fd1a460a6f2eca6" .
+
+scene:src%2Fcask_gazebo%2Fcask_gazebo_motion%2Fcask_gazebo_motion%2Fbobcat_motion.py_parameter_17 a scene:DeclaredParameterDefault ;
+    scene:sourceLine 17 ;
+    scene:sourcePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/bobcat_motion.py" ;
+    scene:valueJSON "{\"default\": 2.8, \"name\": \"work_offset\"}" .
+
+scene:src%2Fcask_gazebo%2Fcask_gazebo_motion%2Fcask_gazebo_motion%2Fbobcat_motion.py_parameter_18 a scene:DeclaredParameterDefault ;
+    scene:sourceLine 18 ;
+    scene:sourcePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/bobcat_motion.py" ;
+    scene:valueJSON "{\"default\": 0.15, \"name\": \"work_position_tolerance\"}" .
+
+scene:src%2Fcask_gazebo%2Fcask_gazebo_motion%2Fcask_gazebo_motion%2Fbobcat_motion.py_parameter_19 a scene:DeclaredParameterDefault ;
+    scene:sourceLine 19 ;
+    scene:sourcePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/bobcat_motion.py" ;
+    scene:valueJSON "{\"default\": 0.08, \"name\": \"work_yaw_tolerance\"}" .
+
+scene:src%2Fcask_gazebo%2Fcask_gazebo_motion%2Fcask_gazebo_motion%2Fbobcat_visual_motion.py_parameter_13 a scene:DeclaredParameterDefault ;
+    scene:sourceLine 13 ;
+    scene:sourcePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/bobcat_visual_motion.py" ;
+    scene:valueJSON "{\"default\": 0.0, \"name\": \"initial_x\"}" .
+
+scene:src%2Fcask_gazebo%2Fcask_gazebo_motion%2Fcask_gazebo_motion%2Fbobcat_visual_motion.py_parameter_14 a scene:DeclaredParameterDefault ;
+    scene:sourceLine 14 ;
+    scene:sourcePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/bobcat_visual_motion.py" ;
+    scene:valueJSON "{\"default\": 3.0, \"name\": \"initial_y\"}" .
+
+scene:src%2Fcask_gazebo%2Fcask_gazebo_motion%2Fcask_gazebo_motion%2Fbobcat_visual_motion.py_parameter_15 a scene:DeclaredParameterDefault ;
+    scene:sourceLine 15 ;
+    scene:sourcePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/bobcat_visual_motion.py" ;
+    scene:valueJSON "{\"default\": 0.0, \"name\": \"initial_yaw\"}" .
+
+scene:src%2Fcask_gazebo%2Fcask_gazebo_motion%2Fcask_gazebo_motion%2Fbobcat_visual_motion.py_parameter_16 a scene:DeclaredParameterDefault ;
+    scene:sourceLine 16 ;
+    scene:sourcePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/bobcat_visual_motion.py" ;
+    scene:valueJSON "{\"default\": 5.0, \"name\": \"maximum_digging_depth\"}" .
+
+scene:src%2Fcask_gazebo%2Fcask_gazebo_motion%2Fcask_gazebo_motion%2Fbobcat_visual_motion.py_parameter_17 a scene:DeclaredParameterDefault ;
+    scene:sourceLine 17 ;
+    scene:sourcePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/bobcat_visual_motion.py" ;
+    scene:valueJSON "{\"default\": 0.2, \"name\": \"phase_delay_seconds\"}" .
+
+scene:src%2Fcask_gazebo%2Fcask_gazebo_motion%2Fcask_gazebo_motion%2Fcrane_motion.py_parameter_27 a scene:DeclaredParameterDefault ;
+    scene:sourceLine 27 ;
+    scene:sourcePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/crane_motion.py" ;
+    scene:valueJSON "{\"default\": false, \"name\": \"physical_cargo_mode\"}" .
+
+scene:src%2Fcask_gazebo%2Fcask_gazebo_motion%2Fcask_gazebo_motion%2Fcrane_motion.py_parameter_28 a scene:DeclaredParameterDefault ;
+    scene:sourceLine 28 ;
+    scene:sourcePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/crane_motion.py" ;
+    scene:valueJSON "{\"default\": false, \"name\": \"angular_velocity_control\"}" .
+
+scene:src%2Fcask_gazebo%2Fcask_gazebo_motion%2Fcask_gazebo_motion%2Fcrane_motion.py_parameter_33 a scene:DeclaredParameterDefault ;
+    scene:sourceLine 33 ;
+    scene:sourcePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/crane_motion.py" ;
+    scene:valueJSON "{\"default\": false, \"name\": \"trolley_velocity_control\"}" .
+
+scene:src%2Fcask_gazebo%2Fcask_gazebo_motion%2Fcask_gazebo_motion%2Fcrane_motion.py_parameter_38 a scene:DeclaredParameterDefault ;
+    scene:sourceLine 38 ;
+    scene:sourcePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/crane_motion.py" ;
+    scene:valueJSON "{\"default\": \"empty\", \"name\": \"gazebo_world\"}" .
+
+scene:src%2Fcask_gazebo%2Fcask_gazebo_motion%2Fcask_gazebo_motion%2Fcrane_motion.py_parameter_39 a scene:DeclaredParameterDefault ;
+    scene:sourceLine 39 ;
+    scene:sourcePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/crane_motion.py" ;
+    scene:valueJSON "{\"default\": 2.8, \"name\": \"crane_world_x\"}" .
+
+scene:src%2Fcask_gazebo%2Fcask_gazebo_motion%2Fcask_gazebo_motion%2Fcrane_motion.py_parameter_40 a scene:DeclaredParameterDefault ;
+    scene:sourceLine 40 ;
+    scene:sourcePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/crane_motion.py" ;
+    scene:valueJSON "{\"default\": 0.0, \"name\": \"crane_world_y\"}" .
+
+scene:src%2Fcask_gazebo%2Fcask_gazebo_motion%2Fcask_gazebo_motion%2Fcrane_motion.py_parameter_41 a scene:DeclaredParameterDefault ;
+    scene:sourceLine 41 ;
+    scene:sourcePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/crane_motion.py" ;
+    scene:valueJSON "{\"default\": 0.0, \"name\": \"crane_world_yaw\"}" .
+
+scene:src%2Fcask_gazebo%2Fcask_gazebo_motion%2Fcask_gazebo_motion%2Fcrane_motion.py_parameter_45 a scene:DeclaredParameterDefault ;
+    scene:sourceLine 45 ;
+    scene:sourcePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/crane_motion.py" ;
+    scene:valueJSON "{\"default\": 0.15, \"name\": \"pickup_clearance_margin\"}" .
+
+scene:src%2Fcask_gazebo%2Fcask_gazebo_motion%2Fcask_gazebo_motion%2Fcrane_motion.py_parameter_46 a scene:DeclaredParameterDefault ;
+    scene:sourceLine 46 ;
+    scene:sourcePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/crane_motion.py" ;
+    scene:valueJSON "{\"default\": \"/cask/task001/cargo_clearance\", \"name\": \"cargo_clearance_topic\"}" .
+
+scene:src%2Fcask_gazebo%2Fcask_gazebo_motion%2Fcask_gazebo_motion%2Fcrane_motion.py_parameter_70 a scene:DeclaredParameterDefault ;
+    scene:sourceLine 70 ;
+    scene:sourcePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/crane_motion.py" ;
+    scene:valueJSON "{\"default\": 10.0, \"name\": \"hook_zero_world_z\"}" .
+
+scene:src%2Fcask_gazebo%2Fcask_gazebo_motion%2Fcask_gazebo_motion%2Fcrane_motion.py_parameter_71 a scene:DeclaredParameterDefault ;
+    scene:sourceLine 71 ;
+    scene:sourcePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/crane_motion.py" ;
+    scene:valueJSON "{\"default\": 0.0, \"name\": \"hook_joint_lower\"}" .
+
+scene:src%2Fcask_gazebo%2Fcask_gazebo_motion%2Fcask_gazebo_motion%2Fcrane_motion.py_parameter_72 a scene:DeclaredParameterDefault ;
+    scene:sourceLine 72 ;
+    scene:sourcePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/crane_motion.py" ;
+    scene:valueJSON "{\"default\": 9.4, \"name\": \"hook_joint_upper\"}" .
+
+scene:src%2Fcask_gazebo%2Fcask_gazebo_motion%2Fcask_gazebo_motion%2Fcrane_motion.py_parameter_73 a scene:DeclaredParameterDefault ;
+    scene:sourceLine 73 ;
+    scene:sourcePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/crane_motion.py" ;
+    scene:valueJSON "{\"default\": -3.141592653589793, \"name\": \"tower_joint_lower\"}" .
+
+scene:src%2Fcask_gazebo%2Fcask_gazebo_motion%2Fcask_gazebo_motion%2Fcrane_motion.py_parameter_74 a scene:DeclaredParameterDefault ;
+    scene:sourceLine 74 ;
+    scene:sourcePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/crane_motion.py" ;
+    scene:valueJSON "{\"default\": 3.141592653589793, \"name\": \"tower_joint_upper\"}" .
+
+scene:src%2Fcask_gazebo%2Fcask_gazebo_motion%2Fcask_gazebo_motion%2Fcrane_motion.py_parameter_75 a scene:DeclaredParameterDefault ;
+    scene:sourceLine 75 ;
+    scene:sourcePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/crane_motion.py" ;
+    scene:valueJSON "{\"default\": 0.0, \"name\": \"trolley_joint_lower\"}" .
+
+scene:src%2Fcask_gazebo%2Fcask_gazebo_motion%2Fcask_gazebo_motion%2Fcrane_motion.py_parameter_76 a scene:DeclaredParameterDefault ;
+    scene:sourceLine 76 ;
+    scene:sourcePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/crane_motion.py" ;
+    scene:valueJSON "{\"default\": 5.2, \"name\": \"trolley_joint_upper\"}" .
+
+scene:src%2Fcask_gazebo%2Fcask_gazebo_motion%2Fcask_gazebo_motion%2Fcrane_motion.py_parameter_77 a scene:DeclaredParameterDefault ;
+    scene:sourceLine 77 ;
+    scene:sourcePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/crane_motion.py" ;
+    scene:valueJSON "{\"default\": 1.5708, \"name\": \"initial_tower_yaw\"}" .
+
+scene:src%2Fcask_gazebo%2Fcask_gazebo_motion%2Fcask_gazebo_motion%2Fcrane_motion.py_parameter_78 a scene:DeclaredParameterDefault ;
+    scene:sourceLine 78 ;
+    scene:sourcePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/crane_motion.py" ;
+    scene:valueJSON "{\"default\": 1.8, \"name\": \"initial_trolley_position\"}" .
+
+scene:src%2Fcask_gazebo%2Fcask_gazebo_motion%2Fcask_gazebo_motion%2Fcrane_motion.py_parameter_79 a scene:DeclaredParameterDefault ;
+    scene:sourceLine 79 ;
+    scene:sourcePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/crane_motion.py" ;
+    scene:valueJSON "{\"default\": 9.27, \"name\": \"initial_hook_position\"}" .
+
+scene:src%2Fcask_gazebo%2Fcask_gazebo_motion%2Fcask_gazebo_motion%2Fcrane_servo.py_AngularServo_ACCELERATION a scene:SourceModelOrMotionConstant ;
+    scene:sourcePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/crane_servo.py" ;
+    scene:valueJSON "{\"class\": \"AngularServo\", \"name\": \"ACCELERATION\", \"value\": 0.3}" .
+
+scene:src%2Fcask_gazebo%2Fcask_gazebo_motion%2Fcask_gazebo_motion%2Fcrane_servo.py_AngularServo_ENTER a scene:SourceModelOrMotionConstant ;
+    scene:sourcePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/crane_servo.py" ;
+    scene:valueJSON "{\"class\": \"AngularServo\", \"name\": \"ENTER\", \"value\": 0.0015}" .
+
+scene:src%2Fcask_gazebo%2Fcask_gazebo_motion%2Fcask_gazebo_motion%2Fcrane_servo.py_AngularServo_EXIT a scene:SourceModelOrMotionConstant ;
+    scene:sourcePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/crane_servo.py" ;
+    scene:valueJSON "{\"class\": \"AngularServo\", \"name\": \"EXIT\", \"value\": 0.003}" .
+
+scene:src%2Fcask_gazebo%2Fcask_gazebo_motion%2Fcask_gazebo_motion%2Fcrane_servo.py_TrolleyServo_ACCELERATION a scene:SourceModelOrMotionConstant ;
+    scene:sourcePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/crane_servo.py" ;
+    scene:valueJSON "{\"class\": \"TrolleyServo\", \"name\": \"ACCELERATION\", \"value\": 0.75}" .
+
+scene:src%2Fcask_gazebo%2Fcask_gazebo_motion%2Fcask_gazebo_motion%2Fcrane_servo.py_TrolleyServo_ENTER a scene:SourceModelOrMotionConstant ;
+    scene:sourcePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/crane_servo.py" ;
+    scene:valueJSON "{\"class\": \"TrolleyServo\", \"name\": \"ENTER\", \"value\": 0.00075}" .
+
+scene:src%2Fcask_gazebo%2Fcask_gazebo_motion%2Fcask_gazebo_motion%2Fcrane_servo.py_TrolleyServo_EXIT a scene:SourceModelOrMotionConstant ;
+    scene:sourcePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/crane_servo.py" ;
+    scene:valueJSON "{\"class\": \"TrolleyServo\", \"name\": \"EXIT\", \"value\": 0.002}" .
+
+scene:src%2Fcask_gazebo%2Fcask_gazebo_motion%2Fcask_gazebo_motion%2Fcrane_servo.py_TrolleyServo_GAIN a scene:SourceModelOrMotionConstant ;
+    scene:sourcePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/crane_servo.py" ;
+    scene:valueJSON "{\"class\": \"TrolleyServo\", \"name\": \"GAIN\", \"value\": 1.5}" .
+
+scene:src%2Fcask_gazebo%2Fcask_gazebo_motion%2Fcask_gazebo_motion%2Fcrane_servo.py_TrolleyServo_MAX_SPEED a scene:SourceModelOrMotionConstant ;
+    scene:sourcePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/crane_servo.py" ;
+    scene:valueJSON "{\"class\": \"TrolleyServo\", \"name\": \"MAX_SPEED\", \"value\": 0.4125}" .
+
+scene:src%2Fcask_gazebo%2Fcask_gazebo_motion%2Fcask_gazebo_motion%2Fcrane_servo.py_attribute_14_speed a scene:SourceMotionInitialization ;
+    scene:sourceLine 14 ;
+    scene:sourcePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/crane_servo.py" ;
+    scene:valueJSON "{\"name\": \"speed\", \"value\": 0.0}" .
+
+scene:src%2Fcask_gazebo%2Fcask_gazebo_motion%2Fcask_gazebo_motion%2Fcrane_servo.py_attribute_18_speed a scene:SourceMotionInitialization ;
+    scene:sourceLine 18 ;
+    scene:sourcePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/crane_servo.py" ;
+    scene:valueJSON "{\"name\": \"speed\", \"value\": 0.0}" .
+
+scene:src%2Fcask_gazebo%2Fcask_gazebo_motion%2Fcask_gazebo_motion%2Fcrane_servo.py_attribute_34_speed a scene:SourceMotionInitialization ;
+    scene:sourceLine 34 ;
+    scene:sourcePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/crane_servo.py" ;
+    scene:valueJSON "{\"name\": \"speed\", \"value\": 0.0}" .
+
+scene:src%2Fcask_gazebo%2Fcask_gazebo_motion%2Fcask_gazebo_motion%2Fcrane_servo.py_attribute_42_speed a scene:SourceMotionInitialization ;
+    scene:sourceLine 42 ;
+    scene:sourcePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/crane_servo.py" ;
+    scene:valueJSON "{\"name\": \"speed\", \"value\": 0.0}" .
+
+scene:src%2Fcask_gazebo%2Fcask_gazebo_motion%2Fcask_gazebo_motion%2Fforklift_motion.py_parameter_32 a scene:DeclaredParameterDefault ;
+    scene:sourceLine 32 ;
+    scene:sourcePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/forklift_motion.py" ;
+    scene:valueJSON "{\"default\": 0.0, \"name\": \"lift_joint_lower\"}" .
+
+scene:src%2Fcask_gazebo%2Fcask_gazebo_motion%2Fcask_gazebo_motion%2Fforklift_motion.py_parameter_33 a scene:DeclaredParameterDefault ;
+    scene:sourceLine 33 ;
+    scene:sourcePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/forklift_motion.py" ;
+    scene:valueJSON "{\"default\": 2.6, \"name\": \"lift_joint_upper\"}" .
+
+scene:src%2Fcask_gazebo%2Fcask_gazebo_motion%2Fcask_gazebo_motion%2Fforklift_motion.py_parameter_34 a scene:DeclaredParameterDefault ;
+    scene:sourceLine 34 ;
+    scene:sourcePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/forklift_motion.py" ;
+    scene:valueJSON "{\"default\": 0.0, \"name\": \"initial_lift_position\"}" .
+
+scene:src%2Fcask_gazebo%2Fcask_gazebo_motion%2Fcask_gazebo_motion%2Fforklift_motion.py_parameter_35 a scene:DeclaredParameterDefault ;
+    scene:sourceLine 35 ;
+    scene:sourcePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/forklift_motion.py" ;
+    scene:valueJSON "{\"default\": 0.4, \"name\": \"fork_zero_world_z\"}" .
+
+scene:src%2Fcask_gazebo%2Fcask_gazebo_motion%2Fcask_gazebo_motion%2Fforklift_motion.py_parameter_36 a scene:DeclaredParameterDefault ;
+    scene:sourceLine 36 ;
+    scene:sourcePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/forklift_motion.py" ;
+    scene:valueJSON "{\"default\": -5.0, \"name\": \"initial_x\"}" .
+
+scene:src%2Fcask_gazebo%2Fcask_gazebo_motion%2Fcask_gazebo_motion%2Fforklift_motion.py_parameter_37 a scene:DeclaredParameterDefault ;
+    scene:sourceLine 37 ;
+    scene:sourcePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/forklift_motion.py" ;
+    scene:valueJSON "{\"default\": 3.0, \"name\": \"initial_y\"}" .
+
+scene:src%2Fcask_gazebo%2Fcask_gazebo_motion%2Fcask_gazebo_motion%2Fforklift_motion.py_parameter_38 a scene:DeclaredParameterDefault ;
+    scene:sourceLine 38 ;
+    scene:sourcePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/forklift_motion.py" ;
+    scene:valueJSON "{\"default\": 0.0, \"name\": \"initial_yaw\"}" .
+
+scene:src%2Fcask_gazebo%2Fcask_gazebo_motion%2Fcask_gazebo_motion%2Fforklift_motion.py_parameter_39 a scene:DeclaredParameterDefault ;
+    scene:sourceLine 39 ;
+    scene:sourcePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/forklift_motion.py" ;
+    scene:valueJSON "{\"default\": 0.35, \"name\": \"wheel_radius\"}" .
+
+scene:src%2Fcask_gazebo%2Fcask_gazebo_motion%2Fcask_gazebo_motion%2Fforklift_motion.py_parameter_40 a scene:DeclaredParameterDefault ;
+    scene:sourceLine 40 ;
+    scene:sourcePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/forklift_motion.py" ;
+    scene:valueJSON "{\"default\": 0.25, \"name\": \"navigation_resolution\"}" .
+
+scene:src%2Fcask_gazebo%2Fcask_gazebo_motion%2Fcask_gazebo_motion%2Fforklift_motion.py_parameter_41 a scene:DeclaredParameterDefault ;
+    scene:sourceLine 41 ;
+    scene:sourcePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/forklift_motion.py" ;
+    scene:valueJSON "{\"default\": 3.0, \"name\": \"robot_radius\"}" .
+
+scene:src%2Fcask_gazebo%2Fcask_gazebo_motion%2Fcask_gazebo_motion%2Fforklift_motion.py_parameter_42 a scene:DeclaredParameterDefault ;
+    scene:sourceLine 42 ;
+    scene:sourcePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/forklift_motion.py" ;
+    scene:valueJSON "{\"default\": 0.2, \"name\": \"physical_safety_margin\"}" .
+
+scene:src%2Fcask_gazebo%2Fcask_gazebo_motion%2Fcask_gazebo_motion%2Fforklift_motion.py_parameter_43 a scene:DeclaredParameterDefault ;
+    scene:sourceLine 43 ;
+    scene:sourcePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/forklift_motion.py" ;
+    scene:valueJSON "{\"default\": 0.25, \"name\": \"physical_tracking_margin\"}" .
+
+scene:src%2Fcask_gazebo%2Fcask_gazebo_motion%2Fcask_gazebo_motion%2Fforklift_motion.py_parameter_44 a scene:DeclaredParameterDefault ;
+    scene:sourceLine 44 ;
+    scene:sourcePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/forklift_motion.py" ;
+    scene:valueJSON "{\"default\": 0.45, \"name\": \"obstacle_radius\"}" .
+
+scene:src%2Fcask_gazebo%2Fcask_gazebo_motion%2Fcask_gazebo_motion%2Fforklift_motion.py_parameter_45 a scene:DeclaredParameterDefault ;
+    scene:sourceLine 45 ;
+    scene:sourcePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/forklift_motion.py" ;
+    scene:valueJSON "{\"default\": [-12.0, 20.0, -10.0, 12.0], \"name\": \"navigation_bounds\"}" .
+
+scene:src%2Fcask_gazebo%2Fcask_gazebo_motion%2Fcask_gazebo_motion%2Fforklift_motion.py_parameter_46 a scene:UnresolvedParameterExpression ;
+    scene:sourceLine 46 ;
+    scene:sourcePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/forklift_motion.py" ;
+    scene:valueJSON "{\"expression\": \"ground_speed(0.35)\", \"name\": \"drive_speed\"}" .
+
+scene:src%2Fcask_gazebo%2Fcask_gazebo_motion%2Fcask_gazebo_motion%2Fforklift_motion.py_parameter_47 a scene:DeclaredParameterDefault ;
+    scene:sourceLine 47 ;
+    scene:sourcePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/forklift_motion.py" ;
+    scene:valueJSON "{\"default\": 20.0, \"name\": \"maximum_transport_distance\"}" .
+
+scene:src%2Fcask_gazebo%2Fcask_gazebo_motion%2Fcask_gazebo_motion%2Fforklift_motion.py_parameter_50 a scene:DeclaredParameterDefault ;
+    scene:sourceLine 50 ;
+    scene:sourcePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/forklift_motion.py" ;
+    scene:valueJSON "{\"default\": -1.0, \"name\": \"task001_fail_loaded_at_progress\"}" .
+
+scene:src%2Fcask_gazebo%2Fcask_gazebo_motion%2Fcask_gazebo_motion%2Fforklift_motion.py_parameter_51 a scene:DeclaredParameterDefault ;
+    scene:sourceLine 51 ;
+    scene:sourcePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/forklift_motion.py" ;
+    scene:valueJSON "{\"default\": -1.0, \"name\": \"task002_fail_loaded_at_progress\"}" .
+
+scene:src%2Fcask_gazebo%2Fcask_gazebo_motion%2Fcask_gazebo_motion%2Fforklift_motion.py_parameter_52 a scene:DeclaredParameterDefault ;
+    scene:sourceLine 52 ;
+    scene:sourcePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/forklift_motion.py" ;
+    scene:valueJSON "{\"default\": -1.0, \"name\": \"task002_fail_before_pickup_at_progress\"}" .
+
+scene:src%2Fcask_gazebo%2Fcask_gazebo_motion%2Fcask_gazebo_motion%2Fforklift_motion.py_parameter_53 a scene:DeclaredParameterDefault ;
+    scene:sourceLine 53 ;
+    scene:sourcePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/forklift_motion.py" ;
+    scene:valueJSON "{\"default\": 45.0, \"name\": \"task002_planning_timeout\"}" .
+
+scene:src%2Fcask_gazebo%2Fcask_gazebo_motion%2Fcask_gazebo_motion%2Fforklift_motion.py_parameter_54 a scene:UnresolvedParameterExpression ;
+    scene:sourceLine 54 ;
+    scene:sourcePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/forklift_motion.py" ;
+    scene:valueJSON "{\"expression\": \"ground_speed(0.2)\", \"name\": \"task002_docking_speed\"}" .
+
+scene:src%2Fcask_gazebo%2Fcask_gazebo_motion%2Fcask_gazebo_motion%2Fforklift_motion.py_parameter_55 a scene:UnresolvedParameterExpression ;
+    scene:sourceLine 55 ;
+    scene:sourcePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/forklift_motion.py" ;
+    scene:valueJSON "{\"expression\": \"ground_speed(0.15)\", \"name\": \"task002_lift_rate\"}" .
+
+scene:src%2Fcask_gazebo%2Fcask_gazebo_motion%2Fcask_gazebo_motion%2Fforklift_motion.py_parameter_56 a scene:UnresolvedParameterExpression ;
+    scene:sourceLine 56 ;
+    scene:sourcePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/forklift_motion.py" ;
+    scene:valueJSON "{\"expression\": \"ground_speed(0.132)\", \"name\": \"task002_lower_rate\"}" .
+
+scene:src%2Fcask_gazebo%2Fcask_gazebo_motion%2Fcask_gazebo_motion%2Fforklift_motion.py_parameter_57 a scene:UnresolvedParameterExpression ;
+    scene:sourceLine 57 ;
+    scene:sourcePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/forklift_motion.py" ;
+    scene:valueJSON "{\"expression\": \"ground_speed(0.15)\", \"name\": \"task002_loaded_angular_speed\"}" .
+
+scene:src%2Fcask_gazebo%2Fcask_gazebo_motion%2Fcask_gazebo_motion%2Fforklift_motion.py_parameter_82 a scene:DeclaredParameterDefault ;
+    scene:sourceLine 82 ;
+    scene:sourcePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/forklift_motion.py" ;
+    scene:valueJSON "{\"default\": false, \"name\": \"odom_is_world\"}" .
+
+scene:src%2Fcask_gazebo%2Fcask_gazebo_motion%2Fcask_gazebo_motion%2Fforklift_motion.py_parameter_85 a scene:DeclaredParameterDefault ;
+    scene:sourceLine 85 ;
+    scene:sourcePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/forklift_motion.py" ;
+    scene:valueJSON "{\"default\": false, \"name\": \"physical_cargo_mode\"}" .
+
+scene:src%2Fcask_gazebo%2Fcask_gazebo_motion%2Fcask_gazebo_motion%2Fgazebo_feedback_relay.py_constant_ROBOTS a scene:SourceModelOrMotionConstant ;
+    scene:sourcePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/gazebo_feedback_relay.py" ;
+    scene:valueJSON "{\"name\": \"ROBOTS\", \"value\": [\"forklift\", \"crane\", \"bobcat\", \"truck\", \"jekko\", \"kali\", \"innok224\"]}" .
+
+scene:src%2Fcask_gazebo%2Fcask_gazebo_motion%2Fcask_gazebo_motion%2Fgazebo_motion.py_parameter_20 a scene:DeclaredParameterDefault ;
+    scene:sourceLine 20 ;
+    scene:sourcePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/gazebo_motion.py" ;
+    scene:valueJSON "{\"default\": 2.0, \"name\": \"feedback_timeout\"}" .
+
+scene:src%2Fcask_gazebo%2Fcask_gazebo_motion%2Fcask_gazebo_motion%2Fgazebo_motion.py_parameter_21 a scene:DeclaredParameterDefault ;
+    scene:sourceLine 21 ;
+    scene:sourcePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/gazebo_motion.py" ;
+    scene:valueJSON "{\"default\": 180.0, \"name\": \"motion_timeout\"}" .
+
+scene:src%2Fcask_gazebo%2Fcask_gazebo_motion%2Fcask_gazebo_motion%2Fground_navigation.py_VehiclePlanner_LOAD a scene:SourceModelOrMotionConstant ;
+    scene:sourcePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/ground_navigation.py" ;
+    scene:valueJSON "{\"class\": \"VehiclePlanner\", \"name\": \"LOAD\", \"value\": []}" .
+
+scene:src%2Fcask_gazebo%2Fcask_gazebo_motion%2Fcask_gazebo_motion%2Fground_navigation.py_VehiclePlanner_WHEELS a scene:SourceModelOrMotionConstant ;
+    scene:sourcePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/ground_navigation.py" ;
+    scene:valueJSON "{\"class\": \"VehiclePlanner\", \"name\": \"WHEELS\", \"value\": []}" .
+
+scene:src%2Fcask_gazebo%2Fcask_gazebo_motion%2Fcask_gazebo_motion%2Fground_navigation.py_attribute_54__clearance_cache a scene:SourceMotionInitialization ;
+    scene:sourceLine 54 ;
+    scene:sourcePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/ground_navigation.py" ;
+    scene:valueJSON "{\"name\": \"_clearance_cache\", \"value\": {}}" .
+
+scene:src%2Fcask_gazebo%2Fcask_gazebo_motion%2Fcask_gazebo_motion%2Fground_navigation.py_constant_FOOTPRINTS a scene:SourceModelOrMotionConstant ;
+    scene:sourcePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/ground_navigation.py" ;
+    scene:valueJSON "{\"name\": \"FOOTPRINTS\", \"value\": {\"bobcat\": [-0.85, 1.34, -0.85, 0.85], \"truck\": [-1.8, 1.8, -1.03, 1.03]}}" .
+
+scene:src%2Fcask_gazebo%2Fcask_gazebo_motion%2Fcask_gazebo_motion%2Finnok224_geometry.py_Innok224Geometry_MAX_CURVATURE a scene:SourceModelOrMotionConstant ;
+    scene:sourcePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/innok224_geometry.py" ;
+    scene:valueJSON "{\"class\": \"Innok224Geometry\", \"name\": \"MAX_CURVATURE\", \"value\": 1.58198756201711}" .
+
+scene:src%2Fcask_gazebo%2Fcask_gazebo_motion%2Fcask_gazebo_motion%2Finnok224_geometry.py_Innok224Geometry_PLAN_RADIUS a scene:SourceModelOrMotionConstant ;
+    scene:sourcePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/innok224_geometry.py" ;
+    scene:valueJSON "{\"class\": \"Innok224Geometry\", \"name\": \"PLAN_RADIUS\", \"value\": 0.9}" .
+
+scene:src%2Fcask_gazebo%2Fcask_gazebo_motion%2Fcask_gazebo_motion%2Finnok224_motion.py_attribute_21_motion_scale a scene:SourceMotionInitialization ;
+    scene:sourceLine 21 ;
+    scene:sourcePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/innok224_motion.py" ;
+    scene:valueJSON "{\"name\": \"motion_scale\", \"value\": 2.0}" .
+
+scene:src%2Fcask_gazebo%2Fcask_gazebo_motion%2Fcask_gazebo_motion%2Finnok224_motion.py_parameter_24 a scene:DeclaredParameterDefault ;
+    scene:sourceLine 24 ;
+    scene:sourcePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/innok224_motion.py" ;
+    scene:valueJSON "{\"default\": 2.0, \"name\": \"feedback_timeout\"}" .
+
+scene:src%2Fcask_gazebo%2Fcask_gazebo_motion%2Fcask_gazebo_motion%2Finnok224_motion.py_parameter_25 a scene:DeclaredParameterDefault ;
+    scene:sourceLine 25 ;
+    scene:sourcePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/innok224_motion.py" ;
+    scene:valueJSON "{\"default\": 180.0, \"name\": \"motion_timeout\"}" .
+
+scene:src%2Fcask_gazebo%2Fcask_gazebo_motion%2Fcask_gazebo_motion%2Finnok224_motion.py_parameter_279 a scene:DeclaredParameterDefault ;
+    scene:sourceLine 279 ;
+    scene:sourcePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/innok224_motion.py" ;
+    scene:valueJSON "{\"default\": 15.0, \"name\": \"planning_timeout\"}" .
+
+scene:src%2Fcask_gazebo%2Fcask_gazebo_motion%2Fcask_gazebo_motion%2Fjekko_motion.py_attribute_25_motion_scale a scene:SourceMotionInitialization ;
+    scene:sourceLine 25 ;
+    scene:sourcePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/jekko_motion.py" ;
+    scene:valueJSON "{\"name\": \"motion_scale\", \"value\": 2.0}" .
+
+scene:src%2Fcask_gazebo%2Fcask_gazebo_motion%2Fcask_gazebo_motion%2Fjekko_motion.py_parameter_28 a scene:DeclaredParameterDefault ;
+    scene:sourceLine 28 ;
+    scene:sourcePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/jekko_motion.py" ;
+    scene:valueJSON "{\"default\": 2.0, \"name\": \"feedback_timeout\"}" .
+
+scene:src%2Fcask_gazebo%2Fcask_gazebo_motion%2Fcask_gazebo_motion%2Fjekko_motion.py_parameter_29 a scene:DeclaredParameterDefault ;
+    scene:sourceLine 29 ;
+    scene:sourcePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/jekko_motion.py" ;
+    scene:valueJSON "{\"default\": 180.0, \"name\": \"motion_timeout\"}" .
+
+scene:src%2Fcask_gazebo%2Fcask_gazebo_motion%2Fcask_gazebo_motion%2Fjekko_motion.py_parameter_293 a scene:DeclaredParameterDefault ;
+    scene:sourceLine 293 ;
+    scene:sourcePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/jekko_motion.py" ;
+    scene:valueJSON "{\"default\": 15.0, \"name\": \"planning_timeout\"}" .
+
+scene:src%2Fcask_gazebo%2Fcask_gazebo_motion%2Fcask_gazebo_motion%2Fkali_geometry.py_constant_KALI_CHANGE a scene:SourceModelOrMotionConstant ;
+    scene:sourcePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/kali_geometry.py" ;
+    scene:valueJSON "{\"name\": \"KALI_CHANGE\", \"value\": [0.0, -0.6, 0.7, 0.0, -0.1, 0.0]}" .
+
+scene:src%2Fcask_gazebo%2Fcask_gazebo_motion%2Fcask_gazebo_motion%2Fkali_geometry.py_constant_KALI_STOW a scene:SourceModelOrMotionConstant ;
+    scene:sourcePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/kali_geometry.py" ;
+    scene:valueJSON "{\"name\": \"KALI_STOW\", \"value\": [0.0, -0.4, 1.7, 0.0, -1.3, 0.0]}" .
+
+scene:src%2Fcask_gazebo%2Fcask_gazebo_motion%2Fcask_gazebo_motion%2Fkali_motion.py_attribute_137_motion_scale a scene:SourceMotionInitialization ;
+    scene:sourceLine 137 ;
+    scene:sourcePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/kali_motion.py" ;
+    scene:valueJSON "{\"name\": \"motion_scale\", \"value\": 2.0}" .
+
+scene:src%2Fcask_gazebo%2Fcask_gazebo_motion%2Fcask_gazebo_motion%2Fkali_motion.py_parameter_140 a scene:DeclaredParameterDefault ;
+    scene:sourceLine 140 ;
+    scene:sourcePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/kali_motion.py" ;
+    scene:valueJSON "{\"default\": 2.0, \"name\": \"feedback_timeout\"}" .
+
+scene:src%2Fcask_gazebo%2Fcask_gazebo_motion%2Fcask_gazebo_motion%2Fkali_motion.py_parameter_141 a scene:DeclaredParameterDefault ;
+    scene:sourceLine 141 ;
+    scene:sourcePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/kali_motion.py" ;
+    scene:valueJSON "{\"default\": 180.0, \"name\": \"motion_timeout\"}" .
+
+scene:src%2Fcask_gazebo%2Fcask_gazebo_motion%2Fcask_gazebo_motion%2Fkmr_motion.py_parameter_16 a scene:DeclaredParameterDefault ;
+    scene:sourceLine 16 ;
+    scene:sourcePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/kmr_motion.py" ;
+    scene:valueJSON "{\"default\": 0.0, \"name\": \"initial_x\"}" .
+
+scene:src%2Fcask_gazebo%2Fcask_gazebo_motion%2Fcask_gazebo_motion%2Fkmr_motion.py_parameter_17 a scene:DeclaredParameterDefault ;
+    scene:sourceLine 17 ;
+    scene:sourcePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/kmr_motion.py" ;
+    scene:valueJSON "{\"default\": -3.0, \"name\": \"initial_y\"}" .
+
+scene:src%2Fcask_gazebo%2Fcask_gazebo_motion%2Fcask_gazebo_motion%2Fkmr_motion.py_parameter_18 a scene:DeclaredParameterDefault ;
+    scene:sourceLine 18 ;
+    scene:sourcePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/kmr_motion.py" ;
+    scene:valueJSON "{\"default\": 1.5708, \"name\": \"initial_yaw\"}" .
+
+scene:src%2Fcask_gazebo%2Fcask_gazebo_motion%2Fcask_gazebo_motion%2Fkmr_motion.py_parameter_19 a scene:DeclaredParameterDefault ;
+    scene:sourceLine 19 ;
+    scene:sourcePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/kmr_motion.py" ;
+    scene:valueJSON "{\"default\": 0.19, \"name\": \"wheel_radius\"}" .
+
+scene:src%2Fcask_gazebo%2Fcask_gazebo_motion%2Fcask_gazebo_motion%2Fmotion_speed.py_constant_CRANE_SCALE a scene:SourceModelOrMotionConstant ;
+    scene:sourcePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/motion_speed.py" ;
+    scene:valueJSON "{\"name\": \"CRANE_SCALE\", \"value\": 1.5}" .
+
+scene:src%2Fcask_gazebo%2Fcask_gazebo_motion%2Fcask_gazebo_motion%2Fmotion_speed.py_constant_GROUND_SCALE a scene:SourceModelOrMotionConstant ;
+    scene:sourcePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/motion_speed.py" ;
+    scene:valueJSON "{\"name\": \"GROUND_SCALE\", \"value\": 2.0}" .
+
+scene:src%2Fcask_gazebo%2Fcask_gazebo_motion%2Fcask_gazebo_motion%2Fobstacle_manager_node.py_parameter_66 a scene:DeclaredParameterDefault ;
+    scene:sourceLine 66 ;
+    scene:sourcePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/obstacle_manager_node.py" ;
+    scene:valueJSON "{\"default\": 0.45, \"name\": \"obstacle_radius\"}" .
+
+scene:src%2Fcask_gazebo%2Fcask_gazebo_motion%2Fcask_gazebo_motion%2Fobstacle_manager_node.py_parameter_85 a scene:DeclaredParameterDefault ;
+    scene:sourceLine 85 ;
+    scene:sourcePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/obstacle_manager_node.py" ;
+    scene:valueJSON "{\"default\": false, \"name\": \"gazebo_physics\"}" .
+
+scene:src%2Fcask_gazebo%2Fcask_gazebo_motion%2Fcask_gazebo_motion%2Fobstacle_manager_node.py_parameter_86 a scene:DeclaredParameterDefault ;
+    scene:sourceLine 86 ;
+    scene:sourcePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/obstacle_manager_node.py" ;
+    scene:valueJSON "{\"default\": \"empty\", \"name\": \"gazebo_world\"}" .
+
+scene:src%2Fcask_gazebo%2Fcask_gazebo_motion%2Fcask_gazebo_motion%2Fobstacle_manager_node.py_parameter_87 a scene:DeclaredParameterDefault ;
+    scene:sourceLine 87 ;
+    scene:sourcePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/obstacle_manager_node.py" ;
+    scene:valueJSON "{\"default\": 0.8, \"name\": \"obstacle_height\"}" .
+
+scene:src%2Fcask_gazebo%2Fcask_gazebo_motion%2Fcask_gazebo_motion%2Fphysical_path_planner.py_ForkliftFootprintPlanner_BODY a scene:SourceModelOrMotionConstant ;
+    scene:sourcePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/physical_path_planner.py" ;
+    scene:valueJSON "{\"class\": \"ForkliftFootprintPlanner\", \"name\": \"BODY\", \"value\": [[-1.3, 0.9, -0.6, 0.6], [-1.65, -0.95, -0.65, 0.65], [0.94, 1.1, -0.43, 0.43], [1.14, 1.44, -0.46, 0.46], [1.19, 2.79, 0.215, 0.345], [1.19, 2.79, -0.345, -0.215]]}" .
+
+scene:src%2Fcask_gazebo%2Fcask_gazebo_motion%2Fcask_gazebo_motion%2Fphysical_path_planner.py_ForkliftFootprintPlanner_LOAD a scene:SourceModelOrMotionConstant ;
+    scene:sourcePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/physical_path_planner.py" ;
+    scene:valueJSON "{\"class\": \"ForkliftFootprintPlanner\", \"name\": \"LOAD\", \"value\": [[1.39, 2.59, -0.53, 0.53], [1.88, 2.1, -0.8, 0.8]]}" .
+
+scene:src%2Fcask_gazebo%2Fcask_gazebo_motion%2Fcask_gazebo_motion%2Frear_steering_driver.py_parameter_19 a scene:DeclaredParameterDefault ;
+    scene:sourceLine 19 ;
+    scene:sourcePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/rear_steering_driver.py" ;
+    scene:valueJSON "{\"default\": \"forklift\", \"name\": \"robot\"}" .
+
+scene:src%2Fcask_gazebo%2Fcask_gazebo_motion%2Fcask_gazebo_motion%2Frear_steering_geometry.py_constant_GEOMETRIES a scene:SourceModelOrMotionConstant ;
+    scene:sourcePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/rear_steering_geometry.py" ;
+    scene:valueJSON "{\"name\": \"GEOMETRIES\", \"value\": {\"bobcat\": {\"arguments\": [0.52, -0.52, 1.06, 0.3, 1.65], \"constructor\": \"Geometry\", \"keywords\": {\"dock_lane\": 0.5}}, \"forklift\": {\"arguments\": [0.66, -0.88, 1.4, 0.38, 2.3], \"constructor\": \"Geometry\", \"keywords\": {}}}}" .
+
+scene:src%2Fcask_gazebo%2Fcask_gazebo_motion%2Fcask_gazebo_motion%2Frear_steering_geometry.py_constant_STEERING_LIMIT a scene:SourceModelOrMotionConstant ;
+    scene:sourcePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/rear_steering_geometry.py" ;
+    scene:valueJSON "{\"name\": \"STEERING_LIMIT\", \"value\": 0.9599310885968813}" .
+
+scene:src%2Fcask_gazebo%2Fcask_gazebo_motion%2Fcask_gazebo_motion%2Ftask002_obstacles.py_SoilFootprintPlanner_LOAD a scene:SourceModelOrMotionConstant ;
+    scene:sourcePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/task002_obstacles.py" ;
+    scene:valueJSON "{\"class\": \"SoilFootprintPlanner\", \"name\": \"LOAD\", \"value\": [[1.39, 2.59, -0.53, 0.53]]}" .
+
+scene:src%2Fcask_gazebo%2Fcask_gazebo_motion%2Fcask_gazebo_motion%2Ftask002_scene.py_constant_SOIL_BOXES a scene:SourceModelOrMotionConstant ;
+    scene:sourcePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/task002_scene.py" ;
+    scene:valueJSON "{\"name\": \"SOIL_BOXES\", \"value\": [[\"deck\", [0, 0, 0.125], [1.2, 1.0, 0.05]], [\"left_runner\", [0, 0.48, -0.15], [1.2, 0.1, 0.5]], [\"right_runner\", [0, -0.48, -0.15], [1.2, 0.1, 0.5]], [\"soil_volume\", [0, 0, 0.36], [0.9, 0.8, 0.4]]]}" .
+
+scene:src%2Fcask_gazebo%2Fcask_gazebo_motion%2Fcask_gazebo_motion%2Ftask002_scene.py_constant_SOIL_SIZE a scene:SourceModelOrMotionConstant ;
+    scene:sourcePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/task002_scene.py" ;
+    scene:valueJSON "{\"name\": \"SOIL_SIZE\", \"value\": [1.2, 1.0, 0.45]}" .
+
+scene:src%2Fcask_gazebo%2Fcask_gazebo_motion%2Fcask_gazebo_motion%2Ftask002_scene_node.py_parameter_26 a scene:DeclaredParameterDefault ;
+    scene:sourceLine 26 ;
+    scene:sourcePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/task002_scene_node.py" ;
+    scene:valueJSON "{\"default\": \"empty\", \"name\": \"gazebo_world\"}" .
+
+scene:src%2Fcask_gazebo%2Fcask_gazebo_motion%2Fcask_gazebo_motion%2Ftask002_scene_node.py_parameter_27 a scene:DeclaredParameterDefault ;
+    scene:sourceLine 27 ;
+    scene:sourcePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/task002_scene_node.py" ;
+    scene:valueJSON "{\"default\": \"RequiredExcavating_002\", \"name\": \"soil_required_capability\"}" .
+
+scene:src%2Fcask_gazebo%2Fcask_gazebo_motion%2Fcask_gazebo_motion%2Ftask002_scene_node.py_parameter_28 a scene:DeclaredParameterDefault ;
+    scene:sourceLine 28 ;
+    scene:sourcePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/task002_scene_node.py" ;
+    scene:valueJSON "{\"default\": 60.0, \"name\": \"startup_timeout\"}" .
+
+scene:src%2Fcask_gazebo%2Fcask_gazebo_motion%2Fcask_gazebo_motion%2Ftask005_feedback_relay.py_constant_PERIOD_NS a scene:SourceModelOrMotionConstant ;
+    scene:sourcePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/task005_feedback_relay.py" ;
+    scene:valueJSON "{\"name\": \"PERIOD_NS\", \"value\": 20000000}" .
+
+scene:src%2Fcask_gazebo%2Fcask_gazebo_motion%2Fcask_gazebo_motion%2Ftask005_feedback_relay.py_constant_ROBOTS a scene:SourceModelOrMotionConstant ;
+    scene:sourcePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/task005_feedback_relay.py" ;
+    scene:valueJSON "{\"name\": \"ROBOTS\", \"value\": [\"jekko\", \"kali\", \"innok224\"]}" .
+
+scene:src%2Fcask_gazebo%2Fcask_gazebo_motion%2Fcask_gazebo_motion%2Ftruck_geometry.py_constant_BED_TOP a scene:SourceModelOrMotionConstant ;
+    scene:sourcePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/truck_geometry.py" ;
+    scene:valueJSON "{\"name\": \"BED_TOP\", \"value\": 0.98}" .
+
+scene:src%2Fcask_gazebo%2Fcask_gazebo_motion%2Fcask_gazebo_motion%2Ftruck_geometry.py_constant_BED_X a scene:SourceModelOrMotionConstant ;
+    scene:sourcePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/truck_geometry.py" ;
+    scene:valueJSON "{\"name\": \"BED_X\", \"value\": -0.65}" .
+
+scene:src%2Fcask_gazebo%2Fcask_gazebo_motion%2Fcask_gazebo_motion%2Ftruck_geometry.py_constant_CAB_TOP a scene:SourceModelOrMotionConstant ;
+    scene:sourcePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/truck_geometry.py" ;
+    scene:valueJSON "{\"name\": \"CAB_TOP\", \"value\": 1.595}" .
+
+scene:src%2Fcask_gazebo%2Fcask_gazebo_motion%2Fcask_gazebo_motion%2Ftruck_geometry.py_constant_CARGO_BOTTOM a scene:SourceModelOrMotionConstant ;
+    scene:sourcePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/truck_geometry.py" ;
+    scene:valueJSON "{\"name\": \"CARGO_BOTTOM\", \"value\": -0.4}" .
+
+scene:src%2Fcask_gazebo%2Fcask_gazebo_motion%2Fcask_gazebo_motion%2Ftruck_kinematics.py_constant_MAX_CURVATURE a scene:SourceModelOrMotionConstant ;
+    scene:sourcePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/truck_kinematics.py" ;
+    scene:valueJSON "{\"name\": \"MAX_CURVATURE\", \"value\": 0.23809523809523808}" .
+
+scene:src%2Fcask_gazebo%2Fcask_gazebo_motion%2Fcask_gazebo_motion%2Ftruck_kinematics.py_constant_MIN_RADIUS a scene:SourceModelOrMotionConstant ;
+    scene:sourcePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/truck_kinematics.py" ;
+    scene:valueJSON "{\"name\": \"MIN_RADIUS\", \"value\": 4.2}" .
+
+scene:src%2Fcask_gazebo%2Fcask_gazebo_motion%2Fcask_gazebo_motion%2Ftruck_kinematics.py_constant_PLAN_RADIUS a scene:SourceModelOrMotionConstant ;
+    scene:sourcePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/truck_kinematics.py" ;
+    scene:valueJSON "{\"name\": \"PLAN_RADIUS\", \"value\": 5.2}" .
+
+scene:src%2Fcask_gazebo%2Fcask_gazebo_motion%2Fcask_gazebo_motion%2Ftruck_kinematics.py_constant_REAR_X a scene:SourceModelOrMotionConstant ;
+    scene:sourcePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/truck_kinematics.py" ;
+    scene:valueJSON "{\"name\": \"REAR_X\", \"value\": -1.12}" .
+
+scene:src%2Fcask_gazebo%2Fcask_gazebo_motion%2Fcask_gazebo_motion%2Ftruck_kinematics.py_constant_TRACK a scene:SourceModelOrMotionConstant ;
+    scene:sourcePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/truck_kinematics.py" ;
+    scene:valueJSON "{\"name\": \"TRACK\", \"value\": 1.38}" .
+
+scene:src%2Fcask_gazebo%2Fcask_gazebo_motion%2Fcask_gazebo_motion%2Ftruck_kinematics.py_constant_WHEELBASE a scene:SourceModelOrMotionConstant ;
+    scene:sourcePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/truck_kinematics.py" ;
+    scene:valueJSON "{\"name\": \"WHEELBASE\", \"value\": 2.3}" .
+
+scene:src%2Fcask_gazebo%2Fcask_gazebo_motion%2Fcask_gazebo_motion%2Ftruck_reeds_shepp.py_constant_EPS a scene:SourceModelOrMotionConstant ;
+    scene:sourcePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/truck_reeds_shepp.py" ;
+    scene:valueJSON "{\"name\": \"EPS\", \"value\": 1e-10}" .
+
+scene:src%2Fcask_gazebo%2Fcask_gazebo_motion%2Fcask_gazebo_motion%2Ftruck_reeds_shepp.py_constant_HALF_PI a scene:SourceModelOrMotionConstant ;
+    scene:sourcePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/truck_reeds_shepp.py" ;
+    scene:valueJSON "{\"name\": \"HALF_PI\", \"value\": 1.5707963267948966}" .
+
+scene:src%2Fcask_gazebo%2Fcask_gazebo_motion%2Fcask_gazebo_motion%2Ftruck_visual_motion.py_parameter_14 a scene:DeclaredParameterDefault ;
+    scene:sourceLine 14 ;
+    scene:sourcePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/truck_visual_motion.py" ;
+    scene:valueJSON "{\"default\": 0.0, \"name\": \"initial_x\"}" .
+
+scene:src%2Fcask_gazebo%2Fcask_gazebo_motion%2Fcask_gazebo_motion%2Ftruck_visual_motion.py_parameter_15 a scene:DeclaredParameterDefault ;
+    scene:sourceLine 15 ;
+    scene:sourcePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/truck_visual_motion.py" ;
+    scene:valueJSON "{\"default\": 0.0, \"name\": \"initial_y\"}" .
+
+scene:src%2Fcask_gazebo%2Fcask_gazebo_motion%2Fcask_gazebo_motion%2Ftruck_visual_motion.py_parameter_16 a scene:DeclaredParameterDefault ;
+    scene:sourceLine 16 ;
+    scene:sourcePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/truck_visual_motion.py" ;
+    scene:valueJSON "{\"default\": 0.0, \"name\": \"initial_yaw\"}" .
+
+scene:src%2Fcask_gazebo%2Fcask_gazebo_motion%2Fcask_gazebo_motion%2Ftruck_visual_motion.py_parameter_17 a scene:DeclaredParameterDefault ;
+    scene:sourceLine 17 ;
+    scene:sourcePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/truck_visual_motion.py" ;
+    scene:valueJSON "{\"default\": 100000.0, \"name\": \"maximum_transport_distance\"}" .
+
+scene:src%2Fcask_gazebo%2Fcask_gazebo_motion%2Fcask_gazebo_motion%2Ftruck_visual_motion.py_parameter_18 a scene:DeclaredParameterDefault ;
+    scene:sourceLine 18 ;
+    scene:sourcePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/truck_visual_motion.py" ;
+    scene:valueJSON "{\"default\": 0.2, \"name\": \"phase_delay_seconds\"}" .
+
+scene:src%2Fcask_gazebo%2Fcask_gazebo_motion%2Fcask_gazebo_motion%2Ftruck_visual_motion.py_parameter_19 a scene:DeclaredParameterDefault ;
+    scene:sourceLine 19 ;
+    scene:sourcePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/truck_visual_motion.py" ;
+    scene:valueJSON "{\"default\": 1.0, \"name\": \"drive_speed\"}" .
+
+scene:src%2Fcask_gazebo%2Fcask_gazebo_motion%2Fcask_gazebo_motion%2Ftruck_visual_motion.py_parameter_20 a scene:DeclaredParameterDefault ;
+    scene:sourceLine 20 ;
+    scene:sourcePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/truck_visual_motion.py" ;
+    scene:valueJSON "{\"default\": 0.25, \"name\": \"navigation_resolution\"}" .
+
+scene:src%2Fcask_gazebo%2Fcask_gazebo_motion%2Fcask_gazebo_motion%2Ftruck_visual_motion.py_parameter_21 a scene:DeclaredParameterDefault ;
+    scene:sourceLine 21 ;
+    scene:sourcePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/truck_visual_motion.py" ;
+    scene:valueJSON "{\"default\": 0.8, \"name\": \"robot_radius\"}" .
+
+scene:src%2Fcask_gazebo%2Fcask_gazebo_motion%2Fcask_gazebo_motion%2Ftruck_visual_motion.py_parameter_22 a scene:DeclaredParameterDefault ;
+    scene:sourceLine 22 ;
+    scene:sourcePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/truck_visual_motion.py" ;
+    scene:valueJSON "{\"default\": 0.45, \"name\": \"obstacle_radius\"}" .
+
+scene:src%2Fcask_gazebo%2Fcask_gazebo_motion%2Fcask_gazebo_motion%2Ftruck_visual_motion.py_parameter_23 a scene:DeclaredParameterDefault ;
+    scene:sourceLine 23 ;
+    scene:sourcePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/truck_visual_motion.py" ;
+    scene:valueJSON "{\"default\": [-10.0, 20.0, -10.0, 12.0], \"name\": \"navigation_bounds\"}" .
+
+scene:src%2Fcask_robot_skill_servers%2Fcask_robot_skill_servers%2Fcrane_lifting_server.py_parameter_16 a scene:DeclaredParameterDefault ;
+    scene:sourceLine 16 ;
+    scene:sourcePath "src/cask_robot_skill_servers/cask_robot_skill_servers/crane_lifting_server.py" ;
+    scene:valueJSON "{\"default\": true, \"name\": \"lifting_available\"}" .
+
+scene:src%2Fcask_robot_skill_servers%2Fcask_robot_skill_servers%2Fforklift_lifting_server.py_parameter_15 a scene:DeclaredParameterDefault ;
+    scene:sourceLine 15 ;
+    scene:sourcePath "src/cask_robot_skill_servers/cask_robot_skill_servers/forklift_lifting_server.py" ;
+    scene:valueJSON "{\"default\": true, \"name\": \"transporting_available\"}" .
+
+scene:src%2Fcask_robot_skill_servers%2Fcask_robot_skill_servers%2Fforklift_lifting_server.py_parameter_16 a scene:DeclaredParameterDefault ;
+    scene:sourceLine 16 ;
+    scene:sourcePath "src/cask_robot_skill_servers/cask_robot_skill_servers/forklift_lifting_server.py" ;
+    scene:valueJSON "{\"default\": true, \"name\": \"lifting_available\"}" .
+
+scene:src%2Fcask_robot_skill_servers%2Fcask_robot_skill_servers%2Finnok224_scanning_server.py_parameter_15 a scene:DeclaredParameterDefault ;
+    scene:sourceLine 15 ;
+    scene:sourcePath "src/cask_robot_skill_servers/cask_robot_skill_servers/innok224_scanning_server.py" ;
+    scene:valueJSON "{\"default\": true, \"name\": \"available\"}" .
+
+scene:src%2Fcask_robot_skill_servers%2Fcask_robot_skill_servers%2Fjekko_skill_server.py_parameter_15 a scene:DeclaredParameterDefault ;
+    scene:sourceLine 15 ;
+    scene:sourcePath "src/cask_robot_skill_servers/cask_robot_skill_servers/jekko_skill_server.py" ;
+    scene:valueJSON "{\"default\": true, \"name\": \"available\"}" .
+
+scene:src%2Fcask_robot_skill_servers%2Fcask_robot_skill_servers%2Fjekko_skill_server.py_parameter_16 a scene:DeclaredParameterDefault ;
+    scene:sourceLine 16 ;
+    scene:sourcePath "src/cask_robot_skill_servers/cask_robot_skill_servers/jekko_skill_server.py" ;
+    scene:valueJSON "{\"default\": -1.0, \"name\": \"task005_fail_before_pickup_at_progress\"}" .
+
+scene:src%2Fcask_robot_skill_servers%2Fcask_robot_skill_servers%2Fjekko_skill_server.py_parameter_17 a scene:DeclaredParameterDefault ;
+    scene:sourceLine 17 ;
+    scene:sourcePath "src/cask_robot_skill_servers/cask_robot_skill_servers/jekko_skill_server.py" ;
+    scene:valueJSON "{\"default\": -1.0, \"name\": \"task005_fail_loaded_at_progress\"}" .
+
+scene:src%2Fcask_robot_skill_servers%2Fcask_robot_skill_servers%2Fkali_skill_server.py_parameter_15 a scene:DeclaredParameterDefault ;
+    scene:sourceLine 15 ;
+    scene:sourcePath "src/cask_robot_skill_servers/cask_robot_skill_servers/kali_skill_server.py" ;
+    scene:valueJSON "{\"default\": true, \"name\": \"available\"}" .
+
+abox:Rebar_Requirement_ID a owl:NamedIndividual,
+        din:Instance_Description ;
+    din:Expression_Goal "Requirement" ;
+    din:Instance_Description_has_Type abox:ProductKind_TD ;
+    din:Logic_Interpretation "=" ;
+    din:Value "Rebar" .
+
+abox:RoofComponent_Requirement_ID a owl:NamedIndividual,
+        din:Instance_Description ;
+    din:Expression_Goal "Requirement" ;
+    din:Instance_Description_has_Type abox:ProductKind_TD ;
+    din:Logic_Interpretation "=" ;
+    din:Value "RoofComponent" .
+
+abox:Scanned_Requirement_ID a owl:NamedIndividual,
+        din:Instance_Description ;
+    din:Expression_Goal "Requirement" ;
+    din:Instance_Description_has_Type abox:ScanStatus_TD ;
+    din:Logic_Interpretation "=" ;
+    din:Value "SCANNED" .
+
+abox:Soil_Assurance_ID a owl:NamedIndividual,
+        din:Instance_Description ;
+    din:Expression_Goal "Assurance" ;
+    din:Instance_Description_has_Type abox:ProductKind_TD ;
+    din:Logic_Interpretation "=" ;
+    din:Value "Soil" .
+
+abox:Soil_Assurance_Property a owl:NamedIndividual,
+        din:Data_Element ;
+    din:has_Instance_Description abox:Soil_Assurance_ID ;
+    din:has_Type_Description abox:ProductKind_TD .
+
+abox:Soil_Requirement_ID a owl:NamedIndividual,
+        din:Instance_Description ;
+    din:Expression_Goal "Requirement" ;
+    din:Instance_Description_has_Type abox:ProductKind_TD ;
+    din:Logic_Interpretation "=" ;
+    din:Value "Soil" .
+
+abox:SteelComponent_Requirement_ID a owl:NamedIndividual,
+        din:Instance_Description ;
+    din:Expression_Goal "Requirement" ;
+    din:Instance_Description_has_Type abox:ProductKind_TD ;
+    din:Logic_Interpretation "=" ;
+    din:Value "SteelComponent" .
+
+abox:SuspendedHandoffAssurance_ID a owl:NamedIndividual,
+        din:Instance_Description ;
+    din:Expression_Goal "Assurance" ;
+    din:Instance_Description_has_Type abox:SuspendedHandoffProtocol_TD ;
+    din:Logic_Interpretation "=" ;
+    din:Value "suspended-load-v1" .
+
+abox:SuspendedHandoffAssurance_Property a owl:NamedIndividual,
+        din:Data_Element ;
+    din:has_Instance_Description abox:SuspendedHandoffAssurance_ID ;
+    din:has_Type_Description abox:SuspendedHandoffProtocol_TD .
+
+abox:SuspendedHandoffRequirement_ID a owl:NamedIndividual,
+        din:Instance_Description ;
+    din:Expression_Goal "Requirement" ;
+    din:Instance_Description_has_Type abox:SuspendedHandoffProtocol_TD ;
+    din:Logic_Interpretation "=" ;
+    din:Value "suspended-load-v1" .
+
+abox:SuspendedHandoffRequirement_Property a owl:NamedIndividual,
+        din:Data_Element ;
+    din:has_Instance_Description abox:SuspendedHandoffRequirement_ID ;
+    din:has_Type_Description abox:SuspendedHandoffProtocol_TD .
+
+abox:Task001HoldDuration_ID a owl:NamedIndividual,
+        din:Instance_Description ;
+    din:Expression_Goal "Requirement" ;
+    din:Instance_Description_has_Type abox:DeliveryHeightHoldDuration_TD ;
+    din:Logic_Interpretation "=" ;
+    din:Value 3.0 .
+
+abox:Task002DiggingDepth_ID a owl:NamedIndividual,
+        din:Instance_Description ;
+    din:Expression_Goal "Requirement" ;
+    din:Instance_Description_has_Type abox:DiggingDepth_TD ;
+    din:Logic_Interpretation "=" ;
+    din:Value 1 .
+
+abox:Task002DiggingDepth_Property a owl:NamedIndividual,
+        din:Data_Element ;
+    din:has_Instance_Description abox:Task002DiggingDepth_ID ;
+    din:has_Type_Description abox:DiggingDepth_TD .
+
+abox:Task002ExcavatingAfter a owl:NamedIndividual,
+        <http://www.w3id.org/hsu-aut/VDI3682#Product> ;
+    abox:hasOrientationYaw 0.0 ;
+    abox:hasPositionX 5.0 ;
+    abox:hasPositionY -3.0 ;
+    abox:hasPositionZ 0.4 ;
+    abox:hasReferenceFrame "world" ;
+    din:has_Data_Element abox:Soil_Requirement_Property,
+        abox:Task002DiggingDepth_Property,
+        abox:Task002Payload_Property ;
+    scene:sceneRole "task_state_or_work_point" ;
+    scene:sourcePath "src/ontology/CASK+CRO-abox.ttl" .
+
+abox:Task002HandoffMiddle_ID a owl:NamedIndividual,
+        din:Instance_Description ;
+    din:Expression_Goal "Requirement" ;
+    din:Instance_Description_has_Type abox:HandoffIntermediateState_TD ;
+    din:Logic_Interpretation "=" ;
+    din:Value "http://www.semanticweb.org/lixiangcheng/CASK+CRO-abox#Task002LiftingMiddle" .
+
+abox:Task002HandoffMiddle_Property a owl:NamedIndividual,
+        din:Data_Element ;
+    din:has_Instance_Description abox:Task002HandoffMiddle_ID ;
+    din:has_Type_Description abox:HandoffIntermediateState_TD .
+
+abox:Task002LiftingHeight_ID a owl:NamedIndividual,
+        din:Instance_Description ;
+    din:Expression_Goal "Requirement" ;
+    din:Instance_Description_has_Type abox:LiftingHeight_TD ;
+    din:Logic_Interpretation "=" ;
+    din:Value 3 .
+
+abox:Task002LiftingHeight_Property a owl:NamedIndividual,
+        din:Data_Element ;
+    din:has_Instance_Description abox:Task002LiftingHeight_ID ;
+    din:has_Type_Description abox:LiftingHeight_TD .
+
+abox:Task002Payload_ID a owl:NamedIndividual,
+        din:Instance_Description ;
+    din:Expression_Goal "Requirement" ;
+    din:Instance_Description_has_Type abox:Payload_TD ;
+    din:Logic_Interpretation "=" ;
+    din:Value 3000 .
+
+abox:Task002TransportDistance_ID a owl:NamedIndividual,
+        din:Instance_Description ;
+    din:Expression_Goal "Requirement" ;
+    din:Instance_Description_has_Type abox:TransportDistance_TD ;
+    din:Logic_Interpretation "=" ;
+    din:Value 7.632169 .
+
+abox:Task002TransportDistance_Property a owl:NamedIndividual,
+        din:Data_Element ;
+    din:has_Instance_Description abox:Task002TransportDistance_ID ;
+    din:has_Type_Description abox:TransportDistance_TD .
+
+abox:Task003LiftingHeight_ID a owl:NamedIndividual,
+        din:Instance_Description ;
+    din:Expression_Goal "Requirement" ;
+    din:Instance_Description_has_Type abox:LiftingHeight_TD ;
+    din:Logic_Interpretation "=" ;
+    din:Value 2 .
+
+abox:Task003Payload_ID a owl:NamedIndividual,
+        din:Instance_Description ;
+    din:Expression_Goal "Requirement" ;
+    din:Instance_Description_has_Type abox:Payload_TD ;
+    din:Logic_Interpretation "=" ;
+    din:Value 4000 .
+
+abox:Task003Payload_Property a owl:NamedIndividual,
+        din:Data_Element ;
+    din:has_Instance_Description abox:Task003Payload_ID ;
+    din:has_Type_Description abox:Payload_TD .
+
+abox:Task003RoofPosition_ID a owl:NamedIndividual,
+        din:Instance_Description ;
+    din:Expression_Goal "Requirement" ;
+    din:Instance_Description_has_Type abox:PositionIdentifier_TD ;
+    din:Logic_Interpretation "=" ;
+    din:Value "RoofInstallationPosition_03" .
+
+abox:Task003ScrewingRotation_ID a owl:NamedIndividual,
+        din:Instance_Description ;
+    din:Expression_Goal "Requirement" ;
+    din:Instance_Description_has_Type abox:ScrewingRotation_TD ;
+    din:Logic_Interpretation "=" ;
+    din:Value 6.283 .
+
+abox:Task003ScrewingRotation_Property a owl:NamedIndividual,
+        din:Data_Element ;
+    din:has_Instance_Description abox:Task003ScrewingRotation_ID ;
+    din:has_Type_Description abox:ScrewingRotation_TD .
+
+abox:Task003ScrewingTorque_ID a owl:NamedIndividual,
+        din:Instance_Description ;
+    din:Expression_Goal "Requirement" ;
+    din:Instance_Description_has_Type abox:ScrewingTorque_TD ;
+    din:Logic_Interpretation "=" ;
+    din:Value 50 .
+
+abox:Task003ScrewingTorque_Property a owl:NamedIndividual,
+        din:Data_Element ;
+    din:has_Instance_Description abox:Task003ScrewingTorque_ID ;
+    din:has_Type_Description abox:ScrewingTorque_TD .
+
+abox:Task003ToolPosition_ID a owl:NamedIndividual,
+        din:Instance_Description ;
+    din:Expression_Goal "Requirement" ;
+    din:Instance_Description_has_Type abox:PositionIdentifier_TD ;
+    din:Logic_Interpretation "=" ;
+    din:Value "ScrewPosition_03" .
+
+abox:Task003ToolPosition_Property a owl:NamedIndividual,
+        din:Data_Element ;
+    din:has_Instance_Description abox:Task003ToolPosition_ID ;
+    din:has_Type_Description abox:PositionIdentifier_TD .
+
+abox:Task003ToolPositioningError_ID a owl:NamedIndividual,
+        din:Instance_Description ;
+    din:Expression_Goal "Requirement" ;
+    din:Instance_Description_has_Type abox:ToolPositioningError_TD ;
+    din:Logic_Interpretation "<=" ;
+    din:Value 5 .
+
+abox:Task003ToolPositioningError_Property a owl:NamedIndividual,
+        din:Data_Element ;
+    din:has_Instance_Description abox:Task003ToolPositioningError_ID ;
+    din:has_Type_Description abox:ToolPositioningError_TD .
+
+abox:Task005LiftingAfter a owl:NamedIndividual,
+        <http://www.w3id.org/hsu-aut/VDI3682#Product> ;
+    abox:hasOrientationYaw 0.0 ;
+    abox:hasPositionX -1.1 ;
+    abox:hasPositionY -1.6 ;
+    abox:hasPositionZ 1.0 ;
+    abox:hasReferenceFrame "world" ;
+    din:has_Data_Element abox:SteelComponent_Requirement_Property,
+        abox:Task005LiftingHeight_Property ;
+    scene:sceneRole "task_state_or_work_point" ;
+    scene:sourcePath "src/ontology/CASK+CRO-abox.ttl" .
+
+abox:Task005LiftingBefore a owl:NamedIndividual,
+        <http://www.w3id.org/hsu-aut/VDI3682#Product> ;
+    abox:hasOrientationYaw 0.0 ;
+    abox:hasPositionX -1.8 ;
+    abox:hasPositionY -2.8 ;
+    abox:hasPositionZ 0.15 ;
+    abox:hasReferenceFrame "world" ;
+    din:has_Data_Element abox:SteelComponent_Requirement_Property,
+        abox:Task005Payload_Property ;
+    scene:sceneRole "task_state_or_work_point" ;
+    scene:sourcePath "src/ontology/CASK+CRO-abox.ttl" .
+
+abox:Task005LiftingHeight_ID a owl:NamedIndividual,
+        din:Instance_Description ;
+    din:Expression_Goal "Requirement" ;
+    din:Instance_Description_has_Type abox:LiftingHeight_TD ;
+    din:Logic_Interpretation "=" ;
+    din:Value 1.0 .
+
+abox:Task005LiftingHeight_Property a owl:NamedIndividual,
+        din:Data_Element ;
+    din:has_Instance_Description abox:Task005LiftingHeight_ID ;
+    din:has_Type_Description abox:LiftingHeight_TD .
+
+abox:Task005Payload_ID a owl:NamedIndividual,
+        din:Instance_Description ;
+    din:Expression_Goal "Requirement" ;
+    din:Instance_Description_has_Type abox:Payload_TD ;
+    din:Logic_Interpretation "=" ;
+    din:Value 20.0 .
+
+abox:Task005Payload_Property a owl:NamedIndividual,
+        din:Data_Element ;
+    din:has_Instance_Description abox:Task005Payload_ID ;
+    din:has_Type_Description abox:Payload_TD .
+
+abox:Task005ScrewingRotation_ID a owl:NamedIndividual,
+        din:Instance_Description ;
+    din:Expression_Goal "Requirement" ;
+    din:Instance_Description_has_Type abox:ScrewingRotation_TD ;
+    din:Logic_Interpretation "=" ;
+    din:Value 6.283 .
+
+abox:Task005ScrewingRotation_Property a owl:NamedIndividual,
+        din:Data_Element ;
+    din:has_Instance_Description abox:Task005ScrewingRotation_ID ;
+    din:has_Type_Description abox:ScrewingRotation_TD .
+
+abox:Task005ScrewingTorque_ID a owl:NamedIndividual,
+        din:Instance_Description ;
+    din:Expression_Goal "Requirement" ;
+    din:Instance_Description_has_Type abox:ScrewingTorque_TD ;
+    din:Logic_Interpretation "=" ;
+    din:Value 50.0 .
+
+abox:Task005ScrewingTorque_Property a owl:NamedIndividual,
+        din:Data_Element ;
+    din:has_Instance_Description abox:Task005ScrewingTorque_ID ;
+    din:has_Type_Description abox:ScrewingTorque_TD .
+
+abox:Task005ToolPosition_ID a owl:NamedIndividual,
+        din:Instance_Description ;
+    din:Expression_Goal "Requirement" ;
+    din:Instance_Description_has_Type abox:PositionIdentifier_TD ;
+    din:Logic_Interpretation "=" ;
+    din:Value "ScrewPosition_005" .
+
+abox:Task005ToolPosition_Property a owl:NamedIndividual,
+        din:Data_Element ;
+    din:has_Instance_Description abox:Task005ToolPosition_ID ;
+    din:has_Type_Description abox:PositionIdentifier_TD .
+
+abox:Task005ToolPositioningError_ID a owl:NamedIndividual,
+        din:Instance_Description ;
+    din:Expression_Goal "Requirement" ;
+    din:Instance_Description_has_Type abox:ToolPositioningError_TD ;
+    din:Logic_Interpretation "<=" ;
+    din:Value 5.0 .
+
+abox:Task005ToolPositioningError_Property a owl:NamedIndividual,
+        din:Data_Element ;
+    din:has_Instance_Description abox:Task005ToolPositioningError_ID ;
+    din:has_Type_Description abox:ToolPositioningError_TD .
+
+abox:TaskElementBefore_001 a owl:NamedIndividual,
+        <http://www.w3id.org/hsu-aut/VDI3682#Product> ;
+    abox:hasOrientationYaw 0.0 ;
+    abox:hasPositionX 0.0 ;
+    abox:hasPositionY 3.0 ;
+    abox:hasPositionZ 0.4 ;
+    abox:hasReferenceFrame "world" ;
+    din:has_Data_Element abox:Rebar_Requirement_Property,
+        abox:TaskPayload_Property ;
+    scene:sceneRole "task_state_or_work_point" ;
+    scene:sourcePath "src/ontology/CASK+CRO-abox.ttl" .
+
+abox:TaskHeight_ID a owl:NamedIndividual,
+        din:Instance_Description ;
+    din:Expression_Goal "Requirement" ;
+    din:Instance_Description_has_Type abox:LiftingHeight_TD ;
+    din:Logic_Interpretation "=" ;
+    din:Value 3 .
+
+abox:TaskPayload_ID a owl:NamedIndividual,
+        din:Instance_Description ;
+    din:Expression_Goal "Requirement" ;
+    din:Instance_Description_has_Type abox:Payload_TD ;
+    din:Logic_Interpretation "=" ;
+    din:Value 2000 .
+
+abox:TruckPayload_ID a owl:NamedIndividual,
+        din:Instance_Description ;
+    din:Expression_Goal "Assurance" ;
+    din:Instance_Description_has_Type abox:Payload_TD ;
+    din:Logic_Interpretation "<=" ;
+    din:Value 10000 .
+
+abox:TruckPayload_Property a owl:NamedIndividual,
+        din:Data_Element ;
+    din:has_Instance_Description abox:TruckPayload_ID ;
+    din:has_Type_Description abox:Payload_TD .
+
+scene:TimberIntermediateStorage abox:hasOrientationYaw 0.0 ;
+    abox:hasPositionX -14.0 ;
+    abox:hasPositionY -8.0 ;
+    abox:hasPositionZ 0.4 ;
+    abox:hasReferenceFrame "world" .
+
+scene:TimberMobileCraneWork abox:hasOrientationYaw 2.2655346029916e0 ;
+    abox:hasPositionX -11.5 ;
+    abox:hasPositionY -5.0 ;
+    abox:hasPositionZ 0.045 ;
+    abox:hasReferenceFrame "world" .
+
+scene:TimberPickup abox:hasOrientationYaw -1.570796e+00 ;
+    abox:hasPositionX -14.0 ;
+    abox:hasPositionY -2.0 ;
+    abox:hasPositionZ 0.4 ;
+    abox:hasReferenceFrame "world" .
+
+scene:initial_bobcat a scene:RobotInitialPose ;
+    abox:hasOrientationYaw 1.570796e+00 ;
+    abox:hasPositionX 0e+00 ;
+    abox:hasPositionY -7e+00 ;
+    abox:hasPositionZ 5e-02 ;
+    abox:hasReferenceFrame "world" ;
+    scene:sourcePath "src/cask_oneopen/launch/cask_gazebo_oneopen.launch.py" .
+
+scene:initial_crane a scene:RobotInitialPose ;
+    abox:hasOrientationYaw 0e+00 ;
+    abox:hasPositionX 2.8e+00 ;
+    abox:hasPositionY 0e+00 ;
+    abox:hasPositionZ 0e+00 ;
+    abox:hasReferenceFrame "world" ;
+    scene:sourcePath "src/cask_oneopen/launch/cask_gazebo_oneopen.launch.py" .
+
+scene:initial_forklift a scene:RobotInitialPose ;
+    abox:hasOrientationYaw 0e+00 ;
+    abox:hasPositionX -1.6e+01 ;
+    abox:hasPositionY 4e+00 ;
+    abox:hasPositionZ 5e-02 ;
+    abox:hasReferenceFrame "world" ;
+    scene:sourcePath "src/cask_oneopen/launch/cask_gazebo_oneopen.launch.py" .
+
+scene:initial_innok224 a scene:RobotInitialPose ;
+    abox:hasOrientationYaw -7.62848e-02 ;
+    abox:hasPositionX -1.05e+01 ;
+    abox:hasPositionY 5e-01 ;
+    abox:hasPositionZ 4.5e-02 ;
+    abox:hasReferenceFrame "world" ;
+    scene:sourcePath "src/cask_oneopen/launch/cask_gazebo_oneopen.launch.py" .
+
+scene:initial_jekko a scene:RobotInitialPose ;
+    abox:hasOrientationYaw 1.570796e+00 ;
+    abox:hasPositionX -4.5e+00 ;
+    abox:hasPositionY -7e+00 ;
+    abox:hasPositionZ 4.5e-02 ;
+    abox:hasReferenceFrame "world" ;
+    scene:sourcePath "src/cask_oneopen/launch/cask_gazebo_oneopen.launch.py" .
+
+scene:initial_kali a scene:RobotInitialPose ;
+    abox:hasOrientationYaw 0e+00 ;
+    abox:hasPositionX -9e+00 ;
+    abox:hasPositionY -2.25e+00 ;
+    abox:hasPositionZ 4.5e-02 ;
+    abox:hasReferenceFrame "world" ;
+    scene:sourcePath "src/cask_oneopen/launch/cask_gazebo_oneopen.launch.py" .
+
+scene:initial_task001_rebar a scene:ComponentInitialPose ;
+    abox:hasOrientationYaw 0e+00 ;
+    abox:hasPositionX 0e+00 ;
+    abox:hasPositionY 3e+00 ;
+    abox:hasPositionZ 4e-01 ;
+    abox:hasReferenceFrame "world" ;
+    scene:derivedFromState abox:TaskElementBefore_001 ;
+    scene:sourcePath "src/cask_component_manager/cask_component_manager/component_manager_node.py" .
+
+scene:initial_task002_soil a scene:ComponentInitialPose ;
+    abox:hasOrientationYaw 0e+00 ;
+    abox:hasPositionX 5e+00 ;
+    abox:hasPositionY -3e+00 ;
+    abox:hasPositionZ 4e-01 ;
+    abox:hasReferenceFrame "world" ;
+    scene:derivedFromState abox:Task002ExcavatingAfter ;
+    scene:sourcePath "src/cask_gazebo/cask_gazebo_motion/cask_gazebo_motion/task002_scene.py" .
+
+scene:initial_task005_steel a scene:ComponentInitialPose ;
+    abox:hasOrientationYaw 0e+00 ;
+    abox:hasPositionX -1.8e+00 ;
+    abox:hasPositionY -2.8e+00 ;
+    abox:hasPositionZ 1.5e-01 ;
+    abox:hasReferenceFrame "world" ;
+    scene:derivedFromState abox:Task005LiftingBefore ;
+    scene:sourcePath "src/cask_component_manager/cask_component_manager/component_manager_node.py" .
+
+scene:initial_task005_work_support a scene:ComponentInitialPose ;
+    abox:hasOrientationYaw 0e+00 ;
+    abox:hasPositionX -1.1e+00 ;
+    abox:hasPositionY -1.6e+00 ;
+    abox:hasPositionZ 4.25e-01 ;
+    abox:hasReferenceFrame "world" ;
+    scene:derivedFromState abox:Task005LiftingAfter ;
+    scene:sourcePath "src/cask_component_manager/cask_component_manager/component_manager_node.py" .
+
+scene:initial_truck a scene:RobotInitialPose ;
+    abox:hasOrientationYaw 3.141593e+00 ;
+    abox:hasPositionX 1.2e+01 ;
+    abox:hasPositionY 7e+00 ;
+    abox:hasPositionZ 5e-02 ;
+    abox:hasReferenceFrame "world" ;
+    scene:sourcePath "src/cask_oneopen/launch/cask_gazebo_oneopen.launch.py" .
+
+abox:DeliveryHeightHoldDuration_TD a owl:NamedIndividual,
+        din:Real,
+        din:Type_Description ;
+    din:Code "deliveryHeightHoldDuration" ;
+    din:Definition "Continuous simulated seconds at output product XY/yaw and required lifting world Z, before final lowering. Final output Z is the released height, not the hold height." ;
+    din:Preferred_Name "Delivery height continuous hold duration" ;
+    din:Unit_of_Measure "s" ;
+    din:Version_Number 1 .
+
+abox:DiggingDepth_TD a owl:NamedIndividual,
+        din:Real,
+        din:Type_Description ;
+    din:Code "diggingDepth" ;
+    din:Definition "Maximum or required digging depth" ;
+    din:Preferred_Name "Digging Depth" ;
+    din:Short_Name "depth" ;
+    din:Unit_of_Measure "m" ;
+    din:Version_Number 1 .
+
+abox:HandoffIntermediateState_TD a owl:NamedIndividual,
+        din:String,
+        din:Type_Description ;
+    din:Code "handoffIntermediateState" ;
+    din:Revision_Number 1 .
+
+abox:ScanStatus_TD a owl:NamedIndividual,
+        din:String,
+        din:Type_Description ;
+    din:Code "scanStatus" ;
+    din:Definition "Scanning completion status" ;
+    din:Preferred_Name "Scan Status" ;
+    din:Version_Number 1 .
+
+abox:Scanned_Requirement_Property a owl:NamedIndividual,
+        din:Data_Element ;
+    din:has_Instance_Description abox:Scanned_Requirement_ID ;
+    din:has_Type_Description abox:ScanStatus_TD .
+
+abox:Task001HoldDuration_Property a owl:NamedIndividual,
+        din:Data_Element ;
+    din:has_Instance_Description abox:Task001HoldDuration_ID ;
+    din:has_Type_Description abox:DeliveryHeightHoldDuration_TD .
+
+abox:Task003LiftingHeight_Property a owl:NamedIndividual,
+        din:Data_Element ;
+    din:has_Instance_Description abox:Task003LiftingHeight_ID ;
+    din:has_Type_Description abox:LiftingHeight_TD .
+
+abox:Task003RoofPosition_Property a owl:NamedIndividual,
+        din:Data_Element ;
+    din:has_Instance_Description abox:Task003RoofPosition_ID ;
+    din:has_Type_Description abox:PositionIdentifier_TD .
+
+abox:TaskHeight_Property a owl:NamedIndividual,
+        din:Data_Element ;
+    din:has_Instance_Description abox:TaskHeight_ID ;
+    din:has_Type_Description abox:LiftingHeight_TD .
+
+abox:TaskPayload_Property a owl:NamedIndividual,
+        din:Data_Element ;
+    din:has_Instance_Description abox:TaskPayload_ID ;
+    din:has_Type_Description abox:Payload_TD .
+
+abox:TransportDistance_TD a owl:NamedIndividual,
+        din:Real,
+        din:Type_Description ;
+    din:Code "transportDistance" ;
+    din:Definition "Maximum or required transport distance" ;
+    din:Preferred_Name "Transport Distance" ;
+    din:Short_Name "distance" ;
+    din:Unit_of_Measure "m" ;
+    din:Version_Number 1 .
+
+abox:RoofComponent_Requirement_Property a owl:NamedIndividual,
+        din:Data_Element ;
+    din:has_Instance_Description abox:RoofComponent_Requirement_ID ;
+    din:has_Type_Description abox:ProductKind_TD .
+
+abox:ScrewingRotation_TD a owl:NamedIndividual,
+        din:Real,
+        din:Type_Description ;
+    din:Code "screwingRotation" ;
+    din:Definition "Required screwdriver rotation" ;
+    din:Preferred_Name "Screwing Rotation" ;
+    din:Short_Name "rotation" ;
+    din:Unit_of_Measure "rad" ;
+    din:Version_Number 1 .
+
+abox:ScrewingTorque_TD a owl:NamedIndividual,
+        din:Real,
+        din:Type_Description ;
+    din:Code "scrweingTorque" ;
+    din:Definition "Required or maximum screwing torque" ;
+    din:Preferred_Name "Screwing Torque" ;
+    din:Short_Name "torque" ;
+    din:Unit_of_Measure "N.m" ;
+    din:Version_Number 1 .
+
+abox:SuspendedHandoffProtocol_TD a owl:NamedIndividual,
+        din:String,
+        din:Type_Description ;
+    din:Code "suspendedHandoffProtocol" ;
+    din:Version_Number 1 .
+
+abox:ToolPositioningError_TD a owl:NamedIndividual,
+        din:Real,
+        din:Type_Description ;
+    din:Code "toolPositioningError" ;
+    din:Definition "Maximum absolute positioning error of the tool" ;
+    din:Preferred_Name "Tool Positioning Error" ;
+    din:Short_Name "toolError" ;
+    din:Unit_of_Measure "mm" ;
+    din:Version_Number 1 .
+
+abox:Rebar_Requirement_Property a owl:NamedIndividual,
+        din:Data_Element ;
+    din:has_Instance_Description abox:Rebar_Requirement_ID ;
+    din:has_Type_Description abox:ProductKind_TD .
+
+abox:PositionIdentifier_TD a owl:NamedIndividual,
+        din:String,
+        din:Type_Description ;
+    din:Code "positionIdentifier" ;
+    din:Definition "Symbolic identifier of a target position" ;
+    din:Preferred_Name "Position Identifier" ;
+    din:Short_Name "position" ;
+    din:Version_Number 1 .
+
+abox:Task002Payload_Property a owl:NamedIndividual,
+        din:Data_Element ;
+    din:has_Instance_Description abox:Task002Payload_ID ;
+    din:has_Type_Description abox:Payload_TD .
+
+abox:Soil_Requirement_Property a owl:NamedIndividual,
+        din:Data_Element ;
+    din:has_Instance_Description abox:Soil_Requirement_ID ;
+    din:has_Type_Description abox:ProductKind_TD .
+
+abox:LiftingHeight_TD a owl:NamedIndividual,
+        din:Real,
+        din:Type_Description ;
+    din:Code "liftingHeight" ;
+    din:Definition "Vertical target lifting height" ;
+    din:Preferred_Name "Lifting Height" ;
+    din:Short_Name "height" ;
+    din:Unit_of_Measure "m" ;
+    din:Version_Number 1 .
+
+abox:SteelComponent_Requirement_Property a owl:NamedIndividual,
+        din:Data_Element ;
+    din:has_Instance_Description abox:SteelComponent_Requirement_ID ;
+    din:has_Type_Description abox:ProductKind_TD .
+
+abox:Payload_TD a owl:NamedIndividual,
+        din:Real,
+        din:Type_Description ;
+    din:Code "payload" ;
+    din:Definition "Mass of the component to be lifted" ;
+    din:Preferred_Name "Payload" ;
+    din:Short_Name "payload" ;
+    din:Unit_of_Measure "kg" ;
+    din:Version_Number 1 .
+
+abox:ProductKind_TD a owl:NamedIndividual,
+        din:String,
+        din:Type_Description ;
+    din:Code "productKind" ;
+    din:Definition "Type of product handled by the capability" ;
+    din:Preferred_Name "Product Kind" ;
+    din:Short_Name "productkind" ;
+    din:Version_Number 1 .
+
