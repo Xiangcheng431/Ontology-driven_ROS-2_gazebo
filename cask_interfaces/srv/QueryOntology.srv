@@ -1,0 +1,5 @@
+string query
+---
+bool success
+string result_json
+string message

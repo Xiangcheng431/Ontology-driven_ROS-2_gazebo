@@ -1,0 +1,13 @@
+string ADD=add
+string REMOVE=remove
+string SET=set
+
+string operation
+string subject
+string predicate
+string object
+bool object_is_literal
+bool save_to_file
+---
+bool success
+string message
