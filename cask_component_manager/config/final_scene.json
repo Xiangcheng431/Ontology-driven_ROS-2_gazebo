@@ -1,0 +1,128 @@
+{
+  "world": "empty",
+  "robots": {
+    "crane": [
+      4.8,
+      0.0,
+      0.0,
+      3.141592653589793
+    ],
+    "jekko": [
+      -4.0,
+      -7.0,
+      0.045,
+      0.0
+    ],
+    "innok223": [
+      -5.6,
+      -3.7,
+      0.01,
+      0.0
+    ]
+  },
+  "site": {
+    "center": [
+      1.5,
+      -2.0
+    ],
+    "size": [
+      20.0,
+      14.0
+    ]
+  },
+  "cargo": {
+    "model": "final_steel",
+    "individual": "FinalSteel_01",
+    "kind": "steel",
+    "size": [
+      1.58424,
+      0.8211,
+      0.81024
+    ],
+    "mass": 100.0,
+    "initial_pose": [
+      -2.2,
+      0.0,
+      0.41012,
+      0.0
+    ],
+    "display_name": "Neuss roof assembly",
+    "rigging_gap": {
+      "jekko": 0.44512,
+      "crane": 0.52512
+    },
+    "empty_stow_roof_margin": 0.04
+  },
+  "workbench": {
+    "model": "final_workbench",
+    "center": [
+      5.50644,
+      -5.633905,
+      0.79695
+    ],
+    "size": [
+      1.61,
+      2.03665,
+      1.5939
+    ],
+    "display_name": "Neuss lower building"
+  },
+  "locations": {
+    "startpoint": [
+      -2.2,
+      0.0,
+      0.40512,
+      0.0
+    ],
+    "endpoint": [
+      5.5,
+      -6.1,
+      1.99902,
+      0.0
+    ],
+    "loading_bay": [
+      -2.2,
+      -2.2,
+      0.48,
+      0.0
+    ],
+    "unloading_bay": [
+      5.5,
+      -3.8,
+      0.48,
+      0.0
+    ],
+    "jekko_start_work": [
+      -5.3,
+      -0.05,
+      0.045,
+      0.0
+    ],
+    "jekko_end_work": [
+      2.6,
+      -5.65,
+      0.045,
+      0.0
+    ]
+  },
+  "trailer": {
+    "bed_offset_x": -1.52,
+    "deck_height": 0.48
+  },
+  "crane_geometry": {
+    "boom_length": 10.0
+  },
+  "reference_site": {
+    "enabled": true,
+    "source": "ReferenceSite.obj",
+    "source_scale": 1.0,
+    "translation": [
+      -2.3,
+      2.5,
+      0.427
+    ],
+    "removed_central_building": true,
+    "source_roof_scale": 0.322,
+    "remove_legacy_markings": true
+  }
+}
