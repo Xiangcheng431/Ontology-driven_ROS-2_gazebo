@@ -4,7 +4,7 @@
 
 This project connects construction task requirements to executable robot skills through a CaSk-based semantic World Model, ROS 2, and Gazebo. It demonstrates how a task identifier can be resolved into compatible robot capabilities, ordered through product input/output dependencies, and executed by cooperating machines with measured simulation feedback.
 
-The construction scenario uses a tower crane, a Jekko mini crane, and an Innok223 tractor–trailer vehicle to pick up, transport, and install a Neuss roof assembly on a lower building. The simulated site contains terrain, fences, containers, and surrounding buildings.
+The construction scenario uses a tower crane, a Jekko mini crane, and an Innok223 tractor–trailer vehicle to pick up, transport, and install a Neuss roof on a lower building. 
 
 ## Research focus
 
