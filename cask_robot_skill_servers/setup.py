@@ -1,5 +1,0 @@
-import os
-from glob import glob
-from setuptools import find_packages, setup
-package_name = 'cask_robot_skill_servers'
-setup(name=package_name, version='0.0.0', packages=find_packages(exclude=['test']), data_files=[('share/ament_index/resource_index/packages', ['resource/' + package_name]), ('share/' + package_name, ['package.xml']), (os.path.join('share', package_name, 'launch'), glob('launch/*.launch.py'))], install_requires=['setuptools'], zip_safe=True, maintainer='xiangcheng', maintainer_email='xiangcheng@todo.todo', description='ROS 2 Action Servers for robot skill execution', license='TODO: License declaration', tests_require=['pytest'], entry_points={'console_scripts': ['jekko_skill_server = cask_robot_skill_servers.jekko_skill_server:main', 'jekko_lifting_server = cask_robot_skill_servers.jekko_skill_server:main', 'crane_lifting_server = cask_robot_skill_servers.crane_lifting_server:main', 'final_crane_server = cask_robot_skill_servers.final_lifting_servers:crane_main', 'final_jekko_server = cask_robot_skill_servers.final_lifting_servers:jekko_main', 'innok223_transporting_server = cask_robot_skill_servers.innok223_transporting_server:main']})
